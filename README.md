@@ -1,4 +1,4 @@
-# grupo_3_Pequeños Gigantes
+# IG - ARMADOS
 
 # Primer sprint (22/01)
 
