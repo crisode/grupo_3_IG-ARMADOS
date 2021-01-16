@@ -22,19 +22,18 @@
 
 # Tematica de la web:
 
-Nuestro sitio sera una portal orientado a la venta de juegos y juguetes, de diversas temáticas.
-El publico para el cual va a estar orientado sera desde bebes recién nacidos hasta niños de +13 años, donde sus padres tendrán la facilidad de poder adquirir los productos
-por medio de secciones divididas acordes al edad del niño para mayor agilidad a la hora de la búsqueda.
-
+Nuestro sitio sera una portal orientado a la venta de componentes y accesorios computacion,contara con un apartado para poder solicitar soporte tecnico.
+Orientado a un publico en general, el cual tenga la posibilidad de adquirir alguno de nuestros productos o servicios.
 
 # Páginas de referencia:
 
-https://faoschwarz.com/<br>
-https://www.hamleys.in/<br>
-https://www.lego.com/en-us<br>
-https://cebra.com.ar/<br>
-https://www.elmundodeljuguete.com.ar/<br>
-
+https://www.gezatek.com.ar/ <br>
+https://www.overdrivepc.com.ar/<br><br><br><br>
+https://www.maximus.com.ar/<br><br><br>
+https://compragamer.com/<br><br>
+https://www.mexx.com.ar/<br>
 
 
 ¿Por qué elegimos éstas páginas?
+
+Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de los cuales tomamos como referencia su estructura y estetica.  
