@@ -17,7 +17,7 @@
 - Estudiante de Programación Web, Manicura y Artesana.
 
 ### Irigoitia, Ignacio.
-
+- 23 años. 
 - Estudiante de Programación Web.
 
 # Tematica de la web:
