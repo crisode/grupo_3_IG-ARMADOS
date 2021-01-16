@@ -28,9 +28,9 @@ Orientado a un publico en general, el cual tenga la posibilidad de adquirir algu
 # Páginas de referencia:
 
 https://www.gezatek.com.ar/ <br>
-https://www.overdrivepc.com.ar/<br><br><br><br>
-https://www.maximus.com.ar/<br><br><br>
-https://compragamer.com/<br><br>
+https://www.overdrivepc.com.ar/<br>
+https://www.maximus.com.ar/<br>
+https://compragamer.com/<br>
 https://www.mexx.com.ar/<br>
 
 
