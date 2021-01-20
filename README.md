@@ -20,10 +20,10 @@
 - 23 años. 
 - Estudiante de Programación Web.
 
-# Tematica de la web:
+# Temática de la web:
 
-Nuestro sitio sera una portal orientado a la venta de componentes y accesorios computacion,contara con un apartado para poder solicitar soporte tecnico.
-Orientado a un publico en general, el cual tenga la posibilidad de adquirir alguno de nuestros productos o servicios.
+Nuestro sitio será una portal orientado a la venta de componentes y accesorios computación,contará con un apartado para poder solicitar soporte técnico.
+Orientado a un público en general, el cual tenga la posibilidad de adquirir alguno de nuestros productos o servicios.
 
 # Páginas de referencia:
 
