@@ -37,5 +37,7 @@ Orientado a un público en general, el cual tenga la posibilidad de adquirir alg
 ¿Por qué elegimos éstas páginas?
 
 Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de los cuales tomamos como referencia su estructura y estetica.  
-![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/wifeframes/Detalle-Producto/producto-desktop.png)
+
+# Paleta de colores: 
+![Texto alternativo] (https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/Dise%C3%B1o%20color/Colores.png) 
 
