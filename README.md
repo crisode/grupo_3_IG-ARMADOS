@@ -27,11 +27,11 @@ Orientado a un público en general, el cual tenga la posibilidad de adquirir alg
 
 # Páginas de referencia:
 
-https://www.gezatek.com.ar/ <br>
-https://www.overdrivepc.com.ar/<br>
-https://www.maximus.com.ar/<br>
-https://compragamer.com/<br>
-https://www.mexx.com.ar/<br>
+[gezatek](https://www.gezatek.com.ar/) 
+[overdrivepc](https://www.overdrivepc.com.ar/)
+[maximus](https://www.maximus.com.ar/)
+[compragamer](https://compragamer.com/)
+[mexx](https://www.mexx.com.ar/)
 
 
 ¿Por qué elegimos éstas páginas?
