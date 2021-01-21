@@ -27,16 +27,28 @@ Orientado a un público en general, el cual tenga la posibilidad de adquirir alg
 
 # Páginas de referencia:
 
-[gezatek](https://www.gezatek.com.ar/) <br>
-[overdrivepc](https://www.overdrivepc.com.ar/)<br>
-[maximus](https://www.maximus.com.ar/)<br>
-[compragamer](https://compragamer.com/)<br>
-[mexx](https://www.mexx.com.ar/)<br>
+- [gezatek](https://www.gezatek.com.ar/) <br>
+- [overdrivepc](https://www.overdrivepc.com.ar/)<br>
+- [maximus](https://www.maximus.com.ar/)<br>
+- [compragamer](https://compragamer.com/)<br>
+- [mexx](https://www.mexx.com.ar/)<br>
 
 
 ¿Por qué elegimos éstas páginas?
 
-Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de los cuales tomamos como referencia su estructura y estetica.  
+Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de los cuales tomamos como referencia su estructura y estetica:
+
+- Para la estética y estructura del header y el footer decidimos tomar como referencia a Gezatek debido a la simplicidad de la misma considerando la interacción con el usuario. 
+
+- Para el Home, nos basamos en OverDrive debido a la simpleza de los elementos destacados y las ofertas.
+
+- En cuanto al login y el registro consideramos que la estructura de Maximus y CompraGamer son las que más encajan con nuestro sitio ya que cuentan con una interfaz simple e intuitiva a los ojos del usuario.
+
+- En cuanto a la carga de Producto y el Detalle de Producto, tomamos un poco de cada una de estas páginas sacando lo mejor de cada una para generar la mejor experiencia para el usuario/administrador posible.
+
+- Por último, para el carrito de compras nos basamos en Mex, tomando en cuenta su estructura la cual muestra los datos necesarios y no sobre carga la pagina con informacion.
+
+
 
 # Paleta de colores: 
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/Dise%C3%B1o%20color/Colores.png)
