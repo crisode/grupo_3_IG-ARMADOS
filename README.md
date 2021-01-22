@@ -10,7 +10,8 @@
 
 ### Valdez, Lautaro.
 - 21 años.
-- Estudiante de Programación Web.
+- Entusiasta de la programación y los videojuegos, constantemente ampliando mis conocimientos en esto de la programación para poder afrontar retos cada vez más complejos.
+
 
 ### Junco, Karen.
 - 30 años.
