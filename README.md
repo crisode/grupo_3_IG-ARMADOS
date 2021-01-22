@@ -20,6 +20,9 @@
 - 23 años. 
 - Estudiante de Programación Web.
 
+### ¿Quiénes somos?
+- Somos un equipo de desarrolladores, amantes del gaming y el mundo de las computadoras, que pensamos y codeamos el mejor lugar para que todos aquellos apasionados como nosotros puedan adquirir sus productos y servicios de la mejor manera
+
 # Temática de la web:
 
 Nuestro sitio será una portal orientado a la venta de componentes y accesorios computación,contará con un apartado para poder solicitar soporte técnico.
