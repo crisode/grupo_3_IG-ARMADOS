@@ -65,3 +65,7 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 - Raleway.
 - Helvética.
 
+
+# Logo
+
+![Texto alternativo](ttps://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/imagenes/logo.jpg)
