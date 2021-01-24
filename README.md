@@ -66,6 +66,6 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 - Helvética.
 
 
-# Logo
+# Logo:
 
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/imagenes/Logo%20sin%20fondo.png)
