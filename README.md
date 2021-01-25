@@ -57,7 +57,8 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 # Paleta de colores: 
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/Dise%C3%B1o%20color/Colores.png)
 
-
+# Tablero de trabajo
+- [Trello](https://trello.com/b/j3XKGNzh/prototipo-proyecto-integrador)<br>
 
 # Tipografías:
 
