@@ -10,11 +10,12 @@
 
 ### Valdez, Lautaro.
 - 21 años.
-- Estudiante de Programación Web.
+- Entusiasta de la programación y los videojuegos, constantemente ampliando mis conocimientos en esto de la programación para poder afrontar retos cada vez más complejos.
+
 
 ### Junco, Karen.
 - 30 años.
-- Estudiante de Programación Web, Manicura y Artesana.
+- Autodidáctica, apasionada por la tecnología, emprendedora, y me encuentro estudiando Programación Web para expandir mis conocimientos.
 
 ### Irigoitia, Ignacio.
 - 23 años. 
@@ -56,3 +57,16 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 # Paleta de colores: 
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/Dise%C3%B1o%20color/Colores.png)
 
+# Tablero de trabajo
+- [Trello](https://trello.com/b/j3XKGNzh/prototipo-proyecto-integrador)<br>
+
+# Tipografías:
+
+- Roboto.
+- Raleway.
+- Helvética.
+
+
+# Logo:
+
+![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/imagenes/Logo%20sin%20fondo.png)
