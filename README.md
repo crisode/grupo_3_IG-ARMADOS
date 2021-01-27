@@ -81,7 +81,7 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 
 ### Hacer más:
 - *Reforzar conocimientos para poder avanzar en el proyecto.*
-- *Reuniones más seguidas,de menos tiempo,para ponernos al dia de las actividades que hizo cada integrante.*
+- *Reuniones más seguidas,de menos tiempo,para ponernos al día de las actividades que hizo cada integrante.*
 - *Charlar sobre los aspectos técnicos de nuestro proyecto.*
 
 ### Empezar a hacer:
