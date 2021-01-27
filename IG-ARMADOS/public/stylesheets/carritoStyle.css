@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-header{
+header, footer{
     height: 100px;
     background-color: yellow;
 }
@@ -15,4 +15,12 @@ header p{
 
 .botonPagar{
     width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+.ayudas{
+    text-transform: uppercase;
 }
