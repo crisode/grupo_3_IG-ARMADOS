@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+header, footer{
+    height: 100px;
+    background-color: yellow;
+}
+
+header p{
+    text-align: center;
+    margin-top: 28px;
+}
+
+.botonPagar{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+.ayudas{
+    text-transform: uppercase;
+}
