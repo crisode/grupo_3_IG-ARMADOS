@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+header{
+    height: 100px;
+    background-color: yellow;
+}
+
+header p{
+    text-align: center;
+    margin-top: 28px;
+}
+
+.botonPagar{
+    width: 100%;
+}
