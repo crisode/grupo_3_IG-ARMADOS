@@ -58,7 +58,7 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/Dise%C3%B1o%20color/Colores.png)
 
 # Tablero de trabajo
-- [Trello](https://trello.com/b/j3XKGNzh/prototipo-proyecto-integrador)<br>
+- [Trello](https://trello.com/b/XU2oL1lS/grupo-3-ig-armados)<br>
 
 # Tipografías:
 
@@ -70,3 +70,33 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 # Logo:
 
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/imagenes/Logo%20sin%20fondo.png)
+
+
+## Retrospectiva Starfish grupal (26/01):
+
+### Seguir haciendo:
+- *Uso de Trello.*
+- *Mantener la comunicación.*
+- *Seguir con el mismo compañerismo.*
+
+### Hacer más:
+- *Reforzar conocimientos para poder avanzar en el proyecto.*
+- *Reuniones más seguidas,de menos tiempo,para ponernos al dia de las actividades que hizo cada integrante.*
+- *Charlar sobre los aspectos técnicos de nuestro proyecto.*
+
+### Empezar a hacer:
+- *Anotaciones con ideas.*
+- *Preguntar cuando estemos trabado con algún tema.*
+- *Poner vencimientos en Trello.*
+- *Darnos tiempos de recreación.*
+
+### Dejar de hacer:
+- *Dejar de sobreexigirnos.*
+- *Desviarnos del punto a tratar en las reuniones.*
+- *Tomar decisiones sin todos los compañeros de grupo.*
+
+### Hacer menos:
+- *Reuniones largas.*
+- *Trabajos individuales.*
+- *Commitear tanto.*
+
