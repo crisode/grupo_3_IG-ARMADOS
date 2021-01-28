@@ -2,15 +2,36 @@ html, body {
     min-height: 100vh;
     margin: 0;
     font-size: 10px;
-  }
+}
+body{
+    background-color: #1f1f1f;
+}
 
 header{
     background-color: red;
     height: 50px;
 }
 
+h1{
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+}
+
+h2{
+    color: #ffffff;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
 .product-detail{
-    /*Posiblemente se quite a futuro*/
     min-height: 100vh;
     margin: 0;
 }
@@ -18,9 +39,15 @@ header{
 .product-detail__images-box--thumbnail{
     display: flex;
     width: 100%;
-    cursor: pointer;
     display: inline-flex;
     
+}
+
+.product-detail__images-box--thumbnail_img{
+    width: 150px;
+    height: 150px;
+    font-size: 12px;
+    padding: 2px;
 }
 
 .product-detail__price{
@@ -28,9 +55,39 @@ header{
 }
 
 .product-detail__images-box--largeImg{
-    padding: 10px;
-    width: 45%;
+    
+    width: 100%;
+    height: 80vw;
+    background-color: blue;
 }
+/*  ---SLIDER----   */
+.product-detail__images-box--slider{
+    position: relative;
+    /*quitar a futuro*/
+    width: inherit;
+    height: inherit;
+    
+
+}
+
+.product-detail__images-box--slider li{
+    position: absolute;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    
+}
+
+.product-detail__images-box--slider li:first-child{
+    opacity: 1;
+}
+
+.product-detail__images-box--slider li:target{
+    opacity: 1;
+}
+
+/*  --FIN DEL SLIDER--  */
+
 
 .product-detail__data{
     padding: 10px;
@@ -48,34 +105,64 @@ header{
 }
 
 .similar-products{
-    background-color: gray;
+    
     min-height: 100vh;
     margin: 0;
     
 }
 
+
+
 .similar-products__product-box{
-    background-color: green;
+    background-color: #272727;
     height: 600px;
     margin: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ff6600;
+    border-radius: 15x;
+}
+
+.product-detail__data--caja1{
+    display: flex;
+    border-bottom: 1px solid rgba(126,126,131,.15);
+    margin-bottom: 20px;
+
+}
+
+.product-detail__data--caja1__text{
+    margin-left: 10px;
+
+}
+
+.product-detail__data--caja1__icon{
+    width: 4em;
+}
+
+.similar-products__title{
+    margin-bottom: 10px;
+}
+
+.product-detail__list{
+    display: block;
+    list-style: none;
+
 }
 
 
-
-
-
-.product-detail__images-box--thumbnail img{
+.product-detail__images-box--thumbnail_img img{
     width: 100%;
     height: 100%;
-    padding: 10px;
-    object-fit: contain;
-    border: 1px solid gray;
+    object-position: inherit;
+    object-fit: scale-down;
+    
 
 }
 
 .product-detail__images-box--largeImg img{
-    height: 400px;
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
 
 }
 
@@ -88,42 +175,76 @@ header{
     padding-left: 5px;
 }
 
-
-
 .product-detail__price p{
     text-align: center;
     font-size: 45px;
 }
 
-.similar-products__product-box{
+.product-detail__data i{
+    margin: 2px;
+    object-fit: fill;
+    color: #ff6600;
+
+}
+
+.product-detail__data p{
+    margin-right: 20px;
+}
+
+.similar-products__product-box p{
     text-align: center;
     font-size: 30px;
 
 }
 
-.product-detail__data p{
-    font-size: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ebebeb;
+.product-detail__data--caja1__text p{
+    font-size: 16px;
+    margin: 5px;
+    
+    
 }
+
+.product-detail__data--caja1__icon i{
+    font-size: 30px;
+}
+
 
 .product-detail__shop button{
     margin-top: 10px;
     height: 50px;
     width: 100%; 
-    background-color: #1259c3;
+    background-color: #ff6600;;
     color: #ffffff;
     border-radius: 5px;
     text-decoration: none;
     border-style: none;
     margin-bottom: 15px;
     font-size: 25px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+}
+
+.similar-products__product-box--button button{
+    margin-top: 10px;
+    height: 50px;
+    margin-left: 10%;
+    width: 80%;
+    background-color: #ff6600;;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    border-style: none;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-transform: capitalize;
 }
 
 .product-detail__description p{
     font-size: 14px;
 
+}
+
+.product-detail__title{
+    margin: 5px;
 }
 
 .product-detail__description h2{
@@ -132,6 +253,12 @@ header{
 
 .product-detail__feature h2{
     font-size: 25px;
+}
+
+.similar-products__title h2{
+    padding: 10px;
+    font-size: 35px;
+    text-align: center;
 }
 
 .product-detail__feature p{
