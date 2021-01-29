@@ -104,8 +104,7 @@ ul{
 
 }
 
-.similar-products{
-    
+.similar-products{  
     min-height: 100vh;
     margin: 0;
     
@@ -264,3 +263,44 @@ ul{
 .product-detail__feature p{
     font-size: 14px;
 }
+
+
+/* MEDIA QUERIES*/
+
+/* --TABLET--*/
+@media(min-width: 768px){
+    .similar-products{
+        display: flex;
+    }
+
+    .similar-products__product-box p{
+        font-size: 25px;
+    }
+
+    .product-detail__list{
+        display: flex;
+    
+    }
+
+    .product-detail__list--li{
+        padding-left: 0;
+        padding-right: 24px;
+        width: 60%;
+        
+    }
+
+
+    .similar-products__product-box img{
+        width: 100%;
+        margin: 0;
+        padding: 11px;
+        object-fit: fill;
+
+    }
+
+
+
+
+
+}
+
