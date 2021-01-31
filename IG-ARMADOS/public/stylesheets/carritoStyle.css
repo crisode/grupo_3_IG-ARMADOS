@@ -178,4 +178,10 @@ hr.linea3{
         width: 80%;
         font-size: 20px;
     }
+    .imgIconos i.cruz{
+        top: -5px;   
+    }
+    .imgIconos i.corazon{
+        top: 50px;
+    }
 }
