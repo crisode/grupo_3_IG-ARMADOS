@@ -14,7 +14,7 @@ body{
 
 header, footer{
     height: 15vh;
-    background-color:orangered;
+    background-color: #ff6600;
 }
 
 header p{
@@ -48,6 +48,7 @@ p, span{
     color: #ffffff;
 }
 
+
 /* ACA EMPIEZA EL TITULO, EL TOTAL Y EL BOTON PARA PAGAR */
 
 h1{
@@ -61,8 +62,12 @@ h1{
 
 .botonPagar{
     width: 100%;
-    background-color: orangered;
-    border-color: orangered;
+    background-color:  #ff6600;
+    border-color:  #ff6600;
+}
+
+.botonPagar:hover{
+    color: #ff6600;
 }
 
 .total p{
@@ -78,30 +83,33 @@ hr{
 /* ACA EMPIEZA LA SECCION DEL PRODUCTO, DESCRIPCION Y PRECIO */
 
 .imgIconos{
-    overflow: hidden;
+    display: flex;
+    position: relative;
 }
 
-.imgIconos .cruz{
+.imgIconos i.cruz{
     color: white;
     font-size: 40px;
     position: absolute;
-    top: 360px;
     right: 25px;
+    top: 10px;
 }
-.imgIconos .cruz:hover{
-    color:orangered;
-}
-
-.imgIconos .corazon{
-    top: 405px;
-    font-size: 29px;
+.imgIconos i.cruz:hover{
+    color: #ff6600;
 }
 
+.imgIconos i.corazon{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 25px;
+    top: 55px;
+}
 
 .botonCantidad{
     width: 100%;
-    background-color: orangered;
-    border-color: orangered;
+    background-color:  #ff6600;
+    border-color:  #ff6600;
 }
 
 .linea2{
@@ -158,4 +166,16 @@ hr.linea3{
 }
 .preguntas{
     margin: 10px 0;
+}
+
+
+/* MEDIA QUERIES*/
+
+
+/*    --DESKTOP--- */
+@media(min-width: 992px){
+    .descProduct{
+        width: 80%;
+        font-size: 20px;
+    }
 }
