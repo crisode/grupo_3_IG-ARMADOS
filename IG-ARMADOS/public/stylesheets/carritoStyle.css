@@ -1,11 +1,20 @@
+/* GENERALES */
+
 *{
     box-sizing: border-box;
     margin: 0 auto;
 }
 
+body{
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: #1f1f1f;
+    font-weight: 300;
+}
+
 header, footer{
-    height: 100px;
-    background-color: yellow;
+    height: 15vh;
+    background-color:orangered;
 }
 
 header p{
@@ -13,14 +22,140 @@ header p{
     margin-top: 28px;
 }
 
-.botonPagar{
-    width: 100%;
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 }
 
 img{
     width: 100%;
 }
 
+h2, h4{
+    color: #ffffff;
+}
+
+p, span{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+/* ACA EMPIEZA EL TITULO, EL TOTAL Y EL BOTON PARA PAGAR */
+
+h1{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.botonPagar{
+    width: 100%;
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.total p{
+    font-size: 20px;
+    text-transform: bold;
+}
+
+hr{
+    color: white;
+    margin-bottom: 35px;
+}
+
+/* ACA EMPIEZA LA SECCION DEL PRODUCTO, DESCRIPCION Y PRECIO */
+
+.imgIconos{
+    overflow: hidden;
+}
+
+.imgIconos .cruz{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 360px;
+    right: 25px;
+}
+.imgIconos .cruz:hover{
+    color:orangered;
+}
+
+.imgIconos .corazon{
+    top: 405px;
+    font-size: 29px;
+}
+
+
+.botonCantidad{
+    width: 100%;
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.linea2{
+    margin-top: 35Px;
+}
+
+.precio{
+    text-align: center;
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+/* <!-- ACA EMPIEZA EL RESUMEN DE LA COMPRA --> */
+
+section.resumen h2{
+    text-align: center;
+}
+
+section.resumen ul{
+    margin-top: 15px;
+}
+
+section.resumen li{
+    margin: 10px 0;
+}
+
+section.resumen .prec ul li{
+    text-align: right;
+}
+
+section.resumen .total{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section.resumen .botonPagar{
+    margin: 20px 0;
+}
+
+hr.linea3{
+    margin-bottom: 10px;
+}
+
+/* <!-- ACA EMPIEZA LA SECCION DE PREGUNTAS --> */
+
+.ayuda{
+    margin-bottom: 20px;
+}
+
 .ayudas{
     text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+}
+.preguntas{
+    margin: 10px 0;
 }
