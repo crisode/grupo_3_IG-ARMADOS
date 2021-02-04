@@ -1,11 +1,20 @@
+/* GENERALES */
+
 *{
     box-sizing: border-box;
     margin: 0 auto;
 }
 
+body{
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: #1f1f1f;
+    font-weight: 300;
+}
+
 header, footer{
-    height: 100px;
-    background-color: yellow;
+    height: 15vh;
+    background-color: #ff6600;
 }
 
 header p{
@@ -13,14 +22,166 @@ header p{
     margin-top: 28px;
 }
 
-.botonPagar{
-    width: 100%;
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 }
 
 img{
     width: 100%;
 }
 
+h2, h4{
+    color: #ffffff;
+}
+
+p, span{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+
+/* ACA EMPIEZA EL TITULO, EL TOTAL Y EL BOTON PARA PAGAR */
+
+h1{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.botonPagar{
+    width: 100%;
+    background-color:  #ff6600;
+    border-color:  #ff6600;
+}
+
+.botonPagar:hover{
+    color: #ff6600;
+}
+
+.total p{
+    font-size: 20px;
+    text-transform: bold;
+}
+
+hr{
+    color: white;
+    margin-bottom: 35px;
+}
+
+/* ACA EMPIEZA LA SECCION DEL PRODUCTO, DESCRIPCION Y PRECIO */
+
+.imgIconos{
+    display: flex;
+    position: relative;
+}
+
+.imgIconos i.cruz{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+.imgIconos i.cruz:hover{
+    color: #ff6600;
+}
+
+.imgIconos i.corazon{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 25px;
+    top: 55px;
+}
+
+.botonCantidad{
+    width: 100%;
+    background-color:  #ff6600;
+    border-color:  #ff6600;
+}
+
+.linea2{
+    margin-top: 35Px;
+}
+
+.precio{
+    text-align: center;
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+/* <!-- ACA EMPIEZA EL RESUMEN DE LA COMPRA --> */
+
+section.resumen h2{
+    text-align: center;
+}
+
+section.resumen ul{
+    margin-top: 15px;
+}
+
+section.resumen li{
+    margin: 10px 0;
+}
+
+section.resumen .prec ul li{
+    text-align: right;
+}
+
+section.resumen .total{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section.resumen .botonPagar{
+    margin: 20px 0;
+}
+
+hr.linea3{
+    margin-bottom: 10px;
+}
+
+/* <!-- ACA EMPIEZA LA SECCION DE PREGUNTAS --> */
+
+.ayuda{
+    margin-bottom: 20px;
+}
+
 .ayudas{
     text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+}
+.preguntas{
+    margin: 10px 0;
+}
+
+
+/* MEDIA QUERIES*/
+
+
+/*    --DESKTOP--- */
+@media(min-width: 992px){
+    .descProduct{
+        width: 80%;
+        font-size: 20px;
+    }
+    .imgIconos i.cruz{
+        top: -5px;   
+    }
+    .imgIconos i.corazon{
+        top: 50px;
+    }
 }
