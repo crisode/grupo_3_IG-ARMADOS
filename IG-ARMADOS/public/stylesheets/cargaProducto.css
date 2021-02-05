@@ -1,0 +1,149 @@
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    font-size: 10px;
+}
+body{
+    background-color: #1f1f1f;
+    
+}
+
+header{
+    background-color: red;
+    height: 50px;
+}
+
+h1{
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 25px;   
+
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+textarea{
+    width: 100%;
+}
+
+input{
+    background-color: #272727;
+    color: white;
+    border-style: none;
+    border-bottom: 1px solid #ff6600;
+}
+
+select{
+    background-color: #272727;
+    color: white;
+    border: 1px solid #ff6600;
+
+}
+ 
+
+.content-form{
+    min-height: 100vh;
+    margin: 0;
+}
+
+.product-detail--title{
+    margin-top: 18px;
+    border-bottom: 1px solid gray;
+}
+
+.product-detail{
+    margin-top: 18px;
+}
+
+.product-description--title{
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.product-feature--title{
+    margin-bottom: 10px;
+}
+
+.product-info input{
+    width: 100%;
+    height: 40px;
+
+}
+
+.product-info select{
+    width: 100%;
+    height: 40px;
+    
+}
+
+.product-info h2{
+    font-size: 22px;
+    margin-bottom: 8px;
+    ;
+}
+
+
+
+.product-info select{
+    font-size: 16px;
+    
+}
+
+
+.product-detail input{
+    width: 100%;
+    height: 40px;
+}
+
+.product-img input[type='file']{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.product-img label[for="img"] {
+    margin-top: 10px;
+    height: 50px;
+    width: 100%; 
+    background-color: #ff6600;;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    border-style: none;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    }
+
+.product-detail select{
+    width: 100%;
+    height: 40px;
+}
+
+.product-detail h2{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.product-detail select{
+    font-size: 16px;
+}
+
+
