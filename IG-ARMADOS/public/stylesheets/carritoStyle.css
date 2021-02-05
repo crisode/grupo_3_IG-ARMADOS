@@ -48,6 +48,10 @@ p, span{
     color: #ffffff;
 }
 
+.corazon{
+    display: none;
+}
+
 
 /* ACA EMPIEZA EL TITULO, EL TOTAL Y EL BOTON PARA PAGAR */
 
@@ -61,13 +65,20 @@ h1{
 }
 
 .botonPagar{
-    width: 100%;
-    background-color:  #ff6600;
-    border-color:  #ff6600;
+    height: 50px;
+    width: 100%; 
+    background-color: #ff6600;;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    border-style: none;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-transform: capitalize;
 }
 
 .botonPagar:hover{
-    color: #ff6600;
+    color: white;
 }
 
 .total p{
