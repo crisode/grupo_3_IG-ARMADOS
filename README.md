@@ -71,3 +71,6 @@ Elegimos estos sitios por su trayectoria y recorrido a lo largo de los años, de
 
 ![Texto alternativo](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/imagenes/Logo%20sin%20fondo.png)
 
+# Retrospectiva grupal:
+
+- [Retro.md](https://github.com/crisode/grupo_3_IG-ARMADOS/blob/main/Retro.md)
