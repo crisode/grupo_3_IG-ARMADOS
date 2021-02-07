@@ -1,0 +1,49 @@
+/* GENERALES */
+
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body{
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: #1f1f1f;
+    font-weight: 300;
+}
+
+header, footer{
+    height: 15vh;
+    background-color: #ff6600;
+}
+
+header p{
+    text-align: center;
+    margin-top: 28px;
+}
+
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h4{
+    color: #ffffff;
+}
+
+p, span{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
