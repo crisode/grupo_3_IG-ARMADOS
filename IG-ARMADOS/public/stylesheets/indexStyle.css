@@ -1,0 +1,235 @@
+/* VARIABLES */
+
+:root {
+    --orange: #ff6600;
+    --red: #e30909;
+    --black: #1f1f1f;
+    --white: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: font-family, roboto, serif;
+    color: var(--white);
+
+}
+
+body{
+    background-image: url('../images/Fondo.png');
+    min-height: 100vh;
+
+}
+
+/* HEADER */
+header p{
+    background-color: var(--orange);
+    height: 15vh;
+    text-align: center;
+    margin-top: 28px;
+}
+
+/* BANNER SLIDER */
+
+.banner-slide{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.banner-slide a{
+   margin-left: 110px;
+}
+
+/* BANNER */
+
+section.banner img{
+    
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 15px;
+    
+}
+
+/* TITULO DESTACADOS */
+
+.titulo{
+    display: flex;
+}
+
+.titulo h2{
+    font-size: 24px;
+    margin-top: 20px;
+
+}
+
+.line{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 258px;
+    margin-left: 15px;
+    
+}
+
+/* PRODUCTOS DESTACADOS */
+
+.productos-box{
+    width: 100%;
+    height: 450px;
+    margin-bottom: 40px;
+    border: 1px solid var(--orange);
+    margin-left: 20px;
+}
+
+.productos-box img{
+    width: 100%;
+    margin: 0;
+    padding: 11px;
+    object-fit: fill;
+    
+}
+
+.productos-box p{
+    font-family: roboto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.productos-box p:hover{
+    color: var(--orange);
+}
+
+.productos-box article {
+    display: inline;
+}
+
+.productos-box button{
+    margin-top: 10px;
+    height: 50px;
+    width: 50%;
+    background-color: #ff6600;
+    border-radius: 5px;
+    text-decoration: none;
+    border-style: none;
+    margin-bottom: 40px;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-left: 35px;
+
+}
+
+.productos-box button a{
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.productos-box button a:hover{
+    color: var(--black);
+}
+
+.productos-box i{
+    color: var(--orange);
+    margin-left: 40px;
+    
+}
+
+/* FOOTER */
+
+footer p{
+    background-color: var(--orange);
+    height: 15vh;
+    text-align: center;
+    margin-top: 28px;
+
+}
+
+/* MEDIA QUERIES */ 
+
+/* TABLET */
+
+@media(min-width:768px) {
+
+    /* SLIDER */
+
+    .banner-slide{
+        width: 90%;
+        margin-left: 50px;
+    }
+
+    .banner-slide a{
+        margin-left: 200px;
+    }
+     
+    /* BANNER */
+    section.banner img{
+    width: 90%;
+    margin-left: 50px;
+    }
+
+    /* PRODUCTOS */
+
+    .productos-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .productos-box{
+        width: 45%;
+    }
+
+    .productos-box img{
+        object-fit: cover;
+    }
+
+    .line{
+        width: 550px;
+    }
+
+    /* DESKTOP */
+
+@media(min-width: 992px){
+
+    /* BANNER SLIDER */
+    .banner-slide{
+        width: 80%;
+        margin-left: 130px;
+    }
+    .banner-slide a{
+        margin-left: 15px;
+    }
+
+    .carousel-inner, .carousel-item > img{
+        height: 200px;
+        border-radius: 10px;
+        object-fit: none;
+    }
+    
+    /* BANNER */
+    section.banner img{
+        width: 80%;
+        margin-left: 130px;
+
+    }
+
+    /* PRODUCTOS */
+
+    .productos-box{
+        width: 300px;
+        height: 400px;
+    }
+
+    .line{
+        width: 1140px;
+    }
+
+}
+
+}
