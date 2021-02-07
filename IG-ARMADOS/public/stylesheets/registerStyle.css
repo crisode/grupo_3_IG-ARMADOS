@@ -39,7 +39,7 @@ img{
     width: 100%;
 }
 
-h2, h4{
+h1, h2, h4{
     color: #ffffff;
 }
 
@@ -47,3 +47,56 @@ p, span{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
 }
+
+.registro .imagen{
+    background-color: #ff6600;
+    margin: 10px 0;
+}
+
+
+.registro .condiciones{
+    margin: 30px 0;
+    text-align: center;
+}
+
+.registro .condiciones label{
+    color: white;
+}
+
+.registro .botonPagar{
+    height: 50px;
+    width: 100%; 
+    background-color: #ff6600;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    border-style: none;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.registro .redes i{
+    font-size: 70px;
+    color: white;
+    margin: 25px 35px;
+}
+
+.registro .redes i:hover{
+    color: #ff6600;
+}
+
+/* MEDIA QUERIES*/
+
+/* --TABLET--*/
+@media(min-width: 768px){
+    .registro .titulos{
+        text-align: center;
+        padding: 15px;
+    }
+
+    .registro .custom-input-file{
+        margin: 0px 22px;
+    }
+}
+
