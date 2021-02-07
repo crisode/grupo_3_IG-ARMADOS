@@ -48,6 +48,10 @@ p, span{
     color: #ffffff;
 }
 
+a:hover{
+    color: black;
+}
+
 .registro .imagen{
     background-color: #ff6600;
     margin: 10px 0;
@@ -75,6 +79,7 @@ p, span{
     font-size: 25px;
     text-transform: capitalize;
 }
+
 
 .registro .redes i{
     font-size: 70px;
