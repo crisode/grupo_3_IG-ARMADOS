@@ -12,54 +12,54 @@ body{
     font-weight: 300;
 }
 
-header, footer{
+.carrito header, footer{
     height: 15vh;
     background-color: #ff6600;
 }
 
-header p{
+.carrito header p{
     text-align: center;
     margin-top: 28px;
 }
 
-ul,li {
+.carrito ul,li {
   list-style: none;
   margin: 0;
   padding: 0;
   color: white;
 }
 
-a{
+.carrito a{
     display: inline-block;
     text-decoration: none;
     color: inherit;
 }
 
-img{
+.carrito img{
     width: 100%;
 }
 
-h2, h4{
+.carrito h2, h4{
     color: #ffffff;
 }
 
-p, span{
+.carrito p, span{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
 }
 
-.corazon{
+.carrito .corazon{
     display: none;
 }
 
-a:hover{
+.carrito a:hover{
     color: black;
 }
 
 
 /* ACA EMPIEZA EL TITULO, EL TOTAL Y EL BOTON PARA PAGAR */
 
-h1{
+.carrito h1{
     margin-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
@@ -68,7 +68,7 @@ h1{
     margin-bottom: 15px;
 }
 
-.botonPagar{
+.carrito .botonPagar{
     height: 50px;
     width: 100%; 
     background-color: #ff6600;;
@@ -81,39 +81,39 @@ h1{
     text-transform: capitalize;
 }
 
-.botonPagar:hover{
+.carrito .botonPagar:hover{
     color: white;
 }
 
-.total p{
+.carrito .total p{
     font-size: 20px;
     text-transform: bold;
 }
 
-hr{
+.carrito hr{
     color: white;
     margin-bottom: 35px;
 }
 
 /* ACA EMPIEZA LA SECCION DEL PRODUCTO, DESCRIPCION Y PRECIO */
 
-.imgIconos{
+.carrito .imgIconos{
     display: flex;
     position: relative;
 }
 
-.imgIconos i.cruz{
+.carrito .imgIconos i.cruz{
     color: white;
     font-size: 40px;
     position: absolute;
     right: 25px;
     top: 10px;
 }
-.imgIconos i.cruz:hover{
+.carrito .imgIconos i.cruz:hover{
     color: #ff6600;
 }
 
-.imgIconos i.corazon{
+.carrito .imgIconos i.corazon{
     color: white;
     font-size: 30px;
     position: absolute;
@@ -121,17 +121,17 @@ hr{
     top: 55px;
 }
 
-.botonCantidad{
+.carrito .botonCantidad{
     width: 100%;
     background-color:  #ff6600;
     border-color:  #ff6600;
 }
 
-.linea2{
+.carrito .linea2{
     margin-top: 35Px;
 }
 
-.precio{
+.carrito .precio{
     text-align: center;
     padding-top: 2px;
     font-weight: bold;
@@ -139,47 +139,47 @@ hr{
 
 /* <!-- ACA EMPIEZA EL RESUMEN DE LA COMPRA --> */
 
-section.resumen h2{
+.carrito section.resumen h2{
     text-align: center;
 }
 
-section.resumen ul{
+.carrito section.resumen ul{
     margin-top: 15px;
 }
 
-section.resumen li{
+.carrito section.resumen li{
     margin: 10px 0;
 }
 
-section.resumen .prec ul li{
+.carrito section.resumen .prec ul li{
     text-align: right;
 }
 
-section.resumen .total{
+.carrito section.resumen .total{
     font-size: 20px;
     font-weight: bold;
 }
 
-section.resumen .botonPagar{
+.carrito section.resumen .botonPagar{
     margin: 20px 0;
 }
 
-hr.linea3{
+.carrito hr.linea3{
     margin-bottom: 10px;
 }
 
 /* <!-- ACA EMPIEZA LA SECCION DE PREGUNTAS --> */
 
-.ayuda{
+.carrito .ayuda{
     margin-bottom: 20px;
 }
 
-.ayudas{
+.carrito .ayudas{
     text-transform: uppercase;
     color: white;
     margin-bottom: 20px;
 }
-.preguntas{
+.carrito .preguntas{
     margin: 10px 0;
 }
 
@@ -189,14 +189,14 @@ hr.linea3{
 
 /*    --DESKTOP--- */
 @media(min-width: 992px){
-    .descProduct{
+    .carrito .descProduct{
         width: 80%;
         font-size: 20px;
     }
-    .imgIconos i.cruz{
+    .carrito .imgIconos i.cruz{
         top: -5px;   
     }
-    .imgIconos i.corazon{
+    .carrito .imgIconos i.corazon{
         top: 50px;
     }
 }
