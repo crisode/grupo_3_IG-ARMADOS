@@ -9,46 +9,42 @@ body{
     
 }
 
-header{
-    background-color: red;
-    height: 50px;
-}
 
-h1{
+.carga-producto h1{
     font-family: 'Roboto Slab', serif;
     color: #ffffff;
 }
 
-h2{
+.carga-producto h2{
     color: #ffffff;
     font-size: 25px;   
     text-transform: capitalize;
 
 }
 
-p{
+.carga-producto p{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     font-size: 16px;
 }
 
-ul{
+.carga-producto ul{
     margin: 0;
     padding: 0;
 }
 
-textarea{
+.carga-producto textarea{
     width: 100%;
 }
 
-input{
+.carga-producto input{
     background-color: #272727;
     color: white;
     border-style: none;
     border-bottom: 1px solid #ff6600;
 }
 
-select{
+.carga-producto select{
     background-color: #272727;
     color: white;
     border: 1px solid #ff6600;
@@ -56,42 +52,42 @@ select{
 }
  
 
-.content-form{
+.carga-producto .content-form{
     min-height: 100vh;
     margin: 0;
 }
 
-.product-detail--title{
+.carga-producto .product-detail--title{
     margin-top: 18px;
     border-bottom: 1px solid gray;
 }
 
-.product-detail{
+.carga-producto .product-detail{
     margin-top: 18px;
 }
 
-.product-description--title{
+.carga-producto .product-description--title{
     margin-top: 18px;
     margin-bottom: 10px;
 }
 
-.product-feature--title{
+.carga-producto .product-feature--title{
     margin-bottom: 10px;
 }
 
-.product-info input{
+.carga-producto .product-info input{
     width: 100%;
     height: 40px;
 
 }
 
-.product-info select{
+.carga-producto .product-info select{
     width: 100%;
     height: 40px;
     
 }
 
-.product-info h2{
+.carga-producto .product-info h2{
     font-size: 22px;
     margin-bottom: 8px;
     ;
@@ -99,18 +95,18 @@ select{
 
 
 
-.product-info select{
+.carga-producto .product-info select{
     font-size: 16px;
     
 }
 
 
-.product-detail input{
+.carga-producto .product-detail input{
     width: 100%;
     height: 40px;
 }
 
-.product-img input[type='file']{
+.carga-producto .product-img input[type='file']{
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -119,7 +115,7 @@ select{
     z-index: -1;
 }
 
-.product-img label[for="img"] {
+.carga-producto .product-img label[for="img"] {
     margin-top: 10px;
     height: 50px;
     width: 100%; 
@@ -134,21 +130,21 @@ select{
     text-align: center;
     }
 
-.product-detail select{
+    .carga-producto .product-detail select{
     width: 100%;
     height: 40px;
 }
 
-.product-detail h2{
+.carga-producto .product-detail h2{
     font-size: 22px;
     margin-bottom: 8px;
 }
 
-.product-detail select{
+.carga-producto .product-detail select{
     font-size: 16px;
 }
 
-.product-botom button{
+.carga-producto .product-botom button{
     margin-top: 20px;
     height: 50px;
     width: 27%; 
@@ -169,7 +165,7 @@ select{
 /* TABLET */
 
 @media(min-width: 768px){
-    .product-botom button{
+    .carga-producto .product-botom button{
         margin-top: 20px;
         height: 50px;
         width: 20%; 
@@ -191,45 +187,45 @@ select{
 
 @media(min-width: 992px){
 
-    .product-info{
+    .carga-producto .product-info{
         display: flex;
         flex-wrap: wrap;
     
     }
 
-    .box{
+    .carga-producto .box{
         width: 46%;
     }
 
-    .box2{
+    .carga-producto .box2{
         margin-left: 50px;
         width: 46%;
         
     }
 
-    .product-detail{
+    .carga-producto .product-detail{
         display: flex;
         flex-wrap: wrap;
     }
 
-    .box3{
+    .carga-producto .box3{
         width: 46%;
     }
 
-    .box4{
+    .carga-producto .box4{
         margin-left: 50px;
         width: 46%;
     }
 
-    .product-description--title{
+    .carga-producto .product-description--title{
         margin-top: 40px;
     }
 
-    .product-feature--title{
+    .carga-producto .product-feature--title{
         margin-top: 40px;
     }
 
-    .product-botom button{
+    .carga-producto .product-botom button{
     margin-top: 20px;
     height: 50px;
     width: 15%; 
@@ -246,7 +242,7 @@ select{
 
     }
 
-    .product-botom button:hover{
+    .carga-producto .product-botom button:hover{
         color: black;
     }
 
