@@ -91,12 +91,15 @@
      }
      header .list {
        list-style: none;
-       
+       text-transform: capitalize;
+       font-weight: bold;
+
      } 
      header .item {
        margin: 2rem 0;
        border-bottom: 1px solid var(--white);
      }
+  
 
      header .link {
        color: white;
@@ -138,19 +141,23 @@
        display: none;
      }
      header .input-search input{
-       width: 70%;
-       border-radius: 2rem;
+       padding: 4px;
+       width: 80%;
+       border-radius: 5px 0 0 5px;;
+       
       
      }
      header .input-search button{
        background-color: var(--orange);
-       border-radius: 2rem;
+       border-radius: 0 5px 5px 0;
        padding:  0 5px ;
+       
      }
      header form{
        display: flex;
        flex-wrap: wrap;
        justify-content: center;
+       padding-bottom: 10px;
      }
 
     
