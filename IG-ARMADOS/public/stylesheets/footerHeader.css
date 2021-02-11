@@ -16,6 +16,7 @@
      list-style: none;
      font-family: 'Roboto', sans-serif;
     }
+    
     header a, i{
       text-decoration: none;
       color: var(--white);
@@ -197,6 +198,7 @@
      footer .logos{
      border-bottom: 1px solid var(--blanco);
      }
+     
   
 
     
