@@ -22,14 +22,7 @@ body{
     background-image: url('../images/Fondo.png');
     min-height: 100vh;
 
-}
 
-/* HEADER */
-.home header p{
-    background-color: var(--orange);
-    height: 15vh;
-    text-align: center;
-    margin-top: 28px;
 }
 
 /* BANNER SLIDER */
@@ -38,10 +31,12 @@ body{
     width: 100%;
     margin-top: 20px;
     border-radius: 10px;
-    margin-left: 15px;
+    
 }
-.home .banner-slide a{
-   margin-left: 110px;
+
+.home .carousel-inner, .carousel-item > img{
+    border-radius: 10px;
+
 }
 
 /* BANNER */
@@ -51,7 +46,6 @@ body{
     width: 100%;
     margin-top: 20px;
     border-radius: 10px;
-    margin-left: 15px;
     
 }
 
@@ -82,7 +76,6 @@ body{
     height: 450px;
     margin-bottom: 40px;
     border: 1px solid var(--orange);
-    margin-left: 20px;
 }
 
 .home .productos-box img{
@@ -139,16 +132,6 @@ body{
     
 }
 
-/* FOOTER */
-/*
-footer p{
-    background-color: var(--orange);
-    height: 15vh;
-    text-align: center;
-    margin-top: 28px;
-
-}
-*/
 /* MEDIA QUERIES */ 
 
 /* TABLET */
@@ -160,10 +143,11 @@ footer p{
     .home .banner-slide{
         width: 90%;
         margin-left: 50px;
-    }
 
-    .home .banner-slide a{
-        margin-left: 200px;
+    }
+    .home .carousel-inner, .carousel-item > img{
+        border-radius: 10px;
+    
     }
      
     /* BANNER */
@@ -183,6 +167,8 @@ footer p{
 
     .home .productos-box{
         width: 45%;
+        margin: 15px;
+        height: 400px;
     }
 
     .home .productos-box img{
@@ -199,35 +185,39 @@ footer p{
 
     /* BANNER SLIDER */
     .home .banner-slide{
-        width: 80%;
-        margin-left: 130px;
-    }
-    .home .banner-slide a{
-        margin-left: 15px;
+        width: 97%;
+        margin: 15px;
+    
     }
 
     .home .carousel-inner, .carousel-item > img{
-        height: 200px;
+        height: 160px;
         border-radius: 10px;
-        object-fit: none;
     }
     
     /* BANNER */
     .home section.banner img{
-        width: 80%;
-        margin-left: 130px;
+        width: 97%;
+        margin: 15px;
 
     }
 
     /* PRODUCTOS */
 
     .home .productos-box{
-        width: 300px;
-        height: 400px;
+        width: 23%;
+        height: 315px;
+        margin: 9px;
+        margin-bottom: 20px;
+    
     }
 
     .home .line{
-        width: 1140px;
+        width: 810px;
+    }
+
+    .home .productos-box button{
+        margin-left: 10px;
     }
 
 }
