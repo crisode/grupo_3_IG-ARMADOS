@@ -92,12 +92,15 @@
      }
      header .list {
        list-style: none;
-       
+       text-transform: capitalize;
+       font-weight: bold;
+
      } 
      header .item {
        margin: 2rem 0;
        border-bottom: 1px solid var(--white);
      }
+  
 
      header .link {
        color: white;
@@ -121,6 +124,7 @@
      }
      header .name-inc{
        padding-top: 3rem;
+       color:var(--white)
      }
      header .login-header ul{
        display: flex;
@@ -139,19 +143,23 @@
        display: none;
      }
      header .input-search input{
-       width: 70%;
-       border-radius: 2rem;
+       padding: 2px;
+       width: 80%;
+       border-radius: 5px 0 0 5px;;
+       
       
      }
      header .input-search button{
        background-color: var(--orange);
-       border-radius: 2rem;
+       border-radius: 0 5px 5px 0;
        padding:  0 5px ;
+       
      }
      header form{
        display: flex;
        flex-wrap: wrap;
        justify-content: center;
+       padding-bottom: 10px;
      }
 
     
@@ -243,6 +251,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        justify-content: center;
       }
       header .contact li{
         padding: 5px;
@@ -268,7 +277,6 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
         padding: 0;
       }
       header .login-header a{
@@ -369,6 +377,9 @@
         color: white;
         border: 1px solid white;
         margin-bottom: 5px;
+      }
+      footer i{
+        color:var(--white)
       }
      
     /* -----------------------------------------------------------------------------LOGIN------------------------------------------------------------------------------- */
