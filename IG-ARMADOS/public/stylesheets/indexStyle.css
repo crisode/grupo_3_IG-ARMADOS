@@ -14,8 +14,10 @@
     text-decoration: none;
     list-style: none;
     font-family: font-family, roboto, serif;
-    color: var(--white);
+}
 
+p{
+    color: #ffffff;
 }
 
 body{
