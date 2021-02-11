@@ -138,6 +138,7 @@ body{
 
 .detalle-producto .product-detail__data--caja1__icon{
     width: 4em;
+    margin: 0;
 }
 
 .detalle-producto .similar-products__title{
@@ -271,6 +272,14 @@ body{
 
 /* --TABLET--*/
 @media(min-width: 768px){
+
+    .detalle-producto .product-detail__images-box--thumbnail_img{
+        margin: 0;
+        padding: 0;
+        margin-right: 1%;
+    }
+
+
     .detalle-producto .similar-products{
         display: flex;
     }
@@ -313,11 +322,17 @@ body{
 
     .detalle-producto .similar-products__product-box{
         width: 300px;
+        height: 444px;
+    }
+
+    .detalle-producto .similar-products__product-box img{
+        height: 271px;
     }
 
     .detalle-producto .product-detail__images-box--thumbnail{
         flex-direction: column;
         width: 10%;
+        margin-right: 1.5vh;
         
     }
 
