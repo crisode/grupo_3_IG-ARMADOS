@@ -1,57 +1,70 @@
 <header class="container-fluid">
-    <!-- container-fluid para que ocupe todo el ancho de la pantalla -->
-    <!-- LOGO -->
-    <div class="row">
-      <!-- el class row para poder usar columnas  -->
-      <div class="logo col-5 col-lg-2">
-        <a href="/"><img src="/images/logo.png" alt=""></a>
-      </div>
-      <div class="nombre-empresa col-7">
-        <h1>IG-ARMADOS</h1>
-      </div>
-      <!-- menu de navegacion por categorias  -->
-      <nav class="navbar navbar-expand-lg navbar-light col-lg-10">
-        <!-- a partir de md( tablet desaparece el boton acordeon) -->
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <!-- icono del desplazable -->
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navegacion">
-              <i class="fas fa-headphones icono1""></i><li><a href="">auriculares</a></li>
-              <i class="fas fa-laptop icono2"></i><li><a href="">portatiles</a></li>
-              <i class="fas fa-keyboard icono3"></i><li><a href="">teclados</a></li>
-              <i class="fas fa-memory icono4"></i><li><a href="">memorias</a></li>
-              <i class="fas fa-hdd icono5"></i><li><a href="">discos</a></li>
-              <i class="fas fa-mouse icono6"></i><li><a href="">mouses</a></li>
-              <i class="fas fa-microchip icono7"></i><li><a href="">procesadores</a></li>
-            </ul>
-          </div>
-        </div>
+  <div class="row">
+    <div class="menu-mobile col-2">
+
+    <a href="#barra" class="hamburguer ">
+      <i class="fas fa-bars"></i>
+    </a>
+    <div class="nav-bg" id="barra">
+      <nav class="nav-bar ">
+        <ul class="list">
+          <li class="item"><a href="#" class="link">teclados</a></li>
+          <li class="item"><a href="#" class="link">discos rigidos</a></li>
+          <li class="item"><a href="#" class="link">monitores</a></li>
+          <li class="item"><a href="#" class="link">microprocesadores</a></li>
+          <li class="item"><a href="#" class="link">maquinas armadas</a></li>
+          <li class="item"><a href="#" class="link">discos ssd</a></li>
+          <li class="item"><a href="#" class="link">perifericos</a></li>
+        </ul>
       </nav>
-      <!-- menu de contacto -->
-      <div class="contacto col-lg-3">
-        <ul>
-          <li><a href=""><i class="fas fa-at"></i> ejemplo@empresa.com</a></li>
-          <li><a href=""><i class="fas fa-phone-alt"></i> 15543 44556</a></li>
-        </ul>
-      </div>
-      <!-- barra de busqueda -->
-      <div class="input-search col-lg-7">
-        <form action="">
-          <input type="text" placeholder="¿Que es lo que buscabas?">
-          <!--  creo la barra de busqueda, y le asigno el texto interior -->
-          <button><i class="fas fa-search"></i></button><!-- le agrego un boton con el icono de lupa -->
-        </form>
-      </div>
-  
-      <!-- zona de regristro y carrito -->
-      <div class="login-header col-lg-2">
-        <ul>
-          <i class="fas fa-sign-in-alt"></i><li><a href="/login">Login</a></li>
-          <i class="fas fa-cart-arrow-down"></i><li><a href="">Carrito<a></li>
-        </ul>
-      </div>
-    </div> <!-- cierrro el row -->
-  </header>
+      <a href="#header" class="cross">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+    </nav>
+  </div>
+    <div class="logo col-3 col-lg-1">
+      <a href="/"><img src="/images/logo.png" alt=""></a>
+    </div>
+    <nav class="nav-bar2 col-lg-11">
+      <ul class="list2">
+        <li class="item"><i class="fas fa-keyboard"></i><a href="#" class="link">teclados</a></li>
+        <li class="item"><a href="#" class="link">discos rigidos</a></li>
+        <li class="item"><a href="#" class="link">monitores</a></li>
+        <li class="item"><a href="#" class="link">microprocesadores</a></li>
+        <li class="item"><a href="#" class="link">maquinas armadas</a></li>
+        <li class="item"><a href="#" class="link">discos ssd</a></li>
+        <li class="item"><a href="#" class="link">perifericos</a></li>
+      </ul>
+    </nav>
+    <div class="name-inc col-4">
+      <h1>IG-ARMADOS</h1>
+    </div>
+    <div class="login-header col-3 ">
+      <ul>
+        <li><i class="fas fa-sign-in-alt"></i><a href="/login">login</a></li>
+        <li><i class="fas fa-cart-arrow-down"></i><a href="">carrito<a></li>
+      </ul>
+    </div>
+    <!-- menu de navegacion por categorias  -->
+
+    <!-- menu de contacto -->
+    <div class="contact col-lg-2">
+      <ul>
+        <li><a href=""><i class="fas fa-at"></i> ejemplo@empresa.com</a></li>
+        <li><a href=""><i class="fas fa-phone-alt"></i> 15543 44556</a></li>
+      </ul>
+    </div>
+    <!-- barra de busqueda -->
+    <div class="input-search col-lg-7 ">
+      <form action="">
+        <input type="text" placeholder="¿Que es lo que buscabas?">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+
+    <!-- zona de regristro y carrito -->
+
+  </div> <!-- cierrro el row -->
+
+</header>

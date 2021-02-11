@@ -12,15 +12,6 @@ body{
     font-weight: 300;
 }
 
-.carrito header, footer{
-    height: 15vh;
-    background-color: #ff6600;
-}
-
-.carrito header p{
-    text-align: center;
-    margin-top: 28px;
-}
 
 .carrito ul,li {
   list-style: none;

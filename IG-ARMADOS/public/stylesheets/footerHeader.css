@@ -1,11 +1,11 @@
 /* variables */
 :root{
-    --naranja:#ff6600;
-    --blanco:#ffffff;
-    --negro:#1f1f1f;
-    --rojo:#e30909;
+    --orange:#ff6600;
+    --white:#ffffff;
+    --black:#1f1f1f;
+    --red:#e30909;
     }
-    
+  
     /* Generales */
     
     *{
@@ -15,74 +15,145 @@
      text-decoration: none;
      list-style: none;
      font-family: 'Roboto', sans-serif;
-    /*   
-     */}
-     body{
-     background-image:url("../images/fondo.jpeg")
+    }
+    header a, i{
+      text-decoration: none;
+      color: var(--white);
+    }
+    header a:hover{
+      color: var(--orange);
+    }
+    header{
+      background-image: url("../images/burbujas-en-diferentes-figuras-geometricas_7680x4320_xtrafondos.com.jpg");
+      width: 100%;
+    }
+     
+     *,
+     *::before,
+     *::after {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
      }
-    /* HEADER */
-    
-     header{ /* apunto al header */
-     background-image: url("../images/burbujas-en-diferentes-figuras-geometricas_7680x4320_xtrafondos.com.jpg");
-     background-size: 100%;
+  
+     header .fa-bars {
+       color: white;
+         font-size: 2rem;
+         position: relative;
+         z-index: 0;
+         background-color: var(--orange);
+         padding: 5px;
+         border-radius: 5px;
      }
-     header .logo img{/* apunto a header y la class logo que contiene un img */
-     width: 70px;  /* le doy un tamaño  */
-     margin:30px 0 0 90px; /* le doy margen al logo */
+     
+     header .hamburguer {
+        display: inline-block;
+       padding: 2rem;
+         cursor: pointer;
+         position: relative;
+         z-index: 0; 
+     }
+     
+     header .nav-bg{
+         display: block;
+         visibility: hidden;
+         opacity: 0;
+         width: 100vw;
+         height: 100vh;
+         background-color:var(--orange);
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: 10;
+         transform: translateX(100vw);
+         transition: all .5s;
+     }
+     
+     header .nav-bar {
+       margin-top: 40px;
+       width: 70vw;
+       height: 100vh;
+       color: black;
+       padding: 2rem;
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: 12;
+     }
+     header .nav-bar2{
+       display: none;
+     }
+     
+     header .nav-bg:target{
+         visibility: visible;
+         opacity: 1;
+         transform: translateX(0vw);
+     }
+     header .list {
+       list-style: none;
+       
      } 
-     header .nombre-empresa h1{/* ubico el h1 que esta en el header */
-     margin: 55px 0 0 -10px;
-     color: var(--blanco);
+     header .item {
+       margin: 2rem 0;
+       border-bottom: 1px solid var(--white);
      }
-     header .navbar{/* subo el boton que despliega el menu de navegacion */
-     margin-top: -80px;
+
+     header .link {
+       color: white;
+       text-decoration: none;
+       font-size: 2rem;
      }
-     header i{
-     color: var(--blanco);
+     
+     header .cross{
+         padding: 1rem;
+         font-size: 2rem;
+         cursor: pointer;
+         color: whitesmoke;
+         position: relative;
+         top: 2rem;
+         left: 25rem;
+         z-index: 12;
      }
-     header .navbar li i{/* subo el boton que despliega el menu de navegacion */
-     margin-top: 30px;
-     width: 500px;  
+     header img{
+       width: 70px;
+       padding: 1rem;
      }
-     header a{/* subo el boton que despliega el menu de navegacion */
-     color: var(--blanco);
-     text-decoration: none;
-     margin-left: 3;
-     }
-     header .navbar-toggler{/* le asigno el color al boton desplegable */
-     background-color: var(--naranja);
-     }
-     header .contacto{
-     display: none;
+     header .name-inc{
+       padding-top: 3rem;
      }
      header .login-header ul{
-     display:flex;
-     flex-wrap: wrap;
-     justify-content: flex-end;
-     align-items: flex-start;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row-reverse;
+       padding: 2rem;
+       justify-content: space-between;
      }
      header .login-header i{
-     margin-top: 4px;
-     margin-right: 3px;
+       font-size: 2rem;
      }
-     header .input-search{
-     padding: 10px; 
+     header .login-header a{
+       display: none;
+     }
+     header .contact {
+       display: none;
      }
      header .input-search input{
-     border-radius: 30px;
-     width: 90%;
-     padding-left: 10px;
+       width: 70%;
+       border-radius: 2rem;
+      
      }
      header .input-search button{
-     border: none;
-     background-color: var(--naranja);
-     padding: 2px 10px ;
-     border-radius:10px 0 ;
-     margin-left:-40px ;
+       background-color: var(--orange);
+       border-radius: 2rem;
+       padding:  0 5px ;
      }
-     a:hover{
-     color: var(--naranja);
+     header form{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
      }
+
+    
   
   
   
@@ -130,69 +201,83 @@
 
     
     /*------------------- Escritorio -------------------------------------*/
-     @media(min-width:1024px) {
-      header {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        background-color:var(--negro);
-      }
-      header .logo img{/* apunto a header y la class logo que contiene un img */
-        width: 90px;  /* le doy un tamaño  */
-        margin:10px 150px 0 90px; 
-      } 
-       header .nombre-empresa{
+     @media(min-width:992px) {
+      header .menu-mobile {
         display: none;
-      }  
-      header  .navegacion{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
       }
-      header .navegacion a{
-        margin-left: 30px;
-      }
-      header .contacto{
+      header .nav-bar2{
         display: block;
       }
-      header .input-search input{
-        border-radius: 5px;
-        width: 90%;
-        padding-left: 10px;
+      
+      header img{
+        order: -1;
       }
-      header .input-search button{
-        border: solid var(--naranja) 1px;
-        background-color: var(--naranja);
-        padding: 2px 8px;
-        border-radius: 5px;
-        margin-left: -7px;
-      }
-      header .contacto{
-        margin-left: -10px;
-      }
-      header .login-header{
+      header ul {
         display: flex;
         flex-wrap: wrap;
+        flex-direction:row;
+        justify-content:space-around;
+      }
+      header ul li{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column ;
+        justify-content: space-around;
+      }
+      header .link {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      header .name-inc{
+        display: none;
+      }
+      header .contact {
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      header .contact ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      header .contact li{
+        padding: 5px;
+      }
+      header .login-header{
+        order: 1;
+      }
+      header .input-search {
+        padding: 5px;
+      }
+      header .input-search input{
+        border-radius: 5px 0 0 5px;
+        padding: 4px;
+        width: 85%;
+        
+      }
+      header .input-search button{
+        background-color: var(--orange);
+        border-radius: 0 5px 5px 0;
+        padding: 5px ;
       }
       header .login-header ul{
-       display:flex;
-       flex-wrap: wrap;
-       flex-direction: row;
-       padding: 0;
-       margin-top: 20px
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
       }
-      header .login-header i{
-        margin-top: 4px;
-        margin-right: 5px;
+      header .login-header a{
+        display: block;
+        
       }
-      header .navegacion i{
-        display: none 
-      }
-      header .navegacion li{
-        margin-top: 100px;
-      }
-     
-     
+      
+
+
+
+      
       /* ------------FOOTER------------------ */
     
       footer .barra-mobile{
