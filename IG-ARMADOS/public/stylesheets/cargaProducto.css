@@ -147,7 +147,7 @@ body{
 .carga-producto .product-botom button{
     margin-top: 20px;
     height: 50px;
-    width: 27%; 
+    width: 100%; 
     background-color: #ff6600;;
     color: #ffffff;
     border-radius: 5px;
@@ -157,7 +157,6 @@ body{
     font-size: 25px;
     text-transform: capitalize;
     text-align: center;
-    margin-left: 395px;
 }
 
 /* MEDIA QUERIES */
@@ -165,6 +164,11 @@ body{
 /* TABLET */
 
 @media(min-width: 768px){
+    .carga-producto .product-botom{
+        display: flex;
+        justify-content: center;
+    }
+
     .carga-producto .product-botom button{
         margin-top: 20px;
         height: 50px;
@@ -178,8 +182,7 @@ body{
         font-size: 25px;
         text-transform: capitalize;
         text-align: center;
-        margin-left: 552px;
-        
+        width: 80%;
     }
 }
 
@@ -225,6 +228,11 @@ body{
         margin-top: 40px;
     }
 
+    .carga-producto .product-botom{
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .carga-producto .product-botom button{
     margin-top: 20px;
     height: 50px;
@@ -238,7 +246,6 @@ body{
     font-size: 25px;
     text-transform: capitalize;
     text-align: center;
-    margin-left: 1092px;
 
     }
 
