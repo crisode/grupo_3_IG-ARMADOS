@@ -204,6 +204,66 @@
     
     /*------------------- Escritorio -------------------------------------*/
      @media(min-width:992px) {
+
+
+
+      header .menu a span:first-child {
+        display: inline-block;
+        padding: 10px;
+      }
+      header .menu a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+      }
+       
+      header .menu a span:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+      }
+      header .menu a span {
+        transition: transform 0.2s ease-out;
+      }
+       
+      header .menu a:hover span:first-child {
+        transform: translateY(100%);
+      }
+       
+      header .menu a:hover span:last-child {
+        transform: none;
+      }
+      header .menu[data-animation="to-top"] a span:last-child {
+        transform: translateY(100%);
+      }
+       
+      header .menu[data-animation="to-top"] a:hover span:first-child {
+        transform: translateY(-100%);
+      }
+       
+      header .menu[data-animation="to-right"] a span:last-child {
+        transform: translateX(-100%);
+      }
+       
+      header .menu[data-animation="to-right"] a:hover span:first-child {
+        transform: translateX(100%);
+      }
+       
+      header .menu[data-animation="to-left"] a span:last-child {
+        transform: translateX(100%);
+      }
+       
+      header .menu[data-animation="to-left"] a:hover span:first-child {
+        transform: translateX(-100%);
+      }
+    
+      }
       header .menu-mobile {
         display: none;
       }
@@ -222,8 +282,12 @@
         flex-direction:row;
         justify-content:space-around;
       }
-      header .list2 i{
+      header .nav-bar2 i{
         font-size: 25px;
+      }
+      header .nav-bar2{
+        margin-top: 20px;
+        padding: 10px;
       }
      
       header ul li{
@@ -232,8 +296,8 @@
         flex-direction: column ;
         justify-content: space-around;
       }
-      header .link {
-        font-size: 12px;
+      header .nav-bar2 span{
+        font-size: 15px;
         text-transform: uppercase;
       }
       header .name-inc{
