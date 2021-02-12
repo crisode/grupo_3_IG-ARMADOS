@@ -161,14 +161,6 @@
        justify-content: center;
        padding-bottom: 10px;
      }
-
-    
-  
-  
-  
-  
-  
-  
       /* ------------footer-------------------- */
     
      footer .marcas,.suscription,.map,.sucursales{
@@ -182,29 +174,29 @@
      flex-wrap: wrap;
      flex-direction: column;
      text-align: center;
-     background-color: var(--negro);
+     background-color: var(--black);
      padding: 0;
-     border-bottom: 1px var(--blanco) solid;
+     border-bottom: 1px var(--white) solid;
      }
      footer li{
      border-bottom: 1px solid white;  
      }
      footer li a, .logos{
      text-decoration: none;
-     color: var(--blanco);
-     background-color: var(--negro); 
+     color: var(--white);
+     background-color: var(--black); 
      text-align: center; 
      }
      footer i{
-     color: var(--blanco);
+     color: var(--white);
      font-size:  20px; 
      padding: 50px 15px ;
      }
      footer i:hover{
-     color: var(--naranja);
+     color: var(--orange);
      } 
      footer .logos{
-     border-bottom: 1px solid var(--blanco);
+     border-bottom: 1px solid var(--white);
      }
      
   
@@ -221,6 +213,8 @@
       
       header img{
         order: -1;
+        display: flex;
+        justify-content: center;
       }
       header ul {
         display: flex;
@@ -228,6 +222,10 @@
         flex-direction:row;
         justify-content:space-around;
       }
+      header .list2 i{
+        font-size: 25px;
+      }
+     
       header ul li{
         display: flex;
         flex-wrap: wrap;
@@ -251,14 +249,13 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
       }
       header .contact li{
         padding: 5px;
       }
-      header .login-header{
-        order: 1;
-      }
+     
       header .input-search {
         padding: 5px;
       }
@@ -273,21 +270,26 @@
         border-radius: 0 5px 5px 0;
         padding: 5px ;
       }
-      header .login-header ul{
+      header .login-header{
+        order: 1;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-around;
+      }
+      header .login-header ul{
         padding: 0;
+        n;
+      }
+      header .login-header li{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
       }
       header .login-header a{
         display: block;
-        
+        padding: 5px;
       }
-      
-
-
-
-      
       /* ------------FOOTER------------------ */
     
       footer .barra-mobile{
@@ -301,30 +303,29 @@
         background-color: rgba(255, 255, 255, 0.2); 
       }
       footer .suscription{
-        border: 3px solid var(--negro);
         border-radius: 5px;
         padding: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between; 
         align-items: center;
-        background-color: var(--negro);
+        background-color: var(--black);
       }
       footer .suscription p{
-        border-right: 1px solid var(--blanco);
+        border-right: 1px solid var(--white);
         margin-top: 16px;
         padding: 10px;
-        color: var(--blanco);
+        color: var(--white);
       }
       footer input{
+        width: 70%;
         border-radius: 5px;
-        width: 380px;
-        margin-left: 40px;
+        margin-left: 100px;
       }
       footer .suscription button{
-        background-color: var(--naranja);
+        background-color: var(--orange);
         border-radius: 5px;
-        color: var(--blanco);
+        color: var(--white);
       }
       footer .marcas{
         display: flex;
@@ -359,16 +360,22 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        color: var(--blanco);
-        border-bottom: 1px solid var(--blanco);
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
       }
       footer .sucursales i{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        color:var(--blanco);
+        color:var(--white);
         padding: 20px;
+        font-size: 40px;
       }
+      footer i:hover{
+        color: blue;
+      }
+     
+      
       footer .sucursales a{
         display: flex;
         flex-wrap: wrap;
@@ -378,10 +385,7 @@
         border: 1px solid white;
         margin-bottom: 5px;
       }
-      footer i{
-        color:var(--white)
-      }
-     
+      
     /* -----------------------------------------------------------------------------LOGIN------------------------------------------------------------------------------- */
     
      }
