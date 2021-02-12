@@ -207,17 +207,17 @@
 
 
 
-      header .menu a span:first-child {
+      .menu a span:first-child {
         display: inline-block;
         padding: 10px;
       }
-      header .menu a {
+      .menu a {
         display: block;
         position: relative;
         overflow: hidden;
       }
        
-      header .menu a span:last-child {
+      .menu a span:last-child {
         position: absolute;
         top: 0;
         right: 0;
@@ -228,41 +228,39 @@
         justify-content: center;
         transform: translateY(-100%);
       }
-      header .menu a span {
+      .menu a span {
         transition: transform 0.2s ease-out;
       }
        
-      header .menu a:hover span:first-child {
+      .menu a:hover span:first-child {
         transform: translateY(100%);
       }
        
-      header .menu a:hover span:last-child {
+      .menu a:hover span:last-child {
         transform: none;
       }
-      header .menu[data-animation="to-top"] a span:last-child {
+      .menu[data-animation="to-top"] a span:last-child {
         transform: translateY(100%);
       }
        
-      header .menu[data-animation="to-top"] a:hover span:first-child {
+      .menu[data-animation="to-top"] a:hover span:first-child {
         transform: translateY(-100%);
       }
        
-      header .menu[data-animation="to-right"] a span:last-child {
+      .menu[data-animation="to-right"] a span:last-child {
         transform: translateX(-100%);
       }
        
-      header .menu[data-animation="to-right"] a:hover span:first-child {
+      .menu[data-animation="to-right"] a:hover span:first-child {
         transform: translateX(100%);
       }
        
-      header .menu[data-animation="to-left"] a span:last-child {
+      .menu[data-animation="to-left"] a span:last-child {
         transform: translateX(100%);
       }
        
-      header .menu[data-animation="to-left"] a:hover span:first-child {
+      .menu[data-animation="to-left"] a:hover span:first-child {
         transform: translateX(-100%);
-      }
-    
       }
       header .menu-mobile {
         display: none;
@@ -286,7 +284,6 @@
         font-size: 25px;
       }
       header .nav-bar2{
-        margin-top: 20px;
         padding: 10px;
       }
      
@@ -297,7 +294,7 @@
         justify-content: space-around;
       }
       header .nav-bar2 span{
-        font-size: 15px;
+        font-size: 12px;
         text-transform: uppercase;
       }
       header .name-inc{
@@ -343,7 +340,7 @@
       }
       header .login-header ul{
         padding: 0;
-        n;
+        
       }
       header .login-header li{
         flex-direction: row;
