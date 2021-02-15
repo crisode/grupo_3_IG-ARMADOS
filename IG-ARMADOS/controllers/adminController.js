@@ -80,7 +80,6 @@ module.exports = {
 
         productos.forEach(producto => {
             if(producto.id === +req.params.id){
-                producto.id = +req.params.id
                 producto.title = title
                 producto.price = price
                 producto.insale = insale
@@ -92,7 +91,7 @@ module.exports = {
                 producto.description = description
                 producto.features = features
                 producto.category = category
-                producto.image = image
+                producto.image = req.files[0].filename
             }
         });
         

@@ -16,7 +16,7 @@ router.get("/detalle/:id", detalleProducto);
 
 //edicion y actualizacion de producto
 router.get("/edit/:id", editarProducto);
-router.put("/upload/:id", actualizarProducto);
+router.put("/upload/:id",upload.any(), actualizarProducto);
 
 //borrar producto
 router.delete("/delete/:id", borrarProducto);
