@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/8708a92b7e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title>IG-ARMADOS</title>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+
+        <%- include('../partials/header') %>
+
+            <!-- HEADER -->
+            <div class="detalle-producto">
+                <div class="container">
+                    <main>
+                        <div class="container mt-5">
+                            <h1>Vista de Detalle</h1>
+                            <div class="card" style="width: 45%">
+                                <img src="/images/<%= producto.image %>" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= producto.title %>
+                                    </h5>
+                                    <span class="card-text"><%= producto.price %> - <%= producto.category %>  </span>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <article class="similar-products__title">
+                        <h2>Productos Similares</h2>
+                    </article>
+                    <div class="similar-products col-12 col-lg-12">
+
+
+                        <div class="similar-products__product-box">
+                            <figure>
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                                    alt="">
+                            </figure>
+
+                            <section>
+                                <p>NOMBRE DEL PRODUCTO</p>
+                                <P>PRECIO DEL PRODUCTO</P>
+                            </section>
+
+                            <article class="similar-products__product-box--button">
+                                <button>Ver Producto</button>
+                            </article>
+
+                        </div>
+                        <div class="similar-products__product-box">
+                            <figure>
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                                    alt="">
+                            </figure>
+
+                            <section>
+                                <p>NOMBRE DEL PRODUCTO</p>
+                                <P>PRECIO DEL PRODUCTO</P>
+                            </section>
+
+                            <article class="similar-products__product-box--button">
+                                <button>Ver Producto</button>
+                            </article>
+
+                        </div>
+                        <div class="similar-products__product-box desktop-hide">
+                            <figure>
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                                    alt="">
+                            </figure>
+
+                            <section>
+                                <p>NOMBRE DEL PRODUCTO</p>
+                                <P>PRECIO DEL PRODUCTO</P>
+                            </section>
+
+                            <article class="similar-products__product-box--button">
+                                <button>Ver Producto</button>
+                            </article>
+
+                        </div>
+                        <div class="similar-products__product-box desktop-hide">
+                            <figure>
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                                    alt="">
+                            </figure>
+
+                            <section>
+                                <p>NOMBRE DEL PRODUCTO</p>
+                                <P>PRECIO DEL PRODUCTO</P>
+                            </section>
+
+                            <article class="similar-products__product-box--button">
+                                <button>Ver Producto</button>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <%- include('../partials/footer') %>
+
+                <!-- FOOTER -->
+
+                <%- include("../partials/scriptBS") %>
+    </body>
+
+</html>

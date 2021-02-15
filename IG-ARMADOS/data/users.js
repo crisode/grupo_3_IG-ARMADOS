@@ -8,6 +8,6 @@ module.exports = {
     },
 
     setUsers: (data) => {
-        fs.readFileSync(usersDB, JSON.stringify(data, null, 2), "utf-8");
+        fs.writeFileSync(usersDB, JSON.stringify(data, null, 2), "utf-8");
     }
 };

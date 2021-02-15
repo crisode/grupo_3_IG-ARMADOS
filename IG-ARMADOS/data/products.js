@@ -8,6 +8,6 @@ module.exports = {
     },
 
     setProducts: (data) => {
-        fs.readFileSync(productsDB, JSON.stringify(data, null, 2), "utf-8");
+        fs.writeFileSync(productsDB, JSON.stringify(data, null, 2), "utf-8");
     }
 };
