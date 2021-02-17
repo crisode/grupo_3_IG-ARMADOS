@@ -5,32 +5,38 @@
 
 <body>
     <%- include("../partials/header")  %> 
-    <main>
-        <div class="container mt-5">
-            <div class="botones col-12">
-                <a href="/admin/create"><button class="btn btn-primary">CREAR PRODUCTO</button></a>
-            </div>
-            <div class="row">
-                <% productos.forEach(producto => { %>
-                    <div class="col-12 col-md-6 col-lg-3 my-3">
-                        <div class="card" style="width: 98%">
-                            <img src="/images/<%= producto.image %>"  class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title"><%= producto.title %> </h5>
-                                <a href="/admin/detalle/<%= producto.id %> " class="btn btn-primary">DETALLE</a>
-                                <a href="/admin/edit/<%= producto.id %>" class="btn btn-primary">EDITAR</a>
-                                <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-sm btn-danger" type="submit">ELIMINAR</button>
-                                </form>
+    <div class="productList">
+        <main>
+            <div class="container mt-5">
+                <div class="botones col-12">
+                    <a href="/admin/create"><button class="btn btn-primary">CREAR PRODUCTO</button></a>
+                </div>
+                <div class="row">
+                    <% productos.forEach(producto => { %>
+                        <div class="col-12 col-md-6 col-lg-3 my-3">
+                            <div class="card card-product" style="width: 98%">
+                                <img src="/images/<%= producto.image %>"  class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <section class="card-body__title">
+                                        <p class="card-text"><%= producto.title %> </p>
+                                    </section>
+                                    
+                                    <a href="/admin/detalle/<%= producto.id %> " class="btn btn-primary card-link">DETALLE</a>
+                                    <a href="/admin/edit/<%= producto.id %>" class="btn btn-primary card-link">EDITAR</a>
+                                    <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST" class="card-body__form">
+                                        <button class="btn btn-sm btn-danger" type="submit">ELIMINAR</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <% }) %>
+                    <% }) %>
+                </div>
+                
             </div>
-            
-        </div>
-    </main>
-
+        </main>
+    
+    </div>
+    
     <%- include("../partials/footer")  %> 
     <%- include("../partials/scriptBS")  %> 
 </body>
