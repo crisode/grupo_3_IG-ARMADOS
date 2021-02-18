@@ -10,7 +10,106 @@
     <%- include('partials/header') %>
 
       <!-- HEADER -->
-
+      <!DOCTYPE html>
+      <html>
+      <!-- HEAD -->
+      <%- include("partials/head") %>
+        <!-- FIN DE HEAD -->
+      
+        <body>
+      
+          <!-- HEADER -->
+          <%- include('partials/header') %>
+            <!-- HEADER -->
+      
+            <div class="home">
+      
+              <!-- BANNER PRINCIPAL-->
+              <%- include('partials/slider') %>
+                <!--FIN BANNER PRINCIPAL-->
+      
+                <!-- IMAGEN DE PROMOCION CON TARJETA -->
+                <section class="banner col-12 col-md-12">
+                  <img src="images/Banner.jpg" alt="">
+                </section>
+                <!-- FIN IMAGEN DE PROMOCION CON TARJETA -->
+                
+                <!-- PRODUCTOS -->
+                <div class="container mt-5">
+                  <div class="row">
+                    <div class="titulo col-12">
+                      <h2>
+                        destacados
+                      </h2>
+                      <div class="line col-12">
+                      </div>
+                    </div>
+                    <!-- CAJA QUE ENGLOBA EL PRODUCTO-->
+                    <% destacados.forEach(producto=> { %>
+                      <div class="col-12 col-md-6 col-lg-3 my-3">
+                        <div class="productos-box">
+                          <img src="images/<%= producto.image %> " alt="">
+                          <section class="titulo-producto">
+                            <p>
+                              <%= producto.title %>
+                            </p>
+                          </section>
+                          <article>
+                            <i class="far fa-eye"></i>
+                            <button><a href="/productos">detalles</a></button>
+                          </article>
+                        </div>
+                      </div>
+                      <% }) %>
+                  </div>
+                </div>
+            
+      
+                <!-- FIN DESTACADOS -->
+                
+                <!-- NOVEDADES-->
+                <div class="container mt-5">
+                  <div class="row">
+                    <div class="titulo col-12">
+                      <h2>
+                       novedades
+                      </h2>
+                      <div class="line2 col-12">
+                      </div>
+                    </div>
+                    <!-- CAJA QUE ENGLOBA EL PRODUCTO-->
+                    <% novedades.forEach(producto=> { %>
+                      <div class="col-12 col-md-6 col-lg-3 my-3">
+                        <div class="productos-box">
+                          <img src="images/<%= producto.image %> " alt="">
+                          <section class="titulo-producto">
+                            <p>
+                              <%= producto.title %>
+                            </p>
+                          </section>
+                          <article>
+                            <i class="far fa-eye"></i>
+                            <button><a href="/productos">detalles</a></button>
+                          </article>
+                        </div>
+                      </div>
+                      <% }) %>
+                  </div>
+                </div>
+            </div>
+            <!--FIN NOVEDADES -->
+      
+            <!-- FOOTER -->
+            <%- include('partials/footer') %>
+              <!--FIN FOOTER -->
+      
+              <!-- SCRIPTS -->
+              <%- include("partials/scriptBS") %>
+                <!-- FIN SCRIPTS -->
+      
+        </body>
+      
+      </html>
       <div class="home">
         <!-- BANNER PRINCIPAL-->
         <div class="banner-slide">

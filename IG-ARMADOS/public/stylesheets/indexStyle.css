@@ -60,31 +60,48 @@ body{
 .home .titulo h2{
     font-size: 24px;
     margin-top: 20px;
+    margin: 0;
+    text-transform: capitalize;
 
+}
+
+.home .titulo-producto p {
+    width: 61vh;
+    padding-right: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    
 }
 
 .home .line{
     border-bottom: 1px solid lightgray;
     margin-bottom: 10px;
-    width: 258px;
     margin-left: 15px;
-    
+    width: 80%;
 }
 
+.home .line2{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    width: 80%;
+
 /* PRODUCTOS DESTACADOS */
+}
 
 .home .productos-box{
-    width: 100%;
-    height: 450px;
-    margin-bottom: 40px;
     border: 1px solid var(--orange);
+    background-color: #272727;
 }
 
 .home .productos-box img{
     width: 100%;
-    margin: 0;
-    padding: 11px;
-    object-fit: fill;
+    height: 300px;
+    object-fit: contain;
+    background-color: white;
+    border: 5px solid #272727;
     
 }
 
@@ -160,26 +177,29 @@ body{
 
     /* PRODUCTOS */
 
-    .home .productos-container{
+    .home .container{
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         width: 100%;
     }
 
     .home .productos-box{
-        width: 45%;
         margin: 15px;
-        height: 400px;
+        height: 415px;
     }
 
-    .home .productos-box img{
-        object-fit: cover;
+    .home .titulo-producto p {
+        width: 46vh;
     }
 
-    .home .line{
-        width: 550px;
+   /*  .home .line{
+        width: 88vh;
     }
+
+    .home .line2{
+        width: 89vh;
+
+    } */
 
     /* DESKTOP */
 
@@ -207,15 +227,27 @@ body{
     /* PRODUCTOS */
 
     .home .productos-box{
-        width: 23%;
-        height: 315px;
+        height: 415px;
         margin: 9px;
         margin-bottom: 20px;
     
     }
 
-    .home .line{
-        width: 810px;
+   /*  .home .line{
+        width: 100vh;
+    }
+
+    .home .line2{
+        width: 100vh;
+    } */
+
+    .home .titulo-producto p{
+        width: 31vh;
+        padding-right: 25%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
     }
 
     .home .productos-box button{
