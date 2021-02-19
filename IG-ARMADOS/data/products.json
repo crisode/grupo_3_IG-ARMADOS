@@ -23,7 +23,7 @@
     "component": "ram",
     "mark": "HyperX",
     "model": "HX426C16FB3/8",
-    "stock": true,
+    "stock": false,
     "description": "Si tu computadora funciona con lentitud, si un programa no responde o no se carga, lo más probable es que se trate de un problema de memoria. Estos son posibles indicios de un rendimiento defectuoso en el día a día de tus tareas. Por ello, contar con una memoria Kingston -sinónimo de tractoria y excelencia- mejorará la productividad de tu equipo: las páginas se cargarán más rápido y la ejecución de nuevas aplicaciones resultará más ágil y simple.",
     "features": "Tecnología: DDR4 SDRAM Formato: UDIMM Velocidad: 2666 MHz Aplicación: Computadoras de escritorio Cantidad de pines: 288 Latencia CAS: 16 Voltaje de alimentación: 1.2V",
     "category": "novedades",

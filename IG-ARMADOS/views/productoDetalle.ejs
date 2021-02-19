@@ -1,226 +1,263 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="es">
-<%- include("partials/head") %>
+<head>
+    <%- include("partials/head") %>
+</head>
+<body>
+    <%- include("partials/header") %>
+     <!-- HEADER -->
+     <div class="detalle-producto">
+        <div class="container">
+            <div class="product-detail row">
+                <article class="product-detail__title col-12">
+                    <h1><%-producto.title%> </h1>
+                </article>
 
-    <body>
-        <!-- HEADER -->
+                <div class="product-detail__images-box col-12 col-lg-8">
+                    <figure class="product-detail__images-box--largeImg">
+                        <ul class="product-detail__images-box--slider">
+                            <li id="slide1">
+                                <img src="/images/<%-producto.image%>" alt="">
+                            </li>
+                            <li id="slide2">
+                                <img src="/images/<%-producto.image%>" alt="">
+                            </li>
+                            <li id="slide3">
+                                <img src="/images/<%-producto.image%>" alt="">
+                            </li>
+                        </ul>
 
-        <%- include('partials/header') %>
-
-            <!-- HEADER -->
-            <div class="detalle-producto">
-                <div class="container">
-                    <div class="product-detail row">
-                        <article class="product-detail__title col-12">
-                            <h1>Mouse Logitech G203</h1>
-                        </article>
-
-                        <div class="product-detail__images-box col-12 col-lg-8">
-                            <figure class="product-detail__images-box--largeImg">
-                                <ul class="product-detail__images-box--slider">
-                                    <li id="slide1">
-                                        <img src="/images/mother4.jpeg" alt="">
-                                    </li>
-                                    <li id="slide2">
-                                        <img src="/images/mother2.jpeg" alt="">
-                                    </li>
-                                    <li id="slide3">
-                                        <img src="/images/mother5.jpeg" alt="">
-                                    </li>
-                                </ul>
-
-                            </figure>
-                            <div class="product-detail__images-box--thumbnail">
-                                <div class="product-detail__images-box--thumbnail_img">
-                                    <a href="#slide1"><img widht="44" height="44" src="/images/mother4.jpeg" alt=""></a>
-                                </div>
-                                <div class="product-detail__images-box--thumbnail_img">
-                                    <a href="#slide2"><img widht="44" height="44" src="/images/mother2.jpeg" alt=""></a>
-                                </div>
-                                <div class="product-detail__images-box--thumbnail_img">
-                                    <a href="#slide3"><img widht="44" height="44" src="/images/mother5.jpeg" alt=""></a>
-                                </div>
-
-                            </div>
+                    </figure>
+                    <div class="product-detail__images-box--thumbnail">
+                        <div class="product-detail__images-box--thumbnail_img">
+                            <a href="#slide1"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
+                        </div>
+                        <div class="product-detail__images-box--thumbnail_img">
+                            <a href="#slide2"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
+                        </div>
+                        <div class="product-detail__images-box--thumbnail_img">
+                            <a href="#slide3"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
                         </div>
 
-
-
-
-                        <section class="product-detail__data col-12 col-lg-4">
-                            <article class="product-detail__price">
-                                <p>$ 3.425</p>
-                            </article>
-                            <div class="product-detail__data--caja1">
-                                <div class="product-detail__data--caja1__icon">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-
-                                <div class="product-detail__data--caja1__text">
-                                    <p>En Stock</p>
-                                </div>
-                            </div>
-                            <div class="product-detail__data--caja1">
-                                <div class="product-detail__data--caja1__icon">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-
-                                <div class="product-detail__data--caja1__text">
-                                    <p>Garantia</p>
-                                </div>
-                            </div>
-                            <div class="product-detail__data--caja1">
-                                <div class="product-detail__data--caja1__icon">
-                                    <i class="fas fa-truck"></i>
-                                </div>
-
-                                <div class="product-detail__data--caja1__text">
-                                    <p>Envios a todo el pais</p>
-                                </div>
-                            </div>
-
-                            <article class="product-detail__shop col-lg-12">
-                                <button>Comprar</button>
-                                <button>Agregar al carrito</button>
-                            </article>
-
-
-                        </section>
-
-
-
-                        <section class="product-detail__description col-12">
-                            <h2>Descripcion de Producto</h2>
-                            <p>
-                                LIGHTSYNC Series Logitech G mouse for advanced gaming-grade performance up to eight
-                                times faster response than standard mice so every mouse click and move is near
-                                instantaneous from hand to screen // Advanced Button Tensioning reduces the force needed
-                                to click the left and right buttons and delivers exceptional click feel, response and
-                                consistency // Classic design inspired by the Logitech G100S mouse, a favorite of gamers
-                                and eSports pros worldwide, re-engineered and optimized for gaming and everyday
-                                versatility, durability and comfort // Cutting-edge 6000 dpi sensor gives you incredible
-                                accuracy, tracking speed, consistency and control no matter your style of gameplay //
-                                The product of over thirty years of Logitech industry leading advances in gaming
-                                technology to help you play to your full potential</p>
-                        </section>
-
-                        <section class="product-detail__feature col-12">
-                            <h2>Caracteristicas del Producto</h2>
-                            <ul class="product-detail__list">
-                                <li class="product-detail__list--li">
-                                    <p>Tipo de mouse: GAMER</p>
-                                </li>
-                                <li class="product-detail__list--li">
-                                    <p>Tipo de sensor: Óptico</p>
-                                </li>
-                            </ul>
-                            <ul class="product-detail__list">
-                                <li class="product-detail__list--li">
-                                    <p>Tecnología del sensor: OPTICO</p>
-                                </li>
-                                <li class="product-detail__list--li">
-                                    <p>Es inalámbrico USB: No</p>
-                                </li>
-                            </ul>
-                            <ul class="product-detail__list">
-                                <li class="product-detail__list--li">
-                                    <p>Con cable: Sí</p>
-                                </li>
-                                <li class="product-detail__list--li">
-                                    <p>Cantidad de botones: 6</p>
-                                </li>
-                            </ul>
-
-                        </section>
-
-
-
                     </div>
-                    <article class="similar-products__title">
-                        <h2>Productos Similares</h2>
+                </div>
+
+
+
+
+                <section class="product-detail__data col-12 col-lg-4">
+                    <article class="product-detail__price">
+                        <p>$<%-producto.price%></p>
                     </article>
-                    <div class="similar-products col-12 col-lg-12">
-
-
-                        <div class="similar-products__product-box">
-                            <figure>
-                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                                    alt="">
-                            </figure>
-
-                            <section>
-                                <p>NOMBRE DEL PRODUCTO</p>
-                                <P>PRECIO DEL PRODUCTO</P>
-                            </section>
-
-                            <article class="similar-products__product-box--button">
-                                <button>Ver Producto</button>
-                            </article>
-
-                        </div>
-                        <div class="similar-products__product-box">
-                            <figure>
-                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                                    alt="">
-                            </figure>
-
-                            <section>
-                                <p>NOMBRE DEL PRODUCTO</p>
-                                <P>PRECIO DEL PRODUCTO</P>
-                            </section>
-
-                            <article class="similar-products__product-box--button">
-                                <button>Ver Producto</button>
-                            </article>
-
-                        </div>
-                        <div class="similar-products__product-box desktop-hide">
-                            <figure>
-                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                                    alt="">
-                            </figure>
-
-                            <section>
-                                <p>NOMBRE DEL PRODUCTO</p>
-                                <P>PRECIO DEL PRODUCTO</P>
-                            </section>
-
-                            <article class="similar-products__product-box--button">
-                                <button>Ver Producto</button>
-                            </article>
-
-                        </div>
-                        <div class="similar-products__product-box desktop-hide">
-                            <figure>
-                                <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                                    alt="">
-                            </figure>
-
-                            <section>
-                                <p>NOMBRE DEL PRODUCTO</p>
-                                <P>PRECIO DEL PRODUCTO</P>
-                            </section>
-
-                            <article class="similar-products__product-box--button">
-                                <button>Ver Producto</button>
-                            </article>
-
+                    <div class="product-detail__data--caja1">
+                        <div class="product-detail__data--caja1__icon">
+                            <i class="fas fa-check-circle"></i>
                         </div>
 
+                        <div class="product-detail__data--caja1__text">
+                            <% if (producto.stock === true) { %>
+                                <p>En Stock</p>
+                           
+                            <% } else { %>
+                                <p>Sin Stock</p>
+                            <% } %>
+                            
+                        </div>
+                    </div>
+                    <div class="product-detail__data--caja1">
+                        <div class="product-detail__data--caja1__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+
+                        <div class="product-detail__data--caja1__text">
+                            <% if (producto.garantia === true) { %>
+                                <p>Con garantia</p>
+                           
+                            <% } else { %>
+                                <p>Sin Stock</p>
+                            <% } %>
+                            
+
+                        </div>
+                    </div>
+                    <div class="product-detail__data--caja1">
+                        <div class="product-detail__data--caja1__icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+
+                        <div class="product-detail__data--caja1__text">
+                            <p>Envios a todo el pais</p>
+                        </div>
                     </div>
 
+                    <article class="product-detail__shop col-lg-12">
+                        <button>Comprar</button>
+                        <button>Agregar al carrito</button>
+                    </article>
+
+
+                </section>
+
+
+
+                <section class="product-detail__description col-12">
+                    <h2>Descripcion de Producto</h2>
+                    <p><%-producto.description%></p>
+                </section>
+
+                <section class="product-detail__feature col-12">
+                    <h2>Caracteristicas del Producto</h2>
+                    <ul class="product-detail__list">
+                        <li class="product-detail__list--li">
+                            <p>Marca : <%- producto.mark %> </p>
+                        </li>
+                        <li class="product-detail__list--li">
+                            <p>Modelo : <%- producto.model %></p>
+                        </li>
+                    </ul>
+                    <ul class="product-detail__list">
+                        <li class="product-detail__list--li">
+                            <p>componente : <%- producto.component %></p>
+                        </li>
+                        <li class="product-detail__list--li">
+                            <p>Categoria : <%- producto.category %> </p>
+                        </li>
+                    </ul>
+                    <ul class="product-detail__list">
+                        <li class="product-detail__list--li">
+                            <p>Detalles : <br><%- producto.features %> </p>
+                        </li>
+                        <li class="product-detail__list--li">
+                          
+                            
+                        </li>
+                    </ul>
+
+                </section>
+
+
+
+            </div>
+            <article class="similar-products__title">
+                <h2>Productos Similares</h2>
+            </article>
+            <div class="similar-products col-12 col-lg-12">
+
+
+                <div class="similar-products__product-box">
+                    <figure>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                            alt="">
+                    </figure>
+
+                    <section>
+                        <p>NOMBRE DEL PRODUCTO</p>
+                        <P>PRECIO DEL PRODUCTO</P>
+                    </section>
+
+                    <article class="similar-products__product-box--button">
+                        <button>Ver Producto</button>
+                    </article>
+
+                </div>
+                <div class="similar-products__product-box">
+                    <figure>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                            alt="">
+                    </figure>
+
+                    <section>
+                        <p>NOMBRE DEL PRODUCTO</p>
+                        <P>PRECIO DEL PRODUCTO</P>
+                    </section>
+
+                    <article class="similar-products__product-box--button">
+                        <button>Ver Producto</button>
+                    </article>
+
+                </div>
+                <div class="similar-products__product-box desktop-hide">
+                    <figure>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                            alt="">
+                    </figure>
+
+                    <section>
+                        <p>NOMBRE DEL PRODUCTO</p>
+                        <P>PRECIO DEL PRODUCTO</P>
+                    </section>
+
+                    <article class="similar-products__product-box--button">
+                        <button>Ver Producto</button>
+                    </article>
+
+                </div>
+                <div class="similar-products__product-box desktop-hide">
+                    <figure>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
+                            alt="">
+                    </figure>
+
+                    <section>
+                        <p>NOMBRE DEL PRODUCTO</p>
+                        <P>PRECIO DEL PRODUCTO</P>
+                    </section>
+
+                    <article class="similar-products__product-box--button">
+                        <button>Ver Producto</button>
+                    </article>
 
                 </div>
 
             </div>
 
-            <!-- FOOTER -->
 
-            <%- include('partials/footer') %>
+        </div>
 
-                <!-- FOOTER -->
+    </div>
 
-                <%- include("partials/scriptBS") %>
-    </body>
+    <!-- FOOTER -->
+    <%- include("partials/footer") %>
 
+    <%- include("partials/scriptBS") %>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
