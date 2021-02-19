@@ -316,6 +316,11 @@
       header .contact li{
         padding: 5px;
       }
+      header .contact a{
+        font-size: 15px;
+        
+        
+      }
      
       header .input-search {
         padding: 5px;
@@ -350,6 +355,7 @@
       header .login-header a{
         display: block;
         padding: 5px;
+        font-size: 15px;
       }
       /* ------------FOOTER------------------ */
     
