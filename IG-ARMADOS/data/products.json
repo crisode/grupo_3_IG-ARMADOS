@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Motherboard Asus Prime H310m-r R2.0 1151 Intel 8va 9na",
+    "title": "Motherboard Asus Prime H310m-r",
     "price": 6299,
     "insale": 5,
     "garantia": true,
@@ -16,7 +16,7 @@
   },
   {
     "id": 2,
-    "title": "Memoria RAM 8GB 1x8GB HyperX HX426C16FB3/8 Fury",
+    "title": "Memoria RAM 8GB HyperX",
     "price": 5499,
     "insale": 0,
     "garantia": true,
@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "title": "Grafica Nvidia Gefore Gtx 1660 6gb",
+    "title": "Gefore Gtx 1660 6gb",
     "price": 84999,
     "insale": 10,
     "garantia": true,
@@ -46,7 +46,7 @@
   },
   {
     "id": 4,
-    "title": "Placa Video Evga Gtx 1650 4gb Gddr6 Ko Ultra Mexx 1",
+    "title": "Evga Gtx 1650 4gb Gddr6",
     "price": 40499,
     "insale": 15,
     "garantia": true,
@@ -61,7 +61,7 @@
   },
   {
     "id": 5,
-    "title": "Procesador gamer Intel Core i7-10700 BX8070110700 de 8 núcleos y 2.9GHz de frecuencia con gráfica integrada",
+    "title": "Intel Core i7-10700",
     "price": 42990,
     "insale": 5,
     "garantia": true,
@@ -76,7 +76,7 @@
   },
   {
     "id": 6,
-    "title": "Disco sólido interno Kingston SA400S37/480G 480GB",
+    "title": "Disco sólido Kingston 480GB",
     "price": 6.269,
     "insale": 10,
     "garantia": true,
@@ -91,7 +91,7 @@
   },
   {
     "id": 7,
-    "title": "Procesador gamer AMD Ryzen 5 3600 100-100000031BOX de 6 núcleos y 3.6GHz de frecuencia",
+    "title": "AMD Ryzen 5 3600",
     "price": 27246,
     "insale": 0,
     "garantia": true,
@@ -106,7 +106,7 @@
   },
   {
     "id": 8,
-    "title": "Procesador gamer Intel Core i3-9100F BX80684I39100F de 4 núcleos y 3.6GHz de frecuencia",
+    "title": "Intel Core i3-9100F",
     "price": 9539,
     "insale": 30,
     "garantia": true,
