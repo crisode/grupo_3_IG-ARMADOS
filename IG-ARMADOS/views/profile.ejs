@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %> 
+<body>
+    <%- include("partials/header") %> 
+
+    <h1 class="profile">estamos en el perfil de usuario</h1>
+    
+
+    <main class="container">
+        <form action="" method="POST">
+          <h3>Editar</h3>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="modelo" placeholder="marca" name="marca" value="">
+                <label for="modelo">Marca</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="modelo" placeholder="modelo" name="modelo" value="">
+                <label for="modelo">Modelo</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="form-floating mb-3">
+                <input type="text" min="2000" max="2021" class="form-control" id="anio" placeholder="año" name="anio" value="">
+                <label for="anio">Año</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="color" placeholder="color" name="color" value="">
+                <label for="color">Color</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="imagen" placeholder="imagen" name="img" value="">
+                <label for="imagen">Imagen</label>
+              </div>
+            </div>
+          
+          </div>
+        
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="submit">Guardar los cambios</button>
+          </div>
+        
+         
+          </form>
+        </main>
+
+
+
+
+
+
+
+
+    <%- include("partials/footer") %> 
+    <%- include("partials/scriptBS") %> 
+
+
+</body>
+</html>

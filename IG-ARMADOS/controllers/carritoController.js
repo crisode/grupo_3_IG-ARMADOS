@@ -1,5 +1,7 @@
 module.exports = {
     index: (req, res) => {
-        res.render("carrito")
+        res.render("carrito",{
+            title:"Carrito"
+        })
     }
 }

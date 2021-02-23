@@ -1,23 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Document</title>
-
-</head>
-<body>
-    
-    
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="es">
-<head>
+
     <%- include("partials/head") %>
-</head>
+
 <body>
     <%- include("partials/header") %>
      <!-- HEADER -->
@@ -53,13 +38,8 @@
                         <div class="product-detail__images-box--thumbnail_img">
                             <a href="#slide3"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
                         </div>
-
                     </div>
                 </div>
-
-
-
-
                 <section class="product-detail__data col-12 col-lg-4">
                     <article class="product-detail__price">
                         <p>$<%-producto.price%></p>
@@ -75,8 +55,7 @@
                            
                             <% } else { %>
                                 <p>Sin Stock</p>
-                            <% } %>
-                            
+                            <% } %>   
                         </div>
                     </div>
                     <div class="product-detail__data--caja1">

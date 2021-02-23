@@ -8,11 +8,14 @@ module.exports = {
 
         //en el main de admin enviamos todo el listado de los productos
         res.render("admin/productoLista",{
+            title:"lista de productos",
             productos
         })
     },   
     cargaProducto : (req,res) => {
-        res.render("admin/cargaProducto")
+        res.render("admin/cargaProducto",{
+            title:"Carga de producto"
+        })
     },
     storeProducto: (req, res) => {
         
@@ -57,6 +60,7 @@ module.exports = {
         let producto = productos.find(producto => producto.id === +req.params.id);
 
         res.render("admin/productoDetalle", {
+            title:"Detalle",
             producto
         });
 
@@ -67,6 +71,7 @@ module.exports = {
         const producto = productos.find(producto => producto.id === +req.params.id);
 
         res.render("admin/editarProducto.ejs", {
+            title:"edicion",
             producto
         })
 

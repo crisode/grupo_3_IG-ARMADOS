@@ -13,6 +13,7 @@ module.exports = {
             });
 
             res.render("index" ,{
+                title:"IG-Armados",
                 destacados,
                 novedades
             })

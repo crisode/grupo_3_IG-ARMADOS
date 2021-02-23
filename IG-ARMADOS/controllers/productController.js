@@ -12,6 +12,7 @@ module.exports = {
         });
 
         res.render("productoDetalle",{
+            title:"Detalle",
             producto,
             novedades
 
