@@ -137,23 +137,26 @@
             </article>
             <div class="similar-products col-12 col-lg-12">
 
-
-                <div class="similar-products__product-box">
-                    <figure>
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                            alt="">
-                    </figure>
-
-                    <section>
-                        <p>NOMBRE DEL PRODUCTO</p>
-                        <P>PRECIO DEL PRODUCTO</P>
-                    </section>
-
-                    <article class="similar-products__product-box--button">
-                        <button>Ver Producto</button>
-                    </article>
-
-                </div>
+                <% novedades.forEach(producto => { %>
+                    <div class="similar-products__product-box">
+                        <figure>
+                            <img src="/images/<%-producto.image%>"
+                                alt="">
+                        </figure>
+    
+                        <section>
+                            <p><%= producto.title %> </p>
+                            <P><%= producto.price %> </P>
+                        </section>
+    
+                        <article class="similar-products__product-box--button">
+                            <button><a href="/productos/<%= producto.id %>">Ver Producto</a></button>
+                        </article>
+    
+                    </div>
+                <% }) %>
+                
+                <!--
                 <div class="similar-products__product-box">
                     <figure>
                         <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
@@ -202,6 +205,7 @@
                     </article>
 
                 </div>
+                -->
 
             </div>
 
