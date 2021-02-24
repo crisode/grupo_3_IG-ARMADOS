@@ -1,7 +1,7 @@
 const { getProducts } = require('../data/products')
 const productos = getProducts(); 
 
-module.exports = {
+module.exports = { 
     detalle: (req, res) => {
 
         let producto = productos.find(producto => {
@@ -15,8 +15,14 @@ module.exports = {
             title:"Detalle",
             producto,
             novedades
-
-
+        })
+    },
+    carrito :(req, res)=>{
+        res.render("carrito",{
+            title:"title"
         })
     }
+  
+    
+
 }

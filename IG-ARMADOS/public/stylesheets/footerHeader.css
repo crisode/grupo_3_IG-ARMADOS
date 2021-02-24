@@ -8,6 +8,26 @@
   
     /* Generales */
     
+ 
+    .boton-admin{
+      position: fixed;
+      width: 180px;
+      height: 36px;
+      line-height: 55px;
+      top: 40px;
+      right: 100px;
+      background: orangered;
+      color: var(--white);
+      border-radius: 13px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow:0px 1px 10px rgba(0, 0, 0, 0.3) ;
+  }
+  
+  
+
+
+    
     *{
      box-sizing: border-box; 
      padding: 0;
