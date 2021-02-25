@@ -9,7 +9,7 @@ const {profile,login, loginProcess,register, registerProcess, carrito} = require
 /* middlewares */
 const checkUser = require("../middlewares/checkUser");  
 
-router.get("/profile",checkUser, profile);
+router.get("/profile",checkUser, profile);           
 
 router.get("/login", login);
 router.post("/login", loginProcess);

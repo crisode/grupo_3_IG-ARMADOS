@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 var productRouter = require('./routes/productRouter');
 var adminRouter = require("./routes/adminRouter");
 const session = require('express-session');
+const localsCheck=require("./middlewares/localCheck");
+const cookieCkeck = require("./middlewares/cookieCheck")
+
 
 var app = express();
 
@@ -29,6 +32,8 @@ app.use(methodOverride('_method'));
 app.use(session({
   secret:"es un secret"
 }));
+app.use(localsCheck);
+app.use(cookieCkeck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
