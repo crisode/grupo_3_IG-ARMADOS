@@ -1,3 +1,11 @@
+const {getUsers, setUsers} = require('../data/users');
+const {validationResult} = require('express-validator');
+const bcrypt = require('bcrypt')
+let users = getUsers();
+
+
+
+
 module.exports={
     login: (req, res) => {
         res.render("login",{
