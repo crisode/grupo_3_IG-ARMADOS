@@ -29,9 +29,7 @@ app.use(methodOverride('_method'));
 
 
 /* middlewares */
-app.use(session({
-  secret:"es un secret"
-}));
+app.use(session({secret: "Mi Secreto", resave: true, saveUninitialized: true}));
 app.use(localsCheck);
 app.use(cookieCkeck)
 
