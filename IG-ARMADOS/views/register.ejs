@@ -64,10 +64,18 @@
                                         <label class="form-check-label" for="flexCheckDefault">
                                             Acepto los terminos y condiciones
                                         </label>
+                                        <% if (typeof errores != 'undefined') { %>
+                                            <ul>
+                                                <% errores.forEach(error => { %>
+                                                 <li><%- error.msg %> </li>
+                                                <% }) %>
+                                            </ul>
+                                           <% } %>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-8 text-center">
-                                    <button class="botonPagar"><a href="#">Registrarme</a></button>
+                                    <button class="botonPagar" type="submit">Registrarme</button>
                                     <p class="mt-4">¿Estás registrado? <a href="/users/login">Inicia sesión</a></p>
                                 </div>
                                 <div class="col-12 col-md-8 text-center redes">
