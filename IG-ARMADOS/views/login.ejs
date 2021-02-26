@@ -11,7 +11,7 @@
             <!-- HEADER -->
             <div class="registro">
                 <main>
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form action="" method="POST">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <h1 class="text-center my-5">Login</h1>
@@ -21,6 +21,7 @@
                                         <input type="email" class="form-control" id="email" placeholder="Email"
                                             name="email">
                                         <label for="email">Email</label>
+                                        <span class="text-danger"><%= /* (typeof errores != "undefined" && errores.email ? errores.email.msg : null) */ %></span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12 col-lg-8">

@@ -72,6 +72,10 @@ body{
     text-transform: capitalize;
 }
 
+.registro .recordar{
+    font-size: 18px;
+    color: white;
+}
 
 .registro .redes i{
     font-size: 70px;

@@ -1,18 +1,23 @@
 const express = require("express");
 const { check } = require("express-validator");
 const router = express.Router();
-const {profile, profileEdit,login, loginProcess,register, registerProcess, carrito} = require("../controllers/userController");
+const {profile, profileEdit,login, loginProcess,register, registerProcess, carrito, update, remove} = require("../controllers/userController");
 const registerValidator = require('../validations/registerValidator');
 const upload = require('../middlewares/avatarMulter');
 
 
 
 
+
 /* middlewares */
 const checkUser = require("../middlewares/checkUser");  
+const localCheck = require("../middlewares/localCheck")
 
-router.get("/profile", profile);  
-router.get("/edit", profileEdit);         
+router.get("/profile",localCheck, profile);  
+router.get("/edit/:id", profileEdit);       
+
+router.post("/edit/:id", update);
+router.delete("/edit/:id", remove);
 
 router.get("/login", login);
 router.post("/login", loginProcess);
