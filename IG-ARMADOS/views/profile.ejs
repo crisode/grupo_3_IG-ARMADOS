@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<%- include("partials/head") %> 
-<body>
-    <%- include("partials/header") %> 
+<html lang="es">
+<%- include("partials/head") %>
 
-    <h1 class="profile">estamos en el perfil de usuario</h1>
-    
-
-    <main class="container fluid profile">
-      <h2 class="titleProfile">Perfil de usuario</h2>
+  <body>
+    <%- include("partials/header") %>
+    <div class="container-fluid">
+      <div class="profile row ">
+        <img src="/images/userAvatar/img-1614349602566.png" alt="">
+        <ul class="list-group col-12 col-lg-6">
+          <li class="list-group-item"><p>Nombre :</p></li>
+          <li class="list-group-item"><p>Apellido :</p></li>
+          <li class="list-group-item"><p>Email :</p></li>
+        </ul>
+        <button class="btn-profile col-12"><a href="/users/edit">Editar perfil</a></button>
+      </div>
+    </div>
       
-    </main>
 
 
 
+      <%- include("partials/footer") %>
+        <%- include("partials/scriptBS") %>
 
 
+  </body>
 
-
-
-    <%- include("partials/footer") %> 
-    <%- include("partials/scriptBS") %> 
-
-
-</body>
 </html>

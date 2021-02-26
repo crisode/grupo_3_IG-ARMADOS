@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("partials/head") %>
+
+  <body>
+    <%- include("partials/header") %>
+    <div class="container-fluid">
+      <div class="profile-edit row ">
+        <img src="/images/userAvatar/img-1614349602566.png" alt="">
+        <ul class="">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
+            <label for="floatingInput">Nombre de usuario</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
+            <label for="floatingtext">Apellido</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Email de usuario">
+            <label for="floatingInput">Email de usuario</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingInput" placeholder="Contraseña">
+            <label for="floatingInput">Contraseña</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingInput" placeholder="Repetir contraseña">
+            <label for="floatingInput">Repetir Contraseña</label>
+          </div>
+          
+        </ul>
+        <button class="btn-profile-edit col-5"><a href="">Editar perfil</a></button>
+        <button class="btn-profile-eliminate col-5"><a href="">Eliminar usuario</a></button>
+      </div>
+    </div>
+      
+
+
+
+      <%- include("partials/footer") %>
+        <%- include("partials/scriptBS") %>
+
+
+  </body>
+
+</html>

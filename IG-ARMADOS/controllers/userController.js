@@ -58,6 +58,12 @@ module.exports={
             title:"perfil"
         })
     },
+    profileEdit:(req, res)=>{
+        res.render("profileEdit",{
+            title:"Editar usuario"
+        })
+
+    },
     carrito:(req, res) => {
         res.render("carrito",{
             title:"carrito"

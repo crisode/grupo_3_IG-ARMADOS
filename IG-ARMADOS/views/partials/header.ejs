@@ -87,14 +87,22 @@
       </ul>
     </nav>
     <div class="name-inc col-4 col-lg-5">
-      <h1>IG-ARMADOS</h1>
+      <h1>IG-ARMADOS</h1> 
     </div>
-    <div class="login-header col-3 col-lg-2 ">
-      <ul>
-        <li><a href="/users/login"><i class="far fa-user"></i><span>Login</span></a></li>
-        <li><a href="/users/carrito"><i class="fas fa-shopping-bag"></i><span>carrito</span></a></li>
+    <div class="login-header col-3 col-lg-2">
+    <div class="btn-group " role="group">
+      <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <li><i class="far fa-user"></i><span>Login</span></li>
+      </button>
+      <li><a href="/users/carrito"><i class="fas fa-shopping-bag car-header"></i><span>Carrito</span></a></li>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <li><a class="dropdown-item" href="/users/login">ingresar</a></li>
+        <li><a class="dropdown-item" href="#">cerrar sesion</a></li>
+        <li><a class="dropdown-item" href="/users/profile">perfil</a></li>
       </ul>
     </div>
+  </div>
+    
     <!-- menu de navegacion por categorias  -->
 
     <!-- menu de contacto -->
@@ -111,6 +119,11 @@
         <button type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
+    <div class="admin col-12  text-center">
+     <a href="/admin">Administrar sitio</a>
+    </div>
+    
+    
 
     <!-- zona de regristro y carrito -->
 
