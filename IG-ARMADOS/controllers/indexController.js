@@ -18,6 +18,11 @@ module.exports = {
                 novedades
             })
 
+        },
+        contact:(req, res)=>{
+            res.render("contacto",{
+                title:"contacto"
+            })
         }
 
         
