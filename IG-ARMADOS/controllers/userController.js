@@ -14,10 +14,13 @@ module.exports = {
 
         let errores = validationResult(req)
         
-        if (errores) {
+        if (!errores.isEmpty()) {
+            
+            
             return res.render("login", {
-                errores: errores.mapped,
-                title : "ingreso"
+                errores: errores.mapped(),
+                title : "ingreso",
+                
             })
 
         } else {
@@ -29,7 +32,7 @@ module.exports = {
 
             /* verifico que la contraseña sea la misma y si es positivo redirigo al perfil */
             if (result) {
-                if (bcrypt.compareSync(pass.trim(), result.pass)) {
+                if (bcrypt.compareSync(pass.trim(), result.password)) {
 
                     //guardo en el objeto session.user los datos del usuario para levantar session del usuario
                     req.session.user = {
@@ -48,6 +51,15 @@ module.exports = {
                     return res.redirect("/");
                 }
             }
+            
+            return res.render('login',{
+                errores : [
+                    {
+                        msg : "credenciales inválidas"
+                    }
+                ]
+            })
+            
 
 
         }
@@ -65,7 +77,7 @@ module.exports = {
 
         if (!errores.isEmpty()) {
             return res.render('register', {
-                errores: errores.errors,
+                errores: errores.mapped(),
                 title: 'registro de usuario'
             })
         } else {
