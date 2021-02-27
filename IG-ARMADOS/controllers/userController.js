@@ -14,6 +14,7 @@ module.exports = {
 
         let errores = validationResult(req)
         
+        
         if (!errores.isEmpty()) {
             
             
@@ -49,15 +50,28 @@ module.exports = {
                     }
 
                     return res.redirect("/");
+                }else{
+                    return res.render('login',{
+                        errores :{
+                            email : {
+                                msg : 'Email o contraseña incorecto'
+                            }
+                        },
+                        
+                        title : 'ingreso'
+                    })
+
                 }
             }
             
             return res.render('login',{
-                errores : [
-                    {
-                        msg : "credenciales inválidas"
+                errores :{
+                    email : {
+                        msg : 'Usuario no registrado'
                     }
-                ]
+                },
+                
+                title : 'ingreso'
             })
             
 
