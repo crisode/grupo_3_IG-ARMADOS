@@ -91,15 +91,28 @@
     </div>
     <div class="login-header col-3 col-lg-2">
     <div class="btn-group " role="group">
+      <% if (typeof user != 'undefined') { %>
+        <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <li><i class="far fa-user"></i><span><%= user.nombre %> </span></li>
+        </button>
+        <li><a href="/users/carrito"><i class="fas fa-shopping-bag car-header"></i><span>Carrito</span></a></li>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item" href="/users/profile">perfil</a></li>
+          <li><a class="dropdown-item" href="#">cerrar sesion</a></li>
+          
+        </ul>
+      <% } else{%>
+          
       <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <li><i class="far fa-user"></i><span>Login</span></li>
       </button>
       <li><a href="/users/carrito"><i class="fas fa-shopping-bag car-header"></i><span>Carrito</span></a></li>
       <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
         <li><a class="dropdown-item" href="/users/login">ingresar</a></li>
-        <li><a class="dropdown-item" href="#">cerrar sesion</a></li>
-        <li><a class="dropdown-item" href="/users/profile">perfil</a></li>
+       
       </ul>
+        <% } %>
+
     </div>
   </div>
     

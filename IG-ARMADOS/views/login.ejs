@@ -29,6 +29,7 @@
                                         <input type="password" class="form-control" id="pass" placeholder="Contraseña"
                                             name="pass">
                                         <label for="pass">Contraseña</label>
+                                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.pass ? errores.pass.msg : null) %></span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12 col-lg-8">
@@ -38,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-8 text-center">
-                                    <button class="botonPagar"><a href="#">Ingresar</a></button>
+                                    <button class="botonPagar" type="submit">Ingresar</button>
                                     <p class="mt-4">¿No estás registrado? <a href="/users/register">Registrate</a></p>
                                 </div>
                                 <div class="col-12 col-md-8 text-center redes">
