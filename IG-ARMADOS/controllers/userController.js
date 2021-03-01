@@ -1,7 +1,9 @@
+const fs = require("fs");
+const path = require("path");
 const { getUsers, setUsers } = require('../data/users');
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt')
-let users = getUsers();
+const users = getUsers();
 
 
 module.exports = {
@@ -121,7 +123,7 @@ module.exports = {
 
             setUsers(users);
 
-            res.redirect("/")
+            res.redirect("/users/login")
 
         }
 
@@ -133,12 +135,23 @@ module.exports = {
     },
     profileEdit: (req, res) => {
 
-        const {name, apellido, email, pass, avatar} = req.body
+        res.render("profileEdit", {
+            title: "Editar Perfil"
+        })
 
-        
+    },
+    carrito: (req, res) => {
+        res.render("carrito", {
+            title: "carrito"
+        });
+    },
+    update: (req, res) => {
+
+        const {name, apellido, email, pass, avatar} = req.body
 
         users.forEach(user => {
             if(user.id === +req.params.id){
+                user.id = Number(req.params.id)
                 user.avatar = avatar
                 user.name = name
                 user.apellido = apellido
@@ -150,17 +163,22 @@ module.exports = {
         setUsers(users)
 
         res.redirect("/users/profile")
-
-    },
-    carrito: (req, res) => {
-        res.render("carrito", {
-            title: "carrito"
-        });
-    },
-    update: (req, res) => {
-
     },
     remove: (req, res) => {
+
+        users.forEach(user => {
+            if (user.id === req.params.id) {
+                if (fs.existsSync(path.join('public','images','userAvatar',user.avatar))) {
+                    fs.unlinkSync(path.join('public','images','userAvatar',user.avatar))
+                }
+
+                var aEliminar = users.indexOf(user);
+                users.splice(aEliminar, 1)
+            }
+        });
+
+        setUsers(users);
+        res.redirect("/")
 
     }
 }

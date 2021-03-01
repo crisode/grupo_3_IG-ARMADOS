@@ -7,8 +7,8 @@
       <div class="container-fluid">
         <div class="profile-edit row ">
 
-          <img src="/images/userAvatar/<%= user.avatar %> " alt="">
-          <form action="/users/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <img src="/images/userAvatar/mother8.jpeg" alt="">
+          <form action="/users/update/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="product-img col-12">
               <label for="img"><span>Modificar imagen</span></label>
                   <input type="file" name="image" id="img">
@@ -18,21 +18,21 @@
             </div>
             <ul class="">
               <div class="form-floating mb-3">
-                <input type="text" value="<%= user.name %> " name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
+                <input type="text" value="<%= user.nombre %> " name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
                 <label for="floatingInput">
-                  <%= user.nombre %>
+                  Nombre
                 </label>
               </div>
               <div class="form-floating mb-3">
                 <input type="text" value="<%= user.apellido %> " name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
                 <label for="floatingtext">
-                  <%= user.apellido %>
+                  Apellido
                 </label>
               </div>
               <div class="form-floating mb-3">
                 <input type="email" value="<%= user.email %> " class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
                 <label for="floatingInput">
-                  <%= user.email %>
+                  Email
                 </label>
               </div>
               <div class="col-12 justify-content-center pregcontra">
@@ -47,10 +47,7 @@
                 <label for="floatingInput">Repetir Contraseña</label>
               </div>
             </ul>
-            <button class="btn-profile-edit col-6" type="submit"><a href="">Actualizar</a></button>
-          </form>
-          <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" class="card-body__form">
-            <button class="btn-profile-eliminate col-6" type="submit"><a href="">Eliminar usuario</a></button>
+            <button class="btn-profile-edit col-6" type="submit">Actualizar</button>
           </form>
         </div>
       </div>
