@@ -401,10 +401,6 @@
   },
   {
     "id": 51,
-    "nombre": "Ignacio",
-    "apellido": "irigoitia",
-    "email": "ignacio.irigoitia@gmail.com",
-    "password": "$2b$12$xiAvhZzQDFOQYkw4XEG7FuBLRtSOL0LMB40.7B8lA7XGLGFQ5mzoO",
-    "avatar": "img-1614373920688.jpg"
+    "nombre": "Ignacio"
   }
 ]

@@ -132,9 +132,24 @@ module.exports = {
         })
     },
     profileEdit: (req, res) => {
-        res.render("profileEdit", {
-            title: "Editar usuario"
+
+        const {name, apellido, email, pass, avatar} = req.body
+
+        
+
+        users.forEach(user => {
+            if(user.id === +req.params.id){
+                user.avatar = avatar
+                user.name = name
+                user.apellido = apellido
+                user.password = pass
+                user.email = email
+            }
         })
+
+        setUsers(users)
+
+        res.redirect("/users/profile")
 
     },
     carrito: (req, res) => {

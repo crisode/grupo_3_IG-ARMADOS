@@ -18,7 +18,7 @@ router.get("/profile",localCheck, profile);
 router.get("/edit/:id", profileEdit);       
 
 router.post("/edit/:id", update);
-router.delete("/edit/:id", remove);
+router.delete("/delete/:id", remove);
 
 router.get("/login", login);
 router.post("/login",loginValidator, loginProcess);
