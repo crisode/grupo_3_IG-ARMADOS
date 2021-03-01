@@ -153,7 +153,7 @@ module.exports = {
             if(user.id === +req.params.id){
                 user.id = Number(req.params.id)
                 user.avatar = avatar
-                user.name = name
+                user.nombre = name
                 user.apellido = apellido
                 user.password = pass
                 user.email = email
@@ -167,7 +167,7 @@ module.exports = {
     remove: (req, res) => {
 
         users.forEach(user => {
-            if (user.id === req.params.id) {
+            if (user.id === +req.params.id) {
                 if (fs.existsSync(path.join('public','images','userAvatar',user.avatar))) {
                     fs.unlinkSync(path.join('public','images','userAvatar',user.avatar))
                 }

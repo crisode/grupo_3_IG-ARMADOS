@@ -17,7 +17,7 @@ const loginValidator = require("../validations/loginValidator");
 router.get("/profile",localCheck, profile);  
 router.get("/edit/:id", profileEdit);       
 
-router.put("/update/:id", localCheck,update);
+router.put("/update/:id", upload.any(), localCheck,update);
 router.delete("/delete/:id", remove);
 
 router.get("/login", login);

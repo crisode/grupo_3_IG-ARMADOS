@@ -13,9 +13,6 @@
           <li class="list-group-item"><p>Email : <%=  user.email  %></p></li>
         </ul>
         <button class="btn-profile col-12"><a href="/users/edit/<%=  user.id  %>">Editar perfil</a></button>
-        <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" class="card-body__form">
-          <button class="btn-profile-eliminate col-6" type="submit">Eliminar Perfil</button>
-        </form>
       </div>
     </div>
       

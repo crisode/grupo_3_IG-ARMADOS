@@ -11,7 +11,7 @@
           <form action="/users/update/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="product-img col-12">
               <label for="img"><span>Modificar imagen</span></label>
-                  <input type="file" name="image" id="img">
+                  <input type="file" name="image" id="img" value="<%= user.avatar %> ">
             </section>
             <div class="col-12 justify-content-center pregcontra">
               <h3>Modifica tus datos personales</h3>
@@ -48,6 +48,9 @@
               </div>
             </ul>
             <button class="btn-profile-edit col-6" type="submit">Actualizar</button>
+          </form>
+          <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" class="card-body__form">
+            <button class="btn-profile-eliminate col-6" type="submit">Eliminar Perfil</button>
           </form>
         </div>
       </div>
