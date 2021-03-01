@@ -11,10 +11,10 @@ const upload = require('../middlewares/avatarMulter');
 
 /* middlewares */
 const checkUser = require("../middlewares/checkUser");  
-const localCheck = require("../middlewares/localCheck");
+
 const loginValidator = require("../validations/loginValidator");
 
-router.get("/profile",localCheck, profile);  
+router.get("/profile", profile);  
 router.get("/edit/:id", profileEdit);       
 
 router.put("/update/:id", upload.any(), update);

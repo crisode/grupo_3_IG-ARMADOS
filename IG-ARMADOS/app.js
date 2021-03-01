@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 var productRouter = require('./routes/productRouter');
 var adminRouter = require("./routes/adminRouter");
 const session = require('express-session');
-const localsCheck=require("./middlewares/localCheck");
+const localCheck = require("./middlewares/localCheck");
 const cookieCkeck = require("./middlewares/cookieCheck")
 
 
@@ -29,9 +29,9 @@ app.use(methodOverride('_method'));
 
 
 /* middlewares */
-app.use(session({secret: "Mi Secreto", resave: true, saveUninitialized: true}));
-app.use(localsCheck);
-app.use(cookieCkeck)
+app.use(session({secret: "Mi Secreto", resave: false, saveUninitialized: true}));
+app.use(localCheck);
+app.use(cookieCkeck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

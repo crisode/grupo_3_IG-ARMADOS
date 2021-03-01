@@ -47,9 +47,10 @@ module.exports = {
                     }
 
                     // creo la cookie para cuando el usuario elija recordarme
+                    /*
                     if (recordar != "undefined") {
                         res.cookie("userCom4", req.session.user, { maxAge: 1000 * 60 * 60 * 24 }); // 1 dia de recordar la cookie
-                    }
+                    }*/
 
                     return res.redirect("/");
                 }else{
@@ -140,7 +141,7 @@ module.exports = {
     },
     profileEdit: (req, res) => {
 
-        let result = users.find(user => user.id === +req.params.id);
+        let result = users.find(user => user.id == +req.params.id);
 
         res.render("profileEdit", {
             title: "Editar Perfil",
@@ -157,6 +158,8 @@ module.exports = {
 
         const {name, apellido, email} = req.body
 
+        let userUpdate;
+
         users.forEach(user => {
             if(user.id === +req.params.id){
                 user.id = Number(req.params.id)
@@ -164,10 +167,24 @@ module.exports = {
                 user.nombre = name
                 user.apellido = apellido
                 user.email = email
+
+                userUpdate = user
             }
         })
 
+        
+
+        req.session.user = {
+            id: userUpdate.id,
+            nombre: userUpdate.nombre,
+            apellido: userUpdate.apellido,
+            email: userUpdate.email,
+            avatar: userUpdate.avatar
+        }
+
         setUsers(users)
+
+        
 
         res.redirect("/users/profile")
     },
