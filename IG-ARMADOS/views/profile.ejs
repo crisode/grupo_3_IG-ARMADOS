@@ -6,13 +6,13 @@
     <%- include("partials/header") %>
     <div class="container-fluid">
       <div class="profile row ">
-        <img src="/images/userAvatar/<%= user.avatar %> " alt="">
+        <img src="/images/userAvatar/<%= result.avatar %> " alt="">
         <ul class="list-group col-12 col-lg-6">
-          <li class="list-group-item"><p>Nombre : <%= user.nombre  %></p></li>
-          <li class="list-group-item"><p>Apellido : <%=  user.apellido  %></p></li>
-          <li class="list-group-item"><p>Email : <%=  user.email  %></p></li>
+          <li class="list-group-item"><p>Nombre : <%= result.nombre  %></p></li>
+          <li class="list-group-item"><p>Apellido : <%=  result.apellido  %></p></li>
+          <li class="list-group-item"><p>Email : <%=  result.email  %></p></li>
         </ul>
-        <button class="btn-profile col-12"><a href="/users/edit/<%=  user.id  %>">Editar perfil</a></button>
+        <button class="btn-profile col-12"><a href="/users/edit/<%=  result.id  %>">Editar perfil</a></button>
       </div>
     </div>
       

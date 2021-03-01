@@ -123,20 +123,26 @@ module.exports = {
 
             setUsers(users);
 
+
             res.redirect("/users/login")
 
         }
 
     },
     profile: (req, res) => {
+
+        let result = users.find(user => req.session.user.id === user.id);
+
         res.render("profile", {
-            title: "perfil"
+            title: "perfil",
+            result
         })
     },
     profileEdit: (req, res) => {
 
         res.render("profileEdit", {
-            title: "Editar Perfil"
+            title: "Editar Perfil",
+            user: req.session
         })
 
     },
@@ -149,13 +155,15 @@ module.exports = {
 
         const {name, apellido, email, pass, avatar} = req.body
 
+        let passHash = bcrypt.hashSync(pass, 12);
+
         users.forEach(user => {
             if(user.id === +req.params.id){
                 user.id = Number(req.params.id)
                 user.avatar = avatar
                 user.nombre = name
                 user.apellido = apellido
-                user.password = pass
+                user.password = passHash
                 user.email = email
             }
         })
