@@ -4,40 +4,63 @@
     --black:#1f1f1f;
     --red:#e30909;
     }
-
     .profile-edit img{
         margin-top: 40px;
-        margin-bottom: 40px;
-        width: 50%; 
+        width: 150px; 
         padding: 0;
         border-radius: 100px;
         border: #ff6600 solid 2px;
        
     }
+    .profile-edit{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
     .profile-edit ul{
         width: 90%;
+        padding: 0%;
     }
-    .profile-edit a{
-        text-decoration: none;
-        color: var(--white);
-    }
-       
     .btn-profile-edit{
         background-color: var(--orange);
         border-radius: 25px;
         text-align: center;
         margin-bottom: 10px;
-        margin-left: 5%;
+        margin-left: 33.33%;
     }
     .btn-profile-eliminate{
         background-color: var(--red);
         border-radius: 25px;
         text-align: center;
         margin-bottom: 10px;
-        margin-left: 5%;
+        margin-left: 33.33%;
     }
-    
-    .profile-edit .pregcontra{
-        color: white;
-        margin: 15px 0;
-    }    
+    .profile-edit a{
+        text-decoration: none;
+        color: var(--white);
+    }
+    .profile-edit h3{
+        color: var(--white);
+        text-align: center;
+    }
+       
+
+    @media(min-width: 768px){
+        .profile-edit ul{
+            width: 50%;
+    }
+
+
+}
+
+@media(min-width: 992px){
+
+    .profile-edit ul{
+        width: 50%;
+}
+.profile-edit img{
+    width: 200px;
+    height: 20%;
+}
+}

@@ -7,12 +7,12 @@
     <div class="container-fluid">
       <div class="profile row ">
         <img src="/images/userAvatar/<%= result.avatar %> " alt="">
-        <ul class="list-group col-12 col-lg-6">
+        <ul class="list-group col-10 col-lg-8">
           <li class="list-group-item"><p>Nombre : <%= result.nombre  %></p></li>
           <li class="list-group-item"><p>Apellido : <%=  result.apellido  %></p></li>
           <li class="list-group-item"><p>Email : <%=  result.email  %></p></li>
         </ul>
-        <button class="btn-profile col-12"><a href="/users/edit/<%=  result.id  %>">Editar perfil</a></button>
+        <button class="btn-profile col-3 col-lg-2"><a href="/users/edit/<%=  result.id  %>">Editar perfil</a></button>
       </div>
     </div>
       

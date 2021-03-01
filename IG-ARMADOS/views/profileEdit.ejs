@@ -7,13 +7,13 @@
       <div class="container-fluid">
         <div class="profile-edit row ">
 
-          <img src="/images/userAvatar/mother8.jpeg" alt="">
-          <form action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <section class="product-img col-12">
-              <label for="img"><span>Modificar imagen</span></label>
+          
+          <form class=" " action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <section class="col-12 col-lg-4">
+              <label for="img"> <img src="/images/userAvatar/<%= result.avatar %> " alt=""></label>
                   <input type="file" name="image" id="img" value="<%= result.avatar %> ">
             </section>
-            <div class="col-12 justify-content-center pregcontra">
+            <div class="">
               <h3>Modifica tus datos personales</h3>
             </div>
             <ul class="">
@@ -47,10 +47,10 @@
                 <label for="floatingInput">Repetir Contraseña</label>
               </div> -->
             </ul>
-            <button class="btn-profile-edit col-6" type="submit">Actualizar</button>
+            <button class="btn-profile-edit col-4" type="submit">Actualizar</button>
           </form>
           <form action="/users/delete/<%= result.id %>?_method=DELETE" method="POST" class="card-body__form">
-            <button class="btn-profile-eliminate col-6" type="submit">Eliminar Perfil</button>
+            <button class="btn-profile-eliminate col-4" type="submit">Eliminar Perfil</button>
           </form>
         </div>
       </div>

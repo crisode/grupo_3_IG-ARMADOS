@@ -406,5 +406,13 @@
     "email": "ignacio.irigoitia@gmail.com",
     "password": "$2b$12$SudanFYeUlHhwixJXxswqu8stgPVTXvaGX9xuKDQmbPSCSCunwjqi",
     "avatar": "img-1614623610732.png"
+  },
+  {
+    "id": 52,
+    "nombre": "cristian      ",
+    "apellido": "rodriguez      ",
+    "email": "voyporlomejor@hotmail.com",
+    "password": "$2b$12$pmTt.muDr8ao67/W.f2UG.xyuOvvxpCxxzWHJS7p/g73eFJkBC2Dm",
+    "avatar": "img-1614624507102.png"
   }
 ]
