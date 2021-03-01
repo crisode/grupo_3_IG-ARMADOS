@@ -140,9 +140,11 @@ module.exports = {
     },
     profileEdit: (req, res) => {
 
+        let result = users.find(user => user.id === +req.params.id);
+
         res.render("profileEdit", {
             title: "Editar Perfil",
-            user: req.session
+            result
         })
 
     },
@@ -153,17 +155,14 @@ module.exports = {
     },
     update: (req, res) => {
 
-        const {name, apellido, email, pass, avatar} = req.body
-
-        let passHash = bcrypt.hashSync(pass, 12);
+        const {name, apellido, email} = req.body
 
         users.forEach(user => {
             if(user.id === +req.params.id){
                 user.id = Number(req.params.id)
-                user.avatar = avatar
+                user.avatar = user.avatar
                 user.nombre = name
                 user.apellido = apellido
-                user.password = passHash
                 user.email = email
             }
         })

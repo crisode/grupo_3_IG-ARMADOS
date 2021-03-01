@@ -404,13 +404,7 @@
     "nombre": "Facundo",
     "apellido": "Irigoitia ",
     "email": "ignacio.irigoitia@gmail.com",
-    "password": "$2b$12$0R8H8hjpXZIZKHcekmLAouJ2cGQE5LF6eppTOBqhdjKX6IBGTJeGO"
-  },
-  {
-    "id": 52,
-    "nombre": "Facundo",
-    "apellido": "Irigoitia  ",
-    "email": "pitacamila.13@gmail.com",
-    "password": "$2b$12$vbOWmagZFCA5qdceDrx4uuKyxFvHgyIsM3A4CWMnUpfhVEsrzs06G"
+    "password": "$2b$12$SudanFYeUlHhwixJXxswqu8stgPVTXvaGX9xuKDQmbPSCSCunwjqi",
+    "avatar": "img-1614623610732.png"
   }
 ]

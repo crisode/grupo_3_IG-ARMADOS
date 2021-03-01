@@ -8,48 +8,37 @@
         <div class="profile-edit row ">
 
           <img src="/images/userAvatar/mother8.jpeg" alt="">
-          <form action="/users/update/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="product-img col-12">
               <label for="img"><span>Modificar imagen</span></label>
-                  <input type="file" name="image" id="img" value="<%= user.avatar %> ">
+                  <input type="file" name="image" id="img" value="<%= result.avatar %> ">
             </section>
             <div class="col-12 justify-content-center pregcontra">
               <h3>Modifica tus datos personales</h3>
             </div>
             <ul class="">
               <div class="form-floating mb-3">
-                <input type="text" value="<%= user.nombre %> " name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
+                <input type="text" value="<%= result.nombre %> " name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
                 <label for="floatingInput">
                   Nombre
                 </label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" value="<%= user.apellido %> " name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
+                <input type="text" value="<%= result.apellido %> " name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
                 <label for="floatingtext">
                   Apellido
                 </label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" value="<%= user.email %> " class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
+                <input type="email" value="<%= result.email %> " class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
                 <label for="floatingInput">
                   Email
                 </label>
               </div>
-              <div class="col-12 justify-content-center pregcontra">
-                <h3>Actualiza tu contraseña o ingrese la actual para confirmar los cambios</h3>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" name="pass" id="floatingInput" placeholder="Contraseña">
-                <label for="floatingInput">Contraseña</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingInput" name="pass2" placeholder="Repetir contraseña">
-                <label for="floatingInput">Repetir Contraseña</label>
-              </div>
             </ul>
             <button class="btn-profile-edit col-6" type="submit">Actualizar</button>
           </form>
-          <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" class="card-body__form">
+          <form action="/users/delete/<%= result.id %>?_method=DELETE" method="POST" class="card-body__form">
             <button class="btn-profile-eliminate col-6" type="submit">Eliminar Perfil</button>
           </form>
         </div>
