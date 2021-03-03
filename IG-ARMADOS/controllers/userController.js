@@ -185,7 +185,7 @@ module.exports = {
         }
 
 
-        setUsers(users)
+        /* fs.writeFileSync("./data/users.json", JSON.stringify(users, null, 2), "utf-8"); */
 
         
 

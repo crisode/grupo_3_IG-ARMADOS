@@ -8,6 +8,6 @@ module.exports = {
     },
 
     setUsers: (data) => {
-        fs.writeFileSync("/data/users.json", JSON.stringify(data, null, 2));
+        fs.writeFileSync(__dirname + "/users.json", JSON.stringify(data, null, 2));
     }
 };
