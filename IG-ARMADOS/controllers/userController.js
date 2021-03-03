@@ -50,7 +50,7 @@ module.exports = {
                     // creo la cookie para cuando el usuario elija recordarme
                     
                     if(recordar){
-                        res.cookie("userCom4", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
+                        res.cookie("user", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
                     }
 
                     return res.redirect("/");
@@ -173,6 +173,8 @@ module.exports = {
 
         let userUpdate = users.find(user => user.id == +req.params.id);
 
+        
+
         req.session.user = {
             id: userUpdate.id,
             nombre: userUpdate.nombre,
@@ -181,6 +183,7 @@ module.exports = {
             avatar: userUpdate.avatar,
             rol: userUpdate.rol
         }
+
 
         setUsers(users)
 
@@ -202,7 +205,16 @@ module.exports = {
         });
 
         setUsers(users);
-        res.redirect("/")
+
+        //cuando cierro sesion, mato el req.session
+        req.session.destroy();
+
+        //cuando finalizo la session, tambien me encargo de matar la cookie
+        if(req.cookies.userCom4){
+            res.cookie("user", "", {maxAge: -1})
+        };
+
+        res.redirect("/");
 
     },
     logout: (req, res) => {
@@ -212,7 +224,7 @@ module.exports = {
 
         //cuando finalizo la session, tambien me encargo de matar la cookie
         if(req.cookies.userCom4){
-            res.cookie("userCom4", "", {maxAge: -1})
+            res.cookie("user", "", {maxAge: -1})
         };
 
         //finalizo redireccionando

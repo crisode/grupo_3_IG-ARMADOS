@@ -1,6 +1,6 @@
 module.exports= ( req, res, next)=>{
-    if (req.cookies.userCom4) {                               
-        req.session.user = req.cookies.userCom4
+    if (req.cookies.user) {                               
+        req.session.user = req.cookies.user
     }
     next()
 }

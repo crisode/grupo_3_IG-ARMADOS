@@ -401,7 +401,7 @@
   },
   {
     "id": 51,
-    "nombre": "Ignacio",
+    "nombre": "Facundo",
     "apellido": "Irigoitia",
     "email": "ignacio.irigoitia@gmail.com",
     "password": "$2b$12$SudanFYeUlHhwixJXxswqu8stgPVTXvaGX9xuKDQmbPSCSCunwjqi",
@@ -415,13 +415,5 @@
     "email": "voyporlomejor@hotmail.com",
     "password": "$2b$12$E9Idn9bppIUiiekczH9cBucE1d91DpPqQXEJnoP7KsF3BRr3hp9ou",
     "avatar": "img-1614792147522.png"
-  },
-  {
-    "id": 53,
-    "nombre": "Facundo",
-    "apellido": "pita",
-    "email": "pitacamila.13@gmail.com",
-    "password": "$2b$12$q3i61DDdMK3nQImTc9TmCu.najctTAk38OuVq8fMQphjAnPy6Lyay",
-    "avatar": "img-1614802781323.png"
   }
 ]
