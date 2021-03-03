@@ -1,7 +1,7 @@
 const express = require("express");
 const { check } = require("express-validator");
 const router = express.Router();
-const {profile, profileEdit,login, loginProcess,register, registerProcess, carrito, update, remove} = require("../controllers/userController");
+const {profile, profileEdit,login, loginProcess,register, registerProcess, carrito, update, remove, logout} = require("../controllers/userController");
 const registerValidator = require('../validations/registerValidator');
 const upload = require('../middlewares/avatarMulter');
 
@@ -27,6 +27,8 @@ router.get("/register", register);
 router.post("/register", upload.any(),registerValidator,registerProcess);
 
 router.get('/carrito',checkUser, carrito);  
+
+router.get("/logout", logout);
 
 
 

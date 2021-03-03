@@ -204,5 +204,25 @@ module.exports = {
         setUsers(users);
         res.redirect("/")
 
+    },
+    logout: (req, res) => {
+
+        //cuando cierro sesion, mato el req.session
+        req.session.destroy();
+
+        //cuando finalizo la session, tambien me encargo de matar la cookie
+        if(req.cookies.userCom4){
+            res.cookie("userCom4", "", {maxAge: -1})
+        };
+
+        //finalizo redireccionando
+        res.redirect("/");
+    },
+    eliminar: (req, res) => {
+
+        
+
+
     }
+    
 }
