@@ -43,13 +43,14 @@ module.exports = {
                         nombre: result.nombre,
                         apellido: result.apellido,
                         email: result.email,
-                        avatar: result.avatar
+                        avatar: result.avatar,
+                        rol: result.rol
                     }
 
                     // creo la cookie para cuando el usuario elija recordarme
                     
-                    if (recordar != "undefined") {
-                        res.cookie("userCom4", req.session.user, { maxAge: 1000 * 60 * 60 * 24 }); // 1 dia de recordar la cookie
+                    if(recordar){
+                        res.cookie("userCom4", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
                     }
 
                     return res.redirect("/");
@@ -167,9 +168,10 @@ module.exports = {
                 user.nombre = name
                 user.apellido = apellido
                 user.email = email
-
-                userUpdate = user
+                user.password = user.password
             }
+
+            userUpdate = user
         })
 
         
