@@ -10,27 +10,27 @@
           
           <form class=" " action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="col-12 col-lg-4">
-              <label for="img"> <img src="/images/userAvatar/<%= result.avatar %> " alt=""></label>
-                  <input type="file" name="image" id="img" value="<%= result.avatar %> ">
+              <label for="img"><img src="/images/userAvatar/<%= result.avatar %>" alt=""></label>
+                  <input type="file" name="image" id="img" value="<%= result.avatar %>">
             </section>
             <div class="">
               <h3>Modifica tus datos personales</h3>
             </div>
             <ul class="">
               <div class="form-floating mb-3">
-                <input type="text" value="<%= result.nombre %> " name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
+                <input type="text" value="<%= result.nombre %>" name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
                 <label for="floatingInput">
                   Nombre
                 </label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" value="<%= result.apellido %> " name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
+                <input type="text" value="<%= result.apellido %>" name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
                 <label for="floatingtext">
                   Apellido
                 </label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" value="<%= result.email %> " class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
+                <input type="email" value="<%= result.email %>" class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
                 <label for="floatingInput">
                   Email
                 </label>

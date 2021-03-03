@@ -159,7 +159,6 @@ module.exports = {
 
         const {name, apellido, email} = req.body
 
-        let userUpdate;
 
         users.forEach(user => {
             if(user.id === +req.params.id){
@@ -170,18 +169,17 @@ module.exports = {
                 user.email = email
                 user.password = user.password
             }
-
-            userUpdate = user
         })
 
-        
+        let userUpdate = users.find(user => user.id == +req.params.id);
 
         req.session.user = {
             id: userUpdate.id,
             nombre: userUpdate.nombre,
             apellido: userUpdate.apellido,
             email: userUpdate.email,
-            avatar: userUpdate.avatar
+            avatar: userUpdate.avatar,
+            rol: userUpdate.rol
         }
 
         setUsers(users)
