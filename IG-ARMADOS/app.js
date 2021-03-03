@@ -12,6 +12,7 @@ var adminRouter = require("./routes/adminRouter");
 const session = require('express-session');
 const localCheck = require("./middlewares/localCheck");
 const cookieCkeck = require("./middlewares/cookieCheck")
+const adminCheck = require("./middlewares/adminCheck");
 
 
 var app = express();
@@ -36,7 +37,7 @@ app.use(cookieCkeck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
-app.use("/admin", adminRouter)
+app.use("/admin", adminCheck, adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
