@@ -7,6 +7,11 @@
     --white: #ffffff;
 }
 
+
+/* loader */
+
+
+
  *{
     box-sizing: border-box;
     padding: 0;
@@ -232,13 +237,7 @@ body{
     
     }
 
-   /*  .home .line{
-        width: 100vh;
-    }
-
-    .home .line2{
-        width: 100vh;
-    } */
+   
 
     .home .titulo-producto p{
         width: 31vh;

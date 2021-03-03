@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const {index, cargaProducto, storeProducto, detalleProducto, editarProducto, actualizarProducto, borrarProducto} = require("../controllers/adminController")
 
-const adminCheck = require("../middlewares/adminCheck");
+
 
 const upload = require("../middlewares/cargaImagen");
 
