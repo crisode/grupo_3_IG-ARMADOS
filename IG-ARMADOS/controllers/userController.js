@@ -47,10 +47,10 @@ module.exports = {
                     }
 
                     // creo la cookie para cuando el usuario elija recordarme
-                    /*
+                    
                     if (recordar != "undefined") {
                         res.cookie("userCom4", req.session.user, { maxAge: 1000 * 60 * 60 * 24 }); // 1 dia de recordar la cookie
-                    }*/
+                    }
 
                     return res.redirect("/");
                 }else{
@@ -217,12 +217,5 @@ module.exports = {
 
         //finalizo redireccionando
         res.redirect("/");
-    },
-    eliminar: (req, res) => {
-
-        
-
-
     }
-    
 }
