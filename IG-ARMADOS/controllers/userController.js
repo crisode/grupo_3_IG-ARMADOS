@@ -167,9 +167,10 @@ module.exports = {
                 user.nombre = name
                 user.apellido = apellido
                 user.email = email
-
-                userUpdate = user
+                user.password = user.password
             }
+
+            userUpdate = user
         })
 
         
