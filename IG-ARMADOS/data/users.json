@@ -405,7 +405,8 @@
     "apellido": "Irigoitia  ",
     "email": "ignacio.irigoitia@gmail.com",
     "password": "$2b$12$SudanFYeUlHhwixJXxswqu8stgPVTXvaGX9xuKDQmbPSCSCunwjqi",
-    "avatar": "img-1614623610732.png"
+    "avatar": "img-1614623610732.png",
+    "rol": "admin"
   },
   {
     "id": 52,

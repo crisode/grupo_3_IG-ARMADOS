@@ -43,7 +43,8 @@ module.exports = {
                         nombre: result.nombre,
                         apellido: result.apellido,
                         email: result.email,
-                        avatar: result.avatar
+                        avatar: result.avatar,
+                        rol: result.rol
                     }
 
                     // creo la cookie para cuando el usuario elija recordarme
