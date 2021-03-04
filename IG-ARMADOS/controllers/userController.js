@@ -210,7 +210,7 @@ module.exports = {
         req.session.destroy();
 
         //cuando finalizo la session, tambien me encargo de matar la cookie
-        if(req.cookies.userCom4){
+        if(req.cookies.user){
             res.cookie("user", "", {maxAge: -1})
         };
 
@@ -223,7 +223,7 @@ module.exports = {
         req.session.destroy();
 
         //cuando finalizo la session, tambien me encargo de matar la cookie
-        if(req.cookies.userCom4){
+        if(req.cookies.user){
             res.cookie("user", "", {maxAge: -1})
         };
 

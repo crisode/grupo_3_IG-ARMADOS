@@ -17,10 +17,10 @@ router.post("/create", upload.any(),  storeProducto);
 router.get("/detalle/:id",  detalleProducto);
 
 //edicion y actualizacion de producto
-router.get("/edit/:id",  editarProducto);
+router.get("/edit/:id", editarProducto);
 router.put("/upload/:id",upload.any(),  actualizarProducto);
 
 //borrar producto
-router.delete("/delete/:id", borrarProducto);
+router.delete("/delete/:id",  borrarProducto);
 
 module.exports = router;

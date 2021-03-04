@@ -415,5 +415,13 @@
     "email": "voyporlomejor@hotmail.com",
     "password": "$2b$12$E9Idn9bppIUiiekczH9cBucE1d91DpPqQXEJnoP7KsF3BRr3hp9ou",
     "avatar": "img-1614792147522.png"
+  },
+  {
+    "id": 53,
+    "nombre": "Facundo",
+    "apellido": "Irigoitia",
+    "email": "donpepe@gmail.com",
+    "password": "$2b$12$zZ3h59/wwYKT5Miuiw6T1uXahZ6FZE/IyFWir4HdYj1Vl0SeJc9Di",
+    "avatar": "img-1614867983864.jpg"
   }
 ]
