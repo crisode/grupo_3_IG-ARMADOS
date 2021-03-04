@@ -20,6 +20,10 @@
     list-style: none;
     font-family: font-family, roboto, serif;
 }
+.home a{
+    text-decoration: none;
+
+}
 
 p{
     color: #ffffff;
@@ -98,6 +102,7 @@ body{
 .home .productos-box{
     border: 1px solid var(--orange);
     background-color: #272727;
+    border-radius: 10px;
 }
 
 .home .productos-box img{
@@ -106,6 +111,7 @@ body{
     object-fit: contain;
     background-color: white;
     border: 5px solid #272727;
+    border-radius: 10px;
     
 }
 

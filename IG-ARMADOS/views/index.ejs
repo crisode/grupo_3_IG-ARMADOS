@@ -36,18 +36,21 @@
               <!-- CAJA QUE ENGLOBA EL PRODUCTO-->
               <% destacados.forEach(producto=> { %>
                 <div class="col-12 col-md-6 col-lg-3 my-3">
-                  <div class="productos-box">
-                    <img src="images/<%= producto.image %> " alt="">
-                    <section class="titulo-producto">
-                      <p>
-                        <%= producto.title %>
-                      </p>
-                    </section>
-                    <article>
-                      <i class="far fa-eye"></i>
-                      <button><a href="/product/<%= producto.id %>">detalles</a></button>
-                    </article>
-                  </div>
+                  <a href="/product/<%= producto.id %>">
+                    <div class="productos-box">
+                      <img src="images/<%= producto.image %> " alt="">
+                      <section class="titulo-producto">
+                        <p>
+                          <%= producto.title %>
+                        </p>
+                      </section>
+                      <article>
+                        <i class="far fa-eye"></i>
+                        <button><a href="/product/<%= producto.id %>">detalles</a></button>
+                      </article>
+                    </div>
+                  </a>
+                  
                 </div>
                 <% }) %>
             </div>
@@ -69,18 +72,20 @@
               <!-- CAJA QUE ENGLOBA EL PRODUCTO-->
               <% novedades.forEach(producto=> { %>
                 <div class="col-12 col-md-6 col-lg-3 my-3">
-                  <div class="productos-box">
-                    <img src="images/<%= producto.image %> " alt="">
-                    <section class="titulo-producto">
-                      <p>
-                        <%= producto.title %>
-                      </p>
-                    </section>
-                    <article>
-                      <i class="far fa-eye"></i>
-                      <button><a href="/product/<%= producto.id %>">detalles</a></button>
-                    </article>
-                  </div>
+                  <a href="/product/<%= producto.id %>">
+                    <div class="productos-box">
+                      <img src="images/<%= producto.image %> " alt="">
+                      <section class="titulo-producto">
+                        <p>
+                          <%= producto.title %>
+                        </p>
+                      </section>
+                      <article>
+                        <i class="far fa-eye"></i>
+                        <button><a href="/product/<%= producto.id %>">detalles</a></button>
+                      </article>
+                    </div>
+                  </a>
                 </div>
                 <% }) %>
             </div>
