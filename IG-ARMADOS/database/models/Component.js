@@ -22,6 +22,12 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true         /* como esta escrito */
 
     };
+    Component.associate = (models) => {
+        Component.belonsTo(models.Producto, {
+            as : "producto",
+            foreignKey : "component_id"
+        })
+    };
 
 
 

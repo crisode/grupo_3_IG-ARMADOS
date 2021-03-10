@@ -24,6 +24,15 @@ module.exports = (sequelize, dataTypes) => {
 
     };
 
+
+    Mark.associate = (models) => {
+        Mark.belonsTo(models.Producto, {
+            as : "producto",
+            foreignKey : "mark_id"
+        })
+    };
+
+
     const Mark = sequelize.define(alias, cols, config)
 
     return Mark

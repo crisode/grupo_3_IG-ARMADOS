@@ -23,6 +23,13 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true     /* como esta escrito */
 
     };
+    Image.associate = (models) => {
+        Image.belonsTo(models.Producto, {
+            as : "producto",
+            foreignKey : "image_id"
+        })
+    };
+
 
 
 
