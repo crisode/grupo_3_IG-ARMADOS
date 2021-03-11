@@ -56,7 +56,8 @@ module.exports = (sequelize,dataTypes) => {
 
     const config = {
         tableName : 'products',
-        timesTamps : true
+        timesTamps : true,
+        underscored: true  
     }
 
 
@@ -70,17 +71,17 @@ module.exports = (sequelize,dataTypes) => {
             foreignKey : 'FK_PRODUCT_ID'
         })
 
-        Producto.hasMany(models.Categoria,{
+        Producto.belongsTo(models.Categoria,{
             as : 'categoria',
             foreignKey : 'FK_CATEGORY_ID'
         })
 
-        Producto.hasMany(models.Componente,{
+        Producto.belongsTo(models.Componente,{
             as : 'componente',
             foreignKey : 'FK_COMPONENT_ID'
         })
 
-        Producto.hasMany(models.Marca,{
+        Producto.belongsTo(models.Marca,{
             as : 'marca',
             foreignKey : 'FK_MARK_ID'
         })
@@ -90,7 +91,7 @@ module.exports = (sequelize,dataTypes) => {
             foreignKey : 'FK_IMAGE_ID'
         })
 
-        Producto.hasMany(models.Garantia,{
+        Producto.belongsTo(models.Garantia,{
             as : 'garantia',
             foreignKey : 'FK_GUARANTEE_ID'
         })
