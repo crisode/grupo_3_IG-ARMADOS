@@ -21,29 +21,42 @@ module.exports = (sequelize,dataTypes) => {
 
     const config = {
         tableName : 'cart',
-        timesTamp : true  
+        timesTamp : true,
+        underscored: true,
+        classMethods : {
+            associate : function(models){
+                Carrito.hasMany(models.Usuario,{
+                    as : 'usuario',
+                    foreignKey : "FK_USER_ID"
+                    
+                })
+                
+                Carrito.hasMany(models.Producto,{
+                    as : 'producto',
+                    foreignKey : 'FK_PRODUCT_ID'
+                })
+
+            }
+        }
+
     }
 
     const Carrito = sequelize.define(alias,cols,config);
-
+/*
     Carrito.associate = function(models){
+        Carrito.hasMany(models.Usuario,{
+            as : 'carrito',
+            foreignKey : 'FK_USER_ID'
+            
+        })
+
         Carrito.hasMany(models.Producto,{
             as : 'producto',
             foreignKey : 'FK_PRODUCT_ID'
         })
-    }
 
-    Carrito.associate = function(models){
-        Carrito.hasMany(models.Usuario,{
-            as : 'usuario',
-            foreignKey : 'FK_USER_ID'
-        })
-    }
-
-
-
-
-
+        
+    }*/
 
     return Carrito;
 
