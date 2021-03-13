@@ -5,8 +5,8 @@ module.exports = (sequelize, dataTypes) => {
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER.UNSIGNED.UNSIGNED,
-            prymaryKey: true,
+            type: dataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
@@ -25,15 +25,17 @@ module.exports = (sequelize, dataTypes) => {
     };
 
 
+    const Mark = sequelize.define(alias, cols, config)
+
     Mark.associate = (models) => {
-        Mark.belonsTo(models.Producto, {
+        Mark.belongsTo(models.Producto, {
             as : "producto",
-            foreignKey : "mark_id"
+            foreignKey : "FK_MARK_ID"
         })
     };
 
 
-    const Mark = sequelize.define(alias, cols, config)
+    
 
     return Mark
 }

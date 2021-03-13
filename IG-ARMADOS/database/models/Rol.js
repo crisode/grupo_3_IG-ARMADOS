@@ -18,15 +18,28 @@ module.exports = (sequelize, dataTypes) => {
     const config = {
         tableName : "roles",
         timestamps : true,
-        underscored: true
+        underscored: true,
+        classMethods : {
+            associate : function(models){
+                Rol.hasMany(models.Usuario,{
+                    as : 'usuario',
+                    foreignKey : "FK_ROL_ID"
+                    
+                })
+            }
+        }
     };
 
     const Rol = sequelize.define(alias, cols, config);
-
+/*
     Rol.associate = (models) => {
         Rol.hasMany(models.User, {
             as : "usuario",
-            foreignKey : "rol_id"
+            foreignKey : "FK_ROL_ID"
         })
-    };
+
+
+    };*/
+
+    return Rol
 };

@@ -6,9 +6,9 @@ module.exports = (sequelize, dataTypes) => {
     const cols = {
         id: {
             type: dataTypes.INTEGER,
-            prymaryKey: true,
             allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
+            primaryKey : true
         },
         name: {
             type: dataTypes.STRING(45),
@@ -23,23 +23,16 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true     /* como esta escrito */
 
     };
+
+    const Image = sequelize.define(alias, cols, config)
+
     Image.associate = (models) => {
-        Image.belonsTo(models.Producto, {
+        Image.belongsTo(models.Producto, {
             as : "producto",
-            foreignKey : "image_id"
+            foreignKey : "FK_IMAGE_ID"
         })
     };
 
-
-
-
-
-
-
-
-
-
-
-    const Image = sequelize.define(alias, cols, config)
+    
     return Image
 }

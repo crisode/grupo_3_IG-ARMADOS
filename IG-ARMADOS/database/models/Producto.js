@@ -1,4 +1,4 @@
-module.exports = (sequelize,dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
 
     const alias = 'Producto';
 
@@ -52,13 +52,13 @@ module.exports = (sequelize,dataTypes) => {
             type : dataTypes.INTEGER,
             allowNull : false
         }
-    },
+    }
 
     const config = {
-        tableName : 'products',
-        timesTamps : true,
-        underscored: true  
-    }
+        tableName : "products",
+        timestamps : true,
+        underscored: true
+    };
 
 
 
@@ -66,7 +66,7 @@ module.exports = (sequelize,dataTypes) => {
     const Producto = sequelize.define(alias,cols,config)
 
     Producto.associate = function(models){
-        Producto.belongsTo(models.Carrito,{
+        Producto.hasMany(models.Carrito,{
             as : 'carrito',
             foreignKey : 'FK_PRODUCT_ID'
         })

@@ -4,10 +4,10 @@ module.exports = (sequelize, dataTypes) => {
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER.UNSIGNED,
-            prymaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            type: dataTypes.INTEGER,
+            primaryKey : true,
+            allowNull : false,
+            autoIncrement : true
         },
         name: {
             type: dataTypes.STRING(100),
@@ -22,22 +22,19 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true         /* como esta escrito */
 
     };
-    Component.associate = (models) => {
-        Component.belonsTo(models.Producto, {
-            as : "producto",
-            foreignKey : "component_id"
-        })
-    };
-
-
-
-
-
-
-
-
 
 
     const Component = sequelize.define(alias, cols, config)
+
+
+
+    Component.associate = (models) => {
+        Component.belongsTo(models.Producto, {
+            as : "producto",
+            foreignKey : "FK_COMPONENT_ID"
+        })
+    };
+
+    
     return Component
 }

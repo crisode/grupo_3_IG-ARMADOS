@@ -26,12 +26,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull : false
         },
         avatar : {
-            type : dataTypes.STRING(45),
+            type : dataTypes.STRING(100),
             allowNull : true
         },
         rol_id : {
             type : dataTypes.INTEGER,
-            allowNull : true
+            allowNull : false
         }
     }; // defino las propiedades de los datos de la tabla
 
@@ -41,14 +41,22 @@ module.exports = (sequelize, dataTypes) => {
         underscored: true
     };
 
-    const User = sequelize.define(alias, cols, config); // utilizo el metodo define de sequelize para definir las 3 constantes creadas
+    const Usuario = sequelize.define(alias, cols, config); // utilizo el metodo define de sequelize para definir las 3 constantes creadas
 
-    User.associate = (models) => {
-        User.belongsTo(models.Rol, {
+    Usuario.associate = function(models){
+        Usuario.belongsTo(models.Rol, {
             as : "rol",
-            foreignKey : "rol_id"
+            foreignKey : "FK_ROL_ID"
         })
-    };
+        
+        Usuario.belongsTo(models.Carrito,{
+            as : 'user',
+            foreignKey : 'FK_USER_ID'
+        
+        })
 
-    return User;
+        
+    }
+
+    return Usuario;
 };
