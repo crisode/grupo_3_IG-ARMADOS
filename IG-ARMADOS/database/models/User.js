@@ -31,13 +31,12 @@ module.exports = (sequelize, dataTypes) => {
         },
         rol_id : {
             type : dataTypes.INTEGER,
-            allowNull : false
         }
     }; // defino las propiedades de los datos de la tabla
 
     const config = {
         tableName : "users",
-        timestamps : true,
+        timestamps : false,
         underscored: true
     };
 
