@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = "Usuarios"; //defino el alias del modelo
+    const alias = "Users"; //defino el alias del modelo
 
     const cols = {
         id : {
@@ -26,29 +26,36 @@ module.exports = (sequelize, dataTypes) => {
             allowNull : false
         },
         avatar : {
-            type : dataTypes.STRING(45),
+            type : dataTypes.STRING(100),
             allowNull : true
         },
         rol_id : {
             type : dataTypes.INTEGER,
-            allowNull : true
         }
     }; // defino las propiedades de los datos de la tabla
 
     const config = {
         tableName : "users",
-        timestamps : true,
+        timestamps : false,
         underscored: true
     };
 
     const User = sequelize.define(alias, cols, config); // utilizo el metodo define de sequelize para definir las 3 constantes creadas
 
-    User.associate = (models) => {
-        User.belongsTo(models.Rol, {
-            as : "rol",
+    User.associate = (models)=>{
+        User.belongsTo(models.Rols, {
+            as : "roles",
             foreignKey : "rol_id"
         })
-    };
+        
+        User.belongsTo(models.Carts,{
+            as : 'user',
+            foreignKey : 'user_id'
+        
+        })
+
+        
+    }
 
     return User;
 };

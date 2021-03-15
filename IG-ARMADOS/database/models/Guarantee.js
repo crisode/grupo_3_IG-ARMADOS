@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = "Garantia";
+    const alias = "Guarantees";
 
     const cols = {
         id : {
@@ -17,16 +17,18 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName : "guarantee",
-        timestamps : true,
+        timestamps : false,
         underscored: true
     };
 
-    const Garantia = sequelize.define(alias, cols, config);
+    const Guarantee = sequelize.define(alias, cols, config);
 
-    Garantia.associate = (models) => {
-        Garantia.hasMany(models.Producto, {
+    Guarantee.associate = (models) => {
+        Guarantee.hasMany(models.Products, {
             as : "producto",
             foreignKey : "guarantee_id"
         })
     };
+
+    return Guarantee
 };

@@ -1,6 +1,6 @@
-module.exports = (sequelize,dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
 
-    const alias = 'Producto';
+    const alias = 'Products';
 
     const cols = {
         id : {
@@ -32,6 +32,10 @@ module.exports = (sequelize,dataTypes) => {
             type : dataTypes.STRING(500),
             allowNull : false
         },
+        model:{
+            type: dataTypes.STRING(100),
+            allowNull:false
+        },
         guarantee_id : {
             type : dataTypes.INTEGER,
             allowNull : false
@@ -52,50 +56,51 @@ module.exports = (sequelize,dataTypes) => {
             type : dataTypes.INTEGER,
             allowNull : false
         }
-    },
-
-    const config = {
-        tableName : 'products',
-        timesTamps : true
     }
 
+    const config = {
+        tableName : "products",
+        timestamps : false,
+        underscored: true
+    };
 
 
 
-    const Producto = sequelize.define(alias,cols,config)
 
-    Producto.associate = function(models){
-        Producto.belongsTo(models.Carrito,{
+    const Product = sequelize.define(alias,cols,config)
+
+    Product.associate = (models)=>{
+        Product.hasMany(models.Carts,{
             as : 'carrito',
-            foreignKey : 'FK_PRODUCT_ID'
+            foreignKey : 'product_id'
         })
 
-        Producto.hasMany(models.Categoria,{
+        Product.belongsTo(models.Categorys,{
             as : 'categoria',
-            foreignKey : 'FK_CATEGORY_ID'
+            foreignKey : 'category_id'
         })
 
-        Producto.hasMany(models.Componente,{
+        Product.belongsTo(models.Components,{
             as : 'componente',
-            foreignKey : 'FK_COMPONENT_ID'
+            foreignKey : 'component_id'
         })
 
-        Producto.hasMany(models.Marca,{
+        Product.belongsTo(models.Marks,{
             as : 'marca',
-            foreignKey : 'FK_MARK_ID'
+            foreignKey : 'mark_id'
         })
 
-        Producto.hasMany(models.Imagen,{
+        Product.hasMany(models.Images,{
             as : 'imagen',
-            foreignKey : 'FK_IMAGE_ID'
+            foreignKey : 'image_id'
         })
 
-        Producto.hasMany(models.Garantia,{
+        Product.belongsTo(models.Guarantees,{
             as : 'garantia',
-            foreignKey : 'FK_GUARANTEE_ID'
+            foreignKey : 'guarantee_id'
         })
                 
     }
 
-    return Producto
+    return Product
 }

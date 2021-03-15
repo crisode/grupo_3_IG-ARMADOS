@@ -1,5 +1,5 @@
 module.exports = (sequelize,dataTypes) => {
-    const alias = 'Carrito';
+    const alias = 'Carts';
 
     const cols = {
         id : {
@@ -21,30 +21,28 @@ module.exports = (sequelize,dataTypes) => {
 
     const config = {
         tableName : 'cart',
-        timesTamp : true  
+        timesTamp : false,
+        underscored: true,
+        
     }
 
-    const Carrito = sequelize.define(alias,cols,config);
+    const Cart = sequelize.define(alias,cols,config);
 
-    Carrito.associate = function(models){
-        Carrito.hasMany(models.Producto,{
-            as : 'producto',
-            foreignKey : 'FK_PRODUCT_ID'
+    Cart.associate = (models)=>{
+        Cart.belongsTo(models.Users,{
+            as : 'User',
+            foreignKey : 'user_id'
+            
         })
-    }
 
-    Carrito.associate = function(models){
-        Carrito.hasMany(models.Usuario,{
-            as : 'usuario',
-            foreignKey : 'FK_USER_ID'
+        Cart.belongsTo(models.Products,{
+            as : 'Product',
+            foreignKey : 'product_id'
         })
+
+        
     }
 
-
-
-
-
-
-    return Carrito;
+    return Cart;
 
 }

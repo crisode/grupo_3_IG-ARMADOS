@@ -1,13 +1,13 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = "Componente";
+    const alias = "Components";
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER.UNSIGNED,
-            prymaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            type: dataTypes.INTEGER,
+            primaryKey : true,
+            allowNull : false,
+            autoIncrement : true
         },
         name: {
             type: dataTypes.STRING(100),
@@ -18,26 +18,23 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: "components",  /* Nombre de la tabla */
-        timestamps: true,         /* Marca de tiempo */
+        timestamps: false,         /* Marca de tiempo */
         underscored: true         /* como esta escrito */
 
     };
+
+
+    const Component = sequelize.define(alias, cols, config)
+
+
+
     Component.associate = (models) => {
-        Component.belonsTo(models.Producto, {
+        Component.belongsTo(models.Products, {
             as : "producto",
             foreignKey : "component_id"
         })
     };
 
-
-
-
-
-
-
-
-
-
-    const Component = sequelize.define(alias, cols, config)
+    
     return Component
 }

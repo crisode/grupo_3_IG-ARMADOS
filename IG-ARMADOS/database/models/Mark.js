@@ -1,12 +1,12 @@
 module.exports = (sequelize, dataTypes) => {
 
 
-    const alias = "Marca";
+    const alias = "Marks";
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER.UNSIGNED.UNSIGNED,
-            prymaryKey: true,
+            type: dataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
@@ -18,22 +18,24 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const config = {
-        tableName: "Marks",  /* Nombre de la tabla */
-        timestamps: true,    /* Marca de tiempo */
+        tableName: "marks",  /* Nombre de la tabla */
+        timestamps: false,    /* Marca de tiempo */
         underscored: true    /* como esta escrito */
 
     };
 
 
+    const Mark = sequelize.define(alias, cols, config)
+
     Mark.associate = (models) => {
-        Mark.belonsTo(models.Producto, {
+        Mark.belongsTo(models.Products, {
             as : "producto",
             foreignKey : "mark_id"
         })
     };
 
 
-    const Mark = sequelize.define(alias, cols, config)
+    
 
     return Mark
 }
