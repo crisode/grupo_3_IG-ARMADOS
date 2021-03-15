@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = "Rol";
+    const alias = "Rols";
 
     const cols = {
         id : {
@@ -17,29 +17,29 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName : "roles",
-        timestamps : true,
+        timestamps : false,
         underscored: true,
-        classMethods : {
+        /* classMethods : {
             associate : function(models){
                 Rol.hasMany(models.Usuario,{
                     as : 'usuario',
-                    foreignKey : "FK_ROL_ID"
+                    foreignKey : "rol_id"
                     
                 })
             }
-        }
+        } */
     };
 
     const Rol = sequelize.define(alias, cols, config);
-/*
+
     Rol.associate = (models) => {
-        Rol.hasMany(models.User, {
+        Rol.hasMany(models.Users, {
             as : "usuario",
-            foreignKey : "FK_ROL_ID"
+            foreignKey : "rol_id"
         })
 
 
-    };*/
+    };
 
     return Rol
 };

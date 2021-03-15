@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = "Componente";
+    const alias = "Components";
 
     const cols = {
         id: {
@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: "components",  /* Nombre de la tabla */
-        timestamps: true,         /* Marca de tiempo */
+        timestamps: false,         /* Marca de tiempo */
         underscored: true         /* como esta escrito */
 
     };
@@ -29,9 +29,9 @@ module.exports = (sequelize, dataTypes) => {
 
 
     Component.associate = (models) => {
-        Component.belongsTo(models.Producto, {
+        Component.belongsTo(models.Products, {
             as : "producto",
-            foreignKey : "FK_COMPONENT_ID"
+            foreignKey : "component_id"
         })
     };
 
