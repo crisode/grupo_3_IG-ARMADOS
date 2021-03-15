@@ -4,7 +4,7 @@ const db = require("../database/models");
 
 module.exports = {
     index: (req, res) => {
-        db.Producto.findAll()
+        db.producto.findAll()
             .then(productos => {
                 return res.render("admin/productoLista", {
                     title: "lista de productos",
@@ -21,7 +21,7 @@ module.exports = {
     },
     storeProducto: (req, res) => {
         const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
-        db.Producto.create({
+        db.producto.create({
             title: title.trim(),
             price,
             insale,
@@ -42,7 +42,7 @@ module.exports = {
     },
 
     detalleProducto: (req, res) => {
-        db.Producto.findByPk(req.params.id)
+        db.producto.findByPk(req.params.id)
             .then(producto => {
                 return res.render("admin/productoDetalle", {
                     title: "Detalle",

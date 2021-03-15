@@ -51,11 +51,8 @@ module.exports = (sequelize, dataTypes) => {
         category_id : {
             type : dataTypes.INTEGER,
             allowNull : false
-        },
-        image : {
-            type : dataTypes.INTEGER,
-            allowNull : false
         }
+        
     }
 
     const config = {
@@ -91,8 +88,8 @@ module.exports = (sequelize, dataTypes) => {
         })
 
         Product.hasMany(models.Images,{
-            as : 'imagen',
-            foreignKey : 'image_id'
+            as : 'imagenes',
+            foreignKey : 'product_id'
         })
 
         Product.belongsTo(models.Guarantees,{
