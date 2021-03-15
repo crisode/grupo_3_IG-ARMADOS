@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
         })
         
         User.belongsTo(models.Carts,{
-            as : 'user',
+            as : 'usuario',
             foreignKey : 'user_id'
         
         })
