@@ -6,15 +6,11 @@ const db = require('../database/models');
 module.exports = { 
     detalle: (req, res) => {
 
-        db.Producto.findOne({
+        db.Products.findOne({
             where : {
                 id : req.params.id
             },
             include : [
-                {
-                    association : 'carrito'
-                },
-                
                 {
                     association : 'categoria'
                 },
@@ -25,7 +21,7 @@ module.exports = {
                     association : 'marca'
                 },
                 {
-                    association : 'imagen'
+                    association : 'imagenes'
                 },
                 {
                     association : 'garantia'
