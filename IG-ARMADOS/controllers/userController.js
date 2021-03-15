@@ -85,7 +85,7 @@ module.exports = {
     registerProcess: (req, res) => {
 
         let errores = validationResult(req);
-
+        
         if (!errores.isEmpty()) {
             return res.render('register', {
                 errores: errores.mapped(),
@@ -99,8 +99,8 @@ module.exports = {
             db.Usuarios.create({
                 name : name.trim(),
                 last_name : apellido.trim(),
-                email : email,
-                pass : bcrypt.hashSync(pass, 12),
+                email,
+                password : bcrypt.hashSync(pass, 12),
                 avatar : img
             })
             .then(() => res.redirect("/login"))
