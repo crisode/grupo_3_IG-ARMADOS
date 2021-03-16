@@ -48,10 +48,11 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey : "rol_id"
         })
         
-        User.belongsTo(models.Carts,{
+        User.belongsToMany(models.Products,{
             as : 'usuario',
-            foreignKey : 'user_id'
-        
+            through : "cart",
+            foreignKey : 'user_id',
+            otherKey : "product_id"
         })
 
         
