@@ -161,7 +161,8 @@ module.exports = {
         db.Users.update({
             name : name,
             last_name : apellido,
-            email : email
+            email : email,
+            avatar : req.files[0].filename
         },{
             where : {
                 id : req.session.user.id
