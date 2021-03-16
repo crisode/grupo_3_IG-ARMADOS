@@ -30,43 +30,56 @@ module.exports = {
 
             const { email, pass, recordar } = req.body;
 
-            db.Usuarios.findOne({
+            db.Users.findOne({
                 where: {
-                    email
+                    email : email
                 }
             })
             .then(user => {
-                if (user && bcrypt.compareSync(pass, user.password)) {
-                    req.session.user = {
-                        id : user.id,
-                        name : user.name,
-                        last_name : user.last_name,
-                        email : user.email,
-                        avatar : user.avatar,
-                        rol : user.rol_id
+                if(!user == ""){
+                    if (bcrypt.compareSync(pass, user.password)) {
+                        req.session.user = {
+                            id : user.id,
+                            name : user.name,
+                            last_name : user.last_name,
+                            email : user.email,
+                            avatar : user.avatar,
+                            rol : user.rol_id
+                        }
+    
+                        // creo la cookie para cuando el usuario elija recordarme
+                        
+                        if(recordar){
+                            res.cookie("user", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
+                        }
+                        return res.redirect("/");
+                    }else{
+                        return res.render('login',{
+                            errores :{
+                                email : {
+                                    msg : 'Email o contraseña incorecto'
+                                }
+                            },
+                            
+                            title : 'ingreso'
+                        })
+    
                     }
-
-                    // creo la cookie para cuando el usuario elija recordarme
-                    
-                    if(recordar){
-                        res.cookie("user", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
-                    }
-                    return res.redirect("/");
                 }else{
                     return res.render('login',{
                         errores :{
                             email : {
-                                msg : 'Email o contraseña incorecto'
+                                msg : 'Usuario no registrado'
                             }
                         },
                         
                         title : 'ingreso'
                     })
-
                 }
-            })
+               
+            }).catch(error => console.log(error))
         }
-                    
+         /*           
         return res.render('login',{
             errores :{
                 email : {
@@ -75,7 +88,7 @@ module.exports = {
             },
             
             title : 'ingreso'
-        })
+        })*/
     },
     register: (req, res) => {
         res.render("register", {
@@ -94,41 +107,41 @@ module.exports = {
         } else {
 
 
-            const { name, apellido, email, pass , img} = req.body;
+            const { name, apellido, email, pass } = req.body;
 
-            db.User.create({
+            db.Users.create({
                 name : name.trim(),
                 last_name : apellido.trim(),
-                email,
+                email: email.trim(),
                 password : bcrypt.hashSync(pass, 12),
-                avatar : img
+                avatar : (req.files[0]) ? req.files[0].filename : "default.png"
             })
-            .then(() => res.redirect("/login"))
+            .then(() => {res.redirect("/users/login")})
         }
 
     },
     profile: (req, res) => {
 
-        let result = db.Usuarios.findByPk({
+        db.Users.findOne({
             where: {
-                id : req.params.id
+                id : req.session.user.id
             }
         })
-        .then(() => {
+        .then((result) => {
             res.render("profile", {
-                title: "perfil",
+                title: "Perfil",
                 result
             })
         })
     },
     profileEdit: (req, res) => {
 
-        let result = db.Usuarios.findByPk({
+        db.Users.findOne({
             where: {
-                id : req.params.id
+                id : req.session.user.id
             }
         })
-        .then(() => {
+        .then((result) => {
             res.render("profileEdit", {
                 title: "Editar Perfil",
                 result
@@ -145,38 +158,22 @@ module.exports = {
         const {name, apellido, email} = req.body
 
 
-        db.Usuarios.update({
+        db.Users.update({
             name : name,
             last_name : apellido,
             email : email
         },{
             where : {
-                id : req.params.id
+                id : req.session.user.id
         }
     })
     .then(() => {
-        let userUpdate = db.Usuarios.findByPk({
-            where: {
-                id : req.params.id
-            }
-        }).then(() => {
-            req.session.user = {
-                id: userUpdate.id,
-                name: userUpdate.name,
-                last_name: userUpdate.last_name,
-                email: userUpdate.email,
-                avatar: userUpdate.avatar,
-                rol: userUpdate.rol_id
-            }
+            res.redirect("/users/profile")
         })
-
-        res.redirect("/users/profile")
-    })
-        
     },
     remove: (req, res) => {
 
-        db.Usuarios.destroy({
+        db.Users.destroy({
             where : {
                 id : req.params.id
             }
