@@ -96,7 +96,7 @@ module.exports = {
 
             const { name, apellido, email, pass , img} = req.body;
 
-            db.Usuarios.create({
+            db.User.create({
                 name : name.trim(),
                 last_name : apellido.trim(),
                 email,

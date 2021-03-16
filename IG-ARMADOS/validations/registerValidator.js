@@ -1,7 +1,5 @@
 const {check, body}= require ("express-validator");
-const {getUsers} = require('../data/users')
-
-let usersDB = getUsers();
+const db = require("../database/models")
 
 
 module.exports= [
@@ -17,13 +15,19 @@ module.exports= [
     .withMessage('email invalido'),
 
     body('email').custom((value) => {
-        let emailCheck = usersDB.find(user => user.email === value)
         
-        if(emailCheck){
-            return false
-        }else{
-            return true
-        }
+        db.Users.findOne({
+            where : {
+                email : value
+            }
+        })
+        .then(resultado => {
+            if(resultado){
+                return false
+            }else{
+                return true
+            }
+        })
     }).withMessage('Email ya registrado'),
 
     check("pass")
