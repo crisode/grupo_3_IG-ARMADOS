@@ -6,11 +6,11 @@ module.exports = {
             .then(productos => {
                 
                 let destacados = productos.filter(producto => {
-                    return producto.categoria.name == "destacados"
+                    return producto.categoria.name == "Destacados"
                 });
 
                 let novedades = productos.filter(producto => {
-                    return producto.categoria.name == "novedades"
+                    return producto.categoria.name == "Novedades"
                 });
 
                 res.render("index" ,{
