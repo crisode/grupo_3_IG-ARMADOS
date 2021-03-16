@@ -13,7 +13,7 @@
                     <section class="product-info col-12">
                         <div class="box ">
                         <h2>titulo del producto</h2>
-                        <input type="text" name="title" id="" value="<%= producto.title %>">
+                        <input type="text" name="title" id="" value="<%= producto.name %>">
                         <h2>Precio del producto</h2>
                         <input type="text" name="price" id="" value="<%= producto.price %> ">
                         </div>
@@ -22,9 +22,11 @@
                         <h2>oferta</h2>
                         <input type="text" name="insale" value="<%= producto.insale %> ">
                         <h2>garantia</h2>
-                        <select name="garantia" id="" value="<%= producto.garantia %> ">
-                            <option value="si"><p>Si</p></option>
-                            <option value="no"><p>No</p></option>
+                        <select name="garantia" id="" value="<%= producto.guarantee_id %> ">
+                            <<% garantias.forEach(garantia=> { %>
+                                <option  <%= garantia.id == producto.guarantee_id  ? "selected":null %> value="<%= garantia.id%>"> <%= garantia.type%> </option>
+                                <% }) %>
+                                </select>
                         </div>
                         </select>
                     </section>
@@ -36,14 +38,23 @@
                     <section class="product-detail col-12">
                         <div class="box3">
                         <h2>componente</h2>
-                        <input type="text" name="component" id="" value="<%= producto.component %> ">
+                        <select name="component" id="" >
+                            <% componentes.forEach(componente=> { %>
+                                <option <%= componente.id == producto.component_id  ? "selected":null %> value="<%= componente.id%>"><%= componente.name%></option>
+                                <% }) %>
+                                </select>
                         <h2>marca</h2>
-                        <input type="text" name="mark" id="" value="<%= producto.mark %>">
-                        <h2 class="mt-3">category</h2>
-                        <select name="category" id="" value="<%= producto.category %>">
-                            <option value="si"><p>novedades</p></option>
-                            <option value="no"><p>destacados</p></option>
-                        </select>
+                        <select name="mark" id="">                                        
+                            <% marcas.forEach(marca=> { %>                      
+                                <option <%= marca.id == producto.mark_id  ? "selected":null %> value="<%= marca.id%>"><%= marca.name%></option>
+                                <% }) %>
+                                </select>                        
+                                <h2 class="mt-3">category</h2>
+                                <select name="category" id="">
+                                    <% categorias.forEach(categoria=> { %>
+                                        <option <%= categoria.id == producto.category_id  ? "selected":null %> value="<%= categoria.id%>"><%= categoria.name%></option>
+                                        <% }) %>
+                                </select>
                         </div>
     
                         <div class="box4">

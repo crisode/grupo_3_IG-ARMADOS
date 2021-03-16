@@ -20,10 +20,12 @@
                     <% productos.forEach(producto => { %>
                         <div class="col-12 col-md-6 col-lg-3 my-3">
                             <div class="card card-product" style="width: 98%">
-                                <img src="/images/<%= producto.image %>"  class="card-img-top" alt="..." />
+                                
+                                <img src="/images/producto/<%= producto.name %>"  class="card-img-top" alt="..." />
+                              
                                 <div class="card-body">
                                     <section class="card-body__title">
-                                        <p class="card-text"><%= producto.title %> </p>
+                                        <p class="card-text"><%= producto.name %> </p>
                                     </section>
                                     
                                     <a href="/product/<%= producto.id %> " class="btn btn-primary card-link">DETALLE</a>
