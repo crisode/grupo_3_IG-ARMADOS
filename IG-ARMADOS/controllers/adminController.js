@@ -2,7 +2,7 @@ const db = require("../database/models");
 const { validationResult } = require('express-validator');
 module.exports = {
     index: (req, res) => {
-        db.producto.findAll()
+        db.Products.findAll()
             .then(productos => {
                 return res.render("admin/productoLista", {
                     title: "lista de productos",
@@ -22,7 +22,7 @@ module.exports = {
         if (errors.isEmpty()) {/* si no hay errores */
 
             const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
-            db.producto.create({
+            db.Products.create({
                 title: title.trim(),
                 price: +price.trim(),
                 insale: insale,
@@ -51,7 +51,7 @@ module.exports = {
     },
 
     detalleProducto: (req, res) => {
-        db.producto.findByPk(req.params.id)
+        db.Products.findByPk(req.params.id)
             .then(producto => {
                 return res.render("admin/productoDetalle", {
                     title: "Detalle",
@@ -62,7 +62,7 @@ module.exports = {
 
     },
     editarProducto: (req, res) => {
-        db.Producto.findByPk(req.params.id)
+        db.Products.findByPk(req.params.id)
             .then(producto => {
                 return res.render("admin/editarProducto.ejs", {
                     title: "Edicion de producto",
@@ -74,7 +74,7 @@ module.exports = {
     },
     actualizarProducto: (req, res) => {
         const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
-        db.Producto.update({
+        db.Products.update({
             title: title.trim(),
             price: +price.trim(),
             insale: insale,
@@ -99,7 +99,7 @@ module.exports = {
 
     },
     borrarProducto: (req, res) => {
-        db.Pelicula.destroy({
+        db.Products.destroy({
             where: {
                 id: req.params.id
             }
