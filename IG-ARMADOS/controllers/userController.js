@@ -162,7 +162,7 @@ module.exports = {
             name : name,
             last_name : apellido,
             email : email,
-            avatar : req.files[0].filename
+            avatar : (req.files[0]) ? req.files[0].filename : req.session.user.avatar
         },{
             where : {
                 id : req.session.user.id
