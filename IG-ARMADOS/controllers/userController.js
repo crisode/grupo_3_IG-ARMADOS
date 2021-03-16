@@ -30,7 +30,7 @@ module.exports = {
 
             const { email, pass, recordar } = req.body;
 
-            db.Usuarios.findOne({
+            db.Users.findOne({
                 where: {
                     email
                 }
@@ -94,14 +94,14 @@ module.exports = {
         } else {
 
 
-            const { name, apellido, email, pass , img} = req.body;
+            const { name, apellido, email, pass } = req.body;
 
-            db.User.create({
+            db.Users.create({
                 name : name.trim(),
                 last_name : apellido.trim(),
-                email,
+                email: email.trim(),
                 password : bcrypt.hashSync(pass, 12),
-                avatar : img
+                avatar : (req.files[0]) ? req.files[0].filename : "default.png"
             })
             .then(() => res.redirect("/login"))
         }

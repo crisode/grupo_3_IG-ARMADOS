@@ -16,20 +16,20 @@ module.exports= [
 
     body('email').custom((value) => {
         
-        db.Users.findOne({
+        return db.Users.findOne({
             where : {
                 email : value
             }
         })
-        .then(resultado => {
-            if(resultado){
+        .then(user => {
+            if (user) {
                 return false
             }else{
                 return true
             }
         })
     }).withMessage('Email ya registrado'),
-
+        
     check("pass")
     .isLength({
         min : 6,
