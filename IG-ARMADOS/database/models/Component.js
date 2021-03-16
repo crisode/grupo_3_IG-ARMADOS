@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
     Component.associate = (models) => {
-        Component.belongsTo(models.Products, {
+        Component.hasMany(models.Products, {
             as : "producto",
             foreignKey : "component_id"
         })

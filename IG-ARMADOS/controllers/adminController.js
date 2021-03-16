@@ -1,7 +1,5 @@
-
-
 const db = require("../database/models");
-
+const { validationResult } = require('express-validator');
 module.exports = {
     index: (req, res) => {
         db.producto.findAll()
@@ -20,25 +18,36 @@ module.exports = {
         })
     },
     storeProducto: (req, res) => {
-        const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
-        db.producto.create({
-            title: title.trim(),
-            price,
-            insale,
-            garantia,
-            component,
-            mark,
-            model,
-            stock,
-            description,
-            features,
-            category,
-            image: req.files[0].filename
-        })
-            .then(() => {
-               return res.redirect("/admin")
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {/* si no hay errores */
+
+            const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
+            db.producto.create({
+                title: title.trim(),
+                price: +price.trim(),
+                insale: insale,
+                garantia: garantia.trim(),
+                component: component.trim(),
+                mark: mark.trim(),
+                model: model.trim(),
+                stock: (req.body.stock),
+                description: description.trim(),
+                features: features.trim(),
+                category: category,
             })
-            .catch(error => res.send(error))
+                .then((newProduct) => {
+                    let id = newProduct.id
+                    db.Images.create({
+                        imagen: (req.files[0]) ? req.files[0].filename : "default-image.png",
+                        product_id: newProduct.id
+                    })
+                        .then(() => {
+                            res.redirect("/admin")
+                        })
+                })
+                .catch(error => res.send(error))
+        }
+
     },
 
     detalleProducto: (req, res) => {
@@ -67,20 +76,18 @@ module.exports = {
         const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
         db.Producto.update({
             title: title.trim(),
-            price,
-            insale,
-            garantia,
-            component,
-            mark,
-            model,
-            stock,
-            description,
-            features,
-            category,
-            image
-        },
-            {
-                where: {
+            price: +price.trim(),
+            insale: insale,
+            garantia: garantia.trim(),
+            component: component.trim(),
+            mark: mark.trim(),
+            model: model.trim(),
+            stock: (req.body.stock),
+            description: description.trim(),
+            features: features.trim(),
+            category: category,
+        }, {
+            where: {
                     id: req.params.id
                 }
             })
@@ -93,14 +100,14 @@ module.exports = {
     },
     borrarProducto: (req, res) => {
         db.Pelicula.destroy({
-            where:{
-                id:req.params.id
+            where: {
+                id: req.params.id
             }
         })
-        .then(() => {
-            return res.redirect("/admin")
-        })
-        .catch(error => res.send(error))
+            .then(() => {
+                return res.redirect("/admin")
+            })
+            .catch(error => res.send(error))
 
 
 
