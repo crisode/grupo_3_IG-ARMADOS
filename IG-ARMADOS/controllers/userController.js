@@ -103,7 +103,7 @@ module.exports = {
                 password : bcrypt.hashSync(pass, 12),
                 avatar : (req.files[0]) ? req.files[0].filename : "default.png"
             })
-            .then(() => res.redirect("/login"))
+            .then(() => {res.redirect("/users/login")})
         }
 
     },
