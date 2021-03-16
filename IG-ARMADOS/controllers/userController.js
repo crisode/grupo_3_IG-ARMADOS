@@ -122,26 +122,26 @@ module.exports = {
     },
     profile: (req, res) => {
 
-        let result = db.Usuarios.findByPk({
+        db.Users.findOne({
             where: {
-                id : req.params.id
+                id : req.session.user.id
             }
         })
-        .then(() => {
+        .then((result) => {
             res.render("profile", {
-                title: "perfil",
+                title: "Perfil",
                 result
             })
         })
     },
     profileEdit: (req, res) => {
 
-        let result = db.Usuarios.findByPk({
+        db.Users.findOne({
             where: {
-                id : req.params.id
+                id : req.session.user.id
             }
         })
-        .then(() => {
+        .then((result) => {
             res.render("profileEdit", {
                 title: "Editar Perfil",
                 result
@@ -158,38 +158,22 @@ module.exports = {
         const {name, apellido, email} = req.body
 
 
-        db.Usuarios.update({
+        db.Users.update({
             name : name,
             last_name : apellido,
             email : email
         },{
             where : {
-                id : req.params.id
+                id : req.session.user.id
         }
     })
     .then(() => {
-        let userUpdate = db.Usuarios.findByPk({
-            where: {
-                id : req.params.id
-            }
-        }).then(() => {
-            req.session.user = {
-                id: userUpdate.id,
-                name: userUpdate.name,
-                last_name: userUpdate.last_name,
-                email: userUpdate.email,
-                avatar: userUpdate.avatar,
-                rol: userUpdate.rol_id
-            }
+            res.redirect("/users/profile")
         })
-
-        res.redirect("/users/profile")
-    })
-        
     },
     remove: (req, res) => {
 
-        db.Usuarios.destroy({
+        db.Users.destroy({
             where : {
                 id : req.params.id
             }
