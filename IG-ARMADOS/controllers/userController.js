@@ -46,7 +46,7 @@ module.exports = {
                             avatar : user.avatar,
                             rol : user.rol_id
                         }
-    
+                        console.log(req.session.user)
                         // creo la cookie para cuando el usuario elija recordarme
                         
                         if(recordar){
