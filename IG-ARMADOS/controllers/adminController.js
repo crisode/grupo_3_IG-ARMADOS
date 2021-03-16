@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 
 module.exports = {
     index : (req, res) => {
-        
+       let imagenes = db.Images.findAll();
        db.Products.findAll({include : [{association :'imagenes'},{association : 'categoria'}]})
         .then(productos => {
             
@@ -15,12 +15,15 @@ module.exports = {
             let novedades = productos.filter(producto => {
                 return producto.categoria.name == "novedades"
             });
+           
 
             res.render("admin/productoLista", {
                 title: "lista de productos",
                 destacados,
                 novedades,
-                 productos
+                productos,
+                imagenes
+                
             })
         }).catch(error => console.log(error))
     },
@@ -37,6 +40,7 @@ module.exports = {
         let garantias = db.Guarantees.findAll();
         let marcas = db.Marks.findAll();
         
+        
     
         Promise.all([categorias, componentes, garantias, marcas])
             .then(([categorias, componentes, garantias, marcas]) => {
@@ -45,7 +49,8 @@ module.exports = {
                     categorias,
                     componentes,
                     garantias,
-                    marcas
+                    marcas,
+                    
                 })
             })
             .catch(error => console.log(error))
@@ -98,17 +103,66 @@ module.exports = {
             .catch(error => res.send(error))
 
     },
+
+
+
+
+
+
+    
+
+
     editarProducto: (req, res) => {
-        db.Products.findByPk(req.params.id)
-            .then(producto => {
+        let categorias = db.Categorys.findAll();
+        let componentes = db.Components.findAll();
+        let garantias = db.Guarantees.findAll();
+        let marcas = db.Marks.findAll();
+
+       let producto= db.Products.findOne({
+            where:{
+                id: req.params.id 
+            }, 
+            include:[
+                {association: 'categoria'},
+                {association: 'componente'},
+                {association: "marca"},
+                {association:"imagenes"},
+                {association:"garantia"}
+            ]
+        })
+        Promise.all([categorias, componentes, garantias, marcas,producto])
+            .then(([categorias, componentes, garantias, marcas,producto]) => {
                 return res.render("admin/editarProducto.ejs", {
                     title: "Edicion de producto",
-                    producto
+                    producto,
+                    categorias,
+                    componentes,
+                    garantias,
+                    marcas,
+
                 })
             })
             .catch(error => res.send(error))
 
     },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     actualizarProducto: (req, res) => {
 
         let errors = validationResult(req);
@@ -117,17 +171,17 @@ module.exports = {
             const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
 
             db.Products.update({
-                title: title.trim(),
-                price: +price.trim(),
-                insale: insale,
-                garantia: garantia.trim(),
-                component: component.trim(),
-                mark: mark.trim(),
-                model: model.trim(),
-                stock: stock.trim(),
-                description: description.trim(),
-                features: features.trim(),
-                category: +category,
+                name:title!=""? title.trim():null,
+                price: price!=""? +price.trim():null,
+                insale: insale!=""?+insale:null,
+                guarantee_id : garantia!=""?garantia.trim():null,
+                component_id: component!=""?component.trim():null,
+                mark_id: mark!=""?mark.trim():null,
+                model:model!=""? model.trim():null,
+                stock:stock!=""? +stock:null,
+                description: description!=""?description.trim():null,
+                features:features!=""? features.trim():null,
+                category_id: category!=""?category:null
             }, {
                 where: {
                     id: req.params.id
