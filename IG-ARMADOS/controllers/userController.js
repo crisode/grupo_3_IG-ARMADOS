@@ -32,41 +32,54 @@ module.exports = {
 
             db.Users.findOne({
                 where: {
-                    email
+                    email : email
                 }
             })
             .then(user => {
-                if (user && bcrypt.compareSync(pass, user.password)) {
-                    req.session.user = {
-                        id : user.id,
-                        name : user.name,
-                        last_name : user.last_name,
-                        email : user.email,
-                        avatar : user.avatar,
-                        rol : user.rol_id
+                if(!user == ""){
+                    if (bcrypt.compareSync(pass, user.password)) {
+                        req.session.user = {
+                            id : user.id,
+                            name : user.name,
+                            last_name : user.last_name,
+                            email : user.email,
+                            avatar : user.avatar,
+                            rol : user.rol_id
+                        }
+    
+                        // creo la cookie para cuando el usuario elija recordarme
+                        
+                        if(recordar){
+                            res.cookie("user", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
+                        }
+                        return res.redirect("/");
+                    }else{
+                        return res.render('login',{
+                            errores :{
+                                email : {
+                                    msg : 'Email o contraseña incorecto'
+                                }
+                            },
+                            
+                            title : 'ingreso'
+                        })
+    
                     }
-
-                    // creo la cookie para cuando el usuario elija recordarme
-                    
-                    if(recordar){
-                        res.cookie("user", req.session.user, {maxAge: 1000 * 60 * 60 * 24}); // 1 dia de recordar la cookie
-                    }
-                    return res.redirect("/");
                 }else{
                     return res.render('login',{
                         errores :{
                             email : {
-                                msg : 'Email o contraseña incorecto'
+                                msg : 'Usuario no registrado'
                             }
                         },
                         
                         title : 'ingreso'
                     })
-
                 }
-            })
+               
+            }).catch(error => console.log(error))
         }
-                    
+         /*           
         return res.render('login',{
             errores :{
                 email : {
@@ -75,7 +88,7 @@ module.exports = {
             },
             
             title : 'ingreso'
-        })
+        })*/
     },
     register: (req, res) => {
         res.render("register", {
