@@ -46,7 +46,7 @@ module.exports = {
                             avatar : user.avatar,
                             rol : user.rol_id
                         }
-    
+                        console.log(req.session.user)
                         // creo la cookie para cuando el usuario elija recordarme
                         
                         if(recordar){
@@ -161,7 +161,8 @@ module.exports = {
         db.Users.update({
             name : name,
             last_name : apellido,
-            email : email
+            email : email,
+            avatar : (req.files[0]) ? req.files[0].filename : req.session.user.avatar
         },{
             where : {
                 id : req.session.user.id
