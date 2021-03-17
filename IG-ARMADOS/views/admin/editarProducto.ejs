@@ -6,7 +6,11 @@
             <div class="content-form row">
                 <form action="/admin/upload/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <section class="product-img col-12">
+                        <li id="slide1">
+                            <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                        </li>
                         <label for="img">Cargar Imagenes</label>
+                        
                             <input type="file" name="image" id="img" value="<%= producto.image %> "> 
                     </section>
         
@@ -19,7 +23,7 @@
                         </div>
     
                         <div class="box2">
-                        <h2>oferta</h2>
+                        <h2>oferta</h2>      
                         <input type="text" name="insale" value="<%= producto.insale %> ">
                         <h2>garantia</h2>
                         <select name="garantia" id="" value="<%= producto.guarantee_id %> ">

@@ -19,6 +19,7 @@ body{
     color: #ffffff;
     font-size: 25px;   
     text-transform: capitalize;
+    padding: 10px 0;
 
 }
 
@@ -40,14 +41,15 @@ body{
 .carga-producto input{
     background-color: #272727;
     color: white;
-    border-style: none;
-    border-bottom: 1px solid #ff6600;
+    border-radius: 10px;
+    border: 1px solid #ff6600;
 }
 
 .carga-producto select{
     background-color: #272727;
     color: white;
     border: 1px solid #ff6600;
+    border-radius: 10px;
 
 }
  

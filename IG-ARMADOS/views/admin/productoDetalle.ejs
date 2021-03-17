@@ -11,12 +11,13 @@
                         <div class="container mt-5">
                             <h1>Vista de Detalle</h1>
                             <div class="card" style="width: 45%">
-                                <img src="/images/<%= producto.image %>" class="card-img-top" alt="..." />
+                                <img src="/images/productos/<%- producto.imagenes[0].name %> " class="card-img-top" alt="..." >
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <%= producto.name %>
                                     </h5>
                                     <span class="card-text"><%= producto.price %> - <%= producto.category_id %>  </span>
+                                    <%=  producto.price %> - <%= producto.category_id %>  
                                 </div>
                             </div>
                         </div>
@@ -35,7 +36,7 @@
 
                             <section>
                                 <p>NOMBRE DEL PRODUCTO</p>
-                                <P>PRECIO DEL PRODUCTO</P>
+                                <P>PRECIO DEL PRODUCTO</P>76
                             </section>
 
                             <article class="similar-products__product-box--button">

@@ -10,33 +10,33 @@
         <div class="container">
             <div class="product-detail row">
                 <article class="product-detail__title col-12">
-                    <h1><%-producto.title%> </h1>
+                    <h1><%-producto.name%> </h1>
                 </article>
 
                 <div class="product-detail__images-box col-12 col-lg-8">
                     <figure class="product-detail__images-box--largeImg">
                         <ul class="product-detail__images-box--slider">
                             <li id="slide1">
-                                <img src="/images/<%-producto.image%>" alt="">
+                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
                             </li>
                             <li id="slide2">
-                                <img src="/images/<%-producto.image%>" alt="">
+                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
                             </li>
                             <li id="slide3">
-                                <img src="/images/<%-producto.image%>" alt="">
+                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
                             </li>
                         </ul>
 
                     </figure>
                     <div class="product-detail__images-box--thumbnail">
                         <div class="product-detail__images-box--thumbnail_img">
-                            <a href="#slide1"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
+                            <a href="#slide1"><img widht="44" height="44" src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
                         </div>
                         <div class="product-detail__images-box--thumbnail_img">
-                            <a href="#slide2"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
+                            <a href="#slide2"><img widht="44" height="44" src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
                         </div>
                         <div class="product-detail__images-box--thumbnail_img">
-                            <a href="#slide3"><img widht="44" height="44" src="/images/<%-producto.image%>" alt=""></a>
+                            <a href="#slide3"><img widht="44" height="44" src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -64,14 +64,10 @@
                         </div>
 
                         <div class="product-detail__data--caja1__text">
-                            <% if (producto.garantia === true) { %>
-                                <p>Con garantia</p>
                            
-                            <% } else { %>
-                                <p>Sin Stock</p>
-                            <% } %>
-                            
-
+                                <p><%-producto.garantia.type%></p>
+                           
+                    
                         </div>
                     </div>
                     <div class="product-detail__data--caja1">
@@ -103,7 +99,7 @@
                     <h2>Caracteristicas del Producto</h2>
                     <ul class="product-detail__list">
                         <li class="product-detail__list--li">
-                            <p>Marca : <%- producto.mark %> </p>
+                            <p>Marca : <%-producto.marca.name %>  </p>
                         </li>
                         <li class="product-detail__list--li">
                             <p>Modelo : <%- producto.model %></p>
@@ -111,10 +107,10 @@
                     </ul>
                     <ul class="product-detail__list">
                         <li class="product-detail__list--li">
-                            <p>componente : <%- producto.component %></p>
+                            <p>componente : <%- producto.componente.name %></p>
                         </li>
                         <li class="product-detail__list--li">
-                            <p>Categoria : <%- producto.category %> </p>
+                            <p>Categoria : <%- producto.categoria.name %> </p>
                         </li>
                     </ul>
                     <ul class="product-detail__list">
@@ -137,7 +133,7 @@
             </article>
             <div class="similar-products ">
 
-                <% novedades.forEach(producto => { %>
+              
                     <div class="similar-products__product-box">
                         <figure>
                             <img src="/images/<%-producto.image%>"
@@ -154,7 +150,7 @@
                         </article>
     
                     </div>
-                <% }) %>
+             
                 
                 <!--
                 <div class="similar-products__product-box">

@@ -28,16 +28,20 @@ module.exports = {
                 }
             ]
         })
-        .then(producto => {
-            let novedades = producto.filter(producto => {
-                return producto.categoria.name == "novedades"
-            });
+        .then( producto=> {
+
             res.render("productoDetalle",{
                 title:"Detalle",
-                producto,
-                novedades
+                producto:producto,
+                categoria:producto,
+                componente:producto,
+                marca:producto,
+                garantia:producto
+
+                
             })
         }).catch(error => console.log(error))
+        
         
 
 
