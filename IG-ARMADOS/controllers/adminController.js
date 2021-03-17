@@ -4,10 +4,11 @@ const { validationResult } = require('express-validator');
 
 module.exports = {
     index : (req, res) => {
-       let imagenes = db.Images.findAll();
+       //let imagenes = db.Images.findAll();
        db.Products.findAll({include : [{association :'imagenes'},{association : 'categoria'}]})
         .then(productos => {
-            
+           // let imagen = productos[0].imagenes[0].name
+
             let destacados = productos.filter(producto => {
                 return producto.categoria.name == "destacados"
             });
@@ -21,8 +22,8 @@ module.exports = {
                 title: "lista de productos",
                 destacados,
                 novedades,
-                productos,
-                imagenes
+                productos
+                
                 
             })
         }).catch(error => console.log(error))
