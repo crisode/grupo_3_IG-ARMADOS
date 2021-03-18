@@ -1,11 +1,23 @@
 
 const db = require('../database/models');
-
+const {Op,Sequelize} = require('sequelize');
+const { sequelize } = require('../database/models');
 
 
 module.exports = { 
     detalle: (req, res) => {
-        let producto = db.Products.findOne({
+        let interes=db.Products.findAll({
+            include: [
+                { association: 'imagenes' },  
+                { association: 'categoria' },
+            ],
+            order: sequelize.random(),
+            limit:4
+        })
+
+
+        
+         let producto = db.Products.findOne({
             where : {
                 id : req.params.id
             },
@@ -17,7 +29,8 @@ module.exports = {
                 {association : 'garantia'}
             ]
         })
-        .then( producto=> {
+        Promise.all([interes, producto])
+        .then( ([interes,producto])=> {
 
             res.render("productoDetalle",{
                 title:"Detalle",
@@ -25,7 +38,8 @@ module.exports = {
                 categoria:producto,
                 componente:producto,
                 marca:producto,
-                garantia:producto
+                garantia:producto,
+                interes
             })
         }).catch(error => console.log(error))
         

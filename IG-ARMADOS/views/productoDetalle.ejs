@@ -1,227 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("partials/head") %>
+<%- include("partials/head") %>
 
-<body>
-    <%- include("partials/header") %>
-     <!-- HEADER -->
-     <div class="detalle-producto">
-        <div class="container">
-            <div class="product-detail row">
-                <article class="product-detail__title col-12">
-                    <h1><%-producto.name%> </h1>
-                </article>
+    <body>
+        <%- include("partials/header") %>
+            <!-- HEADER -->
+            <div class="detalle-producto">
+                <div class="container">
+                    <div class="product-detail row">
+                        <article class="product-detail__title col-12">
+                            <h1>
+                                <%-producto.name%>
+                            </h1>
+                        </article>
 
-                <div class="product-detail__images-box col-12 col-lg-8">
-                    <figure class="product-detail__images-box--largeImg">
-                        <ul class="product-detail__images-box--slider">
-                            <li id="slide1">
-                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
-                            </li>
-                            <li id="slide2">
-                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
-                            </li>
-                            <li id="slide3">
-                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
-                            </li>
-                        </ul>
+                        <div class="product-detail__images-box col-12 col-lg-8">
+                            <figure class="product-detail__images-box--largeImg">
+                                <ul class="product-detail__images-box--slider">
+                                    <li id="slide1">
+                                        <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                                    </li>
+                                    <li id="slide2">
+                                        <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                                    </li>
+                                    <li id="slide3">
+                                        <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                                    </li>
+                                </ul>
 
-                    </figure>
-                    <div class="product-detail__images-box--thumbnail">
-                        <div class="product-detail__images-box--thumbnail_img">
-                            <a href="#slide1"><img widht="44" height="44" src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
+                            </figure>
+                            <div class="product-detail__images-box--thumbnail">
+                                <div class="product-detail__images-box--thumbnail_img">
+                                    <a href="#slide1"><img widht="44" height="44"
+                                            src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
+                                </div>
+                                <div class="product-detail__images-box--thumbnail_img">
+                                    <a href="#slide2"><img widht="44" height="44"
+                                            src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
+                                </div>
+                                <div class="product-detail__images-box--thumbnail_img">
+                                    <a href="#slide3"><img widht="44" height="44"
+                                            src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-detail__images-box--thumbnail_img">
-                            <a href="#slide2"><img widht="44" height="44" src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
-                        </div>
-                        <div class="product-detail__images-box--thumbnail_img">
-                            <a href="#slide3"><img widht="44" height="44" src="/images/productos/<%- producto.imagenes[0].name %> " alt=""></a>
-                        </div>
+                        <section class="product-detail__data col-12 col-lg-4">
+                            <article class="product-detail__price">
+                                <p>$<%=producto.price.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "." );%>
+                                </p>
+                            </article>
+                            <div class="product-detail__data--caja1">
+                                <div class="product-detail__data--caja1__icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+
+                                <div class="product-detail__data--caja1__text">
+                                    <% if (producto.stock===true) { %>
+                                        <p>En Stock</p>
+
+                                        <% } else { %>
+                                            <p>Sin Stock</p>
+                                            <% } %>
+                                </div>
+                            </div>
+                            <div class="product-detail__data--caja1">
+                                <div class="product-detail__data--caja1__icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+
+                                <div class="product-detail__data--caja1__text">
+
+                                    <p>
+                                        <%-producto.garantia.type%>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                            <div class="product-detail__data--caja1">
+                                <div class="product-detail__data--caja1__icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+
+                                <div class="product-detail__data--caja1__text">
+                                    <p>Envios a todo el pais</p>
+                                </div>
+                            </div>
+
+                            <article class="product-detail__shop col-lg-12">
+                                <button>Comprar</button>
+                                <button>Agregar al carrito</button>
+                            </article>
+
+
+                        </section>
+
+
+
+                        <section class="product-detail__description col-12">
+                            <h2>Descripcion de Producto</h2>
+                            <p>
+                                <%-producto.description%>
+                            </p>
+                        </section>
+
+                        <section class="product-detail__feature col-12">
+                            <h2>Caracteristicas del Producto</h2>
+                            <ul class="product-detail__list">
+                                <li class="product-detail__list--li">
+                                    <p>Marca : <%-producto.marca.name %>
+                                    </p>
+                                </li>
+                                <li class="product-detail__list--li">
+                                    <p>Modelo : <%- producto.model %>
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="product-detail__list">
+                                <li class="product-detail__list--li">
+                                    <p>componente : <%- producto.componente.name %>
+                                    </p>
+                                </li>
+                                <li class="product-detail__list--li">
+                                    <p>Categoria : <%- producto.categoria.name %>
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="product-detail__list">
+                                <li class="product-detail__list--li">
+                                    <p>Detalles : <br>
+                                        <%- producto.features %>
+                                    </p>
+                                </li>
+                                <li class="product-detail__list--li">
+
+
+                                </li>
+                            </ul>
+
+                        </section>
                     </div>
-                </div>
-                <section class="product-detail__data col-12 col-lg-4">
-                    <article class="product-detail__price">
-                        <p>$<%=producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,
-                            ".");%></p>
-                    </article>
-                    <div class="product-detail__data--caja1">
-                        <div class="product-detail__data--caja1__icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
 
-                        <div class="product-detail__data--caja1__text">
-                            <% if (producto.stock === true) { %>
-                                <p>En Stock</p>
+
+                    <div class="container-fluid cuerpo mt-5">
+                        <div class="row">
+                            <div class="titulo col-12">
+                                <h1>Productos que te pueden interesar</h1>
+                                <div class="line">
+                                </div>
+                              </div>
+
                            
-                            <% } else { %>
-                                <p>Sin Stock</p>
-                            <% } %>   
+                            <!-- CAJA QUE ENGLOBA EL PRODUCTO-->
+                            <% interes.forEach(producto=> { %>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <section class="product-box">
+                                        <a href="/product/<%= producto.id %>">
+                                            <figure class="product-box_image">
+                                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                                            </figure>
+                                            <article class="product-box_data">
+                                                <h2 class="precio">
+                                                    $<%=producto.price.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "."
+                                                        );%>
+                                                        <!-- con esta formula, le agrega lo que contenga el ultimo string, en este caso "." en l -->
+                                                </h2>
+                                                <article>
+                                                    <button><a href="/product/<%= producto.id %>">detalles</a></button>
+                                                </article>
+                                                <p>
+                                                    <%= producto.name %>
+                                                </p>
+                                            </article>
+                                        </a>
+                                    </section>
+                                </div>
+                                <% }) %>
                         </div>
                     </div>
-                    <div class="product-detail__data--caja1">
-                        <div class="product-detail__data--caja1__icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-
-                        <div class="product-detail__data--caja1__text">
-                           
-                                <p><%-producto.garantia.type%></p>
-                           
-                    
-                        </div>
-                    </div>
-                    <div class="product-detail__data--caja1">
-                        <div class="product-detail__data--caja1__icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-
-                        <div class="product-detail__data--caja1__text">
-                            <p>Envios a todo el pais</p>
-                        </div>
-                    </div>
-
-                    <article class="product-detail__shop col-lg-12">
-                        <button>Comprar</button>
-                        <button>Agregar al carrito</button>
-                    </article>
-
-
-                </section>
-
-
-
-                <section class="product-detail__description col-12">
-                    <h2>Descripcion de Producto</h2>
-                    <p><%-producto.description%></p>
-                </section>
-
-                <section class="product-detail__feature col-12">
-                    <h2>Caracteristicas del Producto</h2>
-                    <ul class="product-detail__list">
-                        <li class="product-detail__list--li">
-                            <p>Marca : <%-producto.marca.name %>  </p>
-                        </li>
-                        <li class="product-detail__list--li">
-                            <p>Modelo : <%- producto.model %></p>
-                        </li>
-                    </ul>
-                    <ul class="product-detail__list">
-                        <li class="product-detail__list--li">
-                            <p>componente : <%- producto.componente.name %></p>
-                        </li>
-                        <li class="product-detail__list--li">
-                            <p>Categoria : <%- producto.categoria.name %> </p>
-                        </li>
-                    </ul>
-                    <ul class="product-detail__list">
-                        <li class="product-detail__list--li">
-                            <p>Detalles : <br><%- producto.features %> </p>
-                        </li>
-                        <li class="product-detail__list--li">
-                          
-                            
-                        </li>
-                    </ul>
-
-                </section>
-
-
-
-            </div>
-            <article class="similar-products__title">
-                <h2>Productos Similares</h2>
-            </article>
-            <div class="similar-products ">
-
-               
-             
-                
-                <!--
-                <div class="similar-products__product-box">
-                    <figure>
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                            alt="">
-                    </figure>
-
-                    <section>
-                        <p>NOMBRE DEL PRODUCTO</p>
-                        <P>PRECIO DEL PRODUCTO</P>
-                    </section>
-
-                    <article class="similar-products__product-box--button">
-                        <button>Ver Producto</button>
-                    </article>
-
                 </div>
-                <div class="similar-products__product-box desktop-hide">
-                    <figure>
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                            alt="">
-                    </figure>
+                <%- include("partials/what") %>
+                    <!-- FOOTER -->
+                    <%- include("partials/footer") %>
 
-                    <section>
-                        <p>NOMBRE DEL PRODUCTO</p>
-                        <P>PRECIO DEL PRODUCTO</P>
-                    </section>
+                        <%- include("partials/scriptBS") %>
+    </body>
 
-                    <article class="similar-products__product-box--button">
-                        <button>Ver Producto</button>
-                    </article>
-
-                </div>
-                <div class="similar-products__product-box desktop-hide">
-                    <figure>
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_654958-MLA32146296720_092019-O.webp"
-                            alt="">
-                    </figure>
-
-                    <section>
-                        <p>NOMBRE DEL PRODUCTO</p>
-                        <P>PRECIO DEL PRODUCTO</P>
-                    </section>
-
-                    <article class="similar-products__product-box--button">
-                        <button>Ver Producto</button>
-                    </article>
-
-                </div>
-                -->
-
-            </div>
-
-
-        </div>
-
-    </div>
-    <%- include("partials/what") %> 
-    <!-- FOOTER -->
-    <%- include("partials/footer") %>
-
-    <%- include("partials/scriptBS") %>
-</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
