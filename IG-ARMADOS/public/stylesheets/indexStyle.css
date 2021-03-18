@@ -17,7 +17,7 @@
     list-style: none;
     font-family: font-family, roboto, serif;
 }
-.home a{
+a{
     text-decoration: none;
 }
 .home .cuerpo{
@@ -30,6 +30,7 @@
 .home body{
     background-image: url('../images/Fondo.png');
     min-height: 100vh;
+  
 }
 .home .carousel-inner, .carousel-item > img{
     border-radius: 10px;
@@ -60,7 +61,7 @@
 
 }
 
-.home .titulo-producto p {
+.titulo-producto p {
     padding-right: 25%;
     overflow: hidden;
     white-space: nowrap;
@@ -152,7 +153,7 @@
     height: 40px;
     margin-top: 15px;
   }
-.home .product-box button{
+  .product-box button{
     margin-top: 0px;
     height: 37px;
     width: 94%;
@@ -168,14 +169,14 @@
 
 }
 
-.home .product-box button a{
+.product-box button a{
     text-decoration: none;
     background-color: #ff6600;
     color: #ffffff;
     font-weight: 10px;
 }
 
-.home .product-box button a:hover{
+.product-box button a:hover{
     color: var(--black);
 }
 
