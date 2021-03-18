@@ -5,27 +5,16 @@ const db = require('../database/models');
 
 module.exports = { 
     detalle: (req, res) => {
-
-        db.Products.findOne({
+        let producto = db.Products.findOne({
             where : {
                 id : req.params.id
             },
             include : [
-                {
-                    association : 'categoria'
-                },
-                {
-                    association : 'componente'
-                },
-                {
-                    association : 'marca'
-                },
-                {
-                    association : 'imagenes'
-                },
-                {
-                    association : 'garantia'
-                }
+                {association : 'categoria'},
+                {association : 'componente'},
+                {association : 'marca'},
+                {association : 'imagenes'},
+                {association : 'garantia'}
             ]
         })
         .then( producto=> {
@@ -37,8 +26,6 @@ module.exports = {
                 componente:producto,
                 marca:producto,
                 garantia:producto
-
-                
             })
         }).catch(error => console.log(error))
         
@@ -66,8 +53,8 @@ module.exports = {
         res.render("carrito",{
             title:"title"
         })
-    }
-  
+    },
+    
     
 
 }

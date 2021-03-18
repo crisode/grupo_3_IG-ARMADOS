@@ -144,24 +144,6 @@ module.exports = {
             .catch(error => res.send(error))
 
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     actualizarProducto: (req, res) => {
 
         let errors = validationResult(req);
@@ -180,7 +162,8 @@ module.exports = {
                 stock: stock != "" ? +stock : null,
                 description: description != "" ? description.trim() : null,
                 features: features != "" ? features.trim() : null,
-                category_id: category != "" ? category : null
+                category_id: category != "" ? category : null,
+                image: image != "" ? image : null
             }, {
                 where: {
                     id: req.params.id

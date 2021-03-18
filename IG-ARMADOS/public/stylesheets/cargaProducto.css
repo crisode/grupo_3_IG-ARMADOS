@@ -22,6 +22,10 @@ body{
     padding: 10px 0;
 
 }
+.img-edit{
+    width: 20%;
+    height: 20%;
+}
 
 .carga-producto p{
     font-family: 'Roboto', sans-serif;

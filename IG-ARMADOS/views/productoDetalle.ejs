@@ -42,7 +42,8 @@
                 </div>
                 <section class="product-detail__data col-12 col-lg-4">
                     <article class="product-detail__price">
-                        <p>$<%-producto.price%></p>
+                        <p>$<%=producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,
+                            ".");%></p>
                     </article>
                     <div class="product-detail__data--caja1">
                         <div class="product-detail__data--caja1__icon">
@@ -133,23 +134,7 @@
             </article>
             <div class="similar-products ">
 
-              
-                    <div class="similar-products__product-box">
-                        <figure>
-                            <img src="/images/<%-producto.image%>"
-                                alt="">
-                        </figure>
-    
-                        <section>
-                            <p><%= producto.title %> </p>
-                            <P><%= producto.price %> </P>
-                        </section>
-    
-                        <article class="similar-products__product-box--button">
-                            <button><a href="/product/<%= producto.id %>">Ver Producto</a></button>
-                        </article>
-    
-                    </div>
+               
              
                 
                 <!--

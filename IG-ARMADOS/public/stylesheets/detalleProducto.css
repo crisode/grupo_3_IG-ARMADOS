@@ -3,15 +3,10 @@ html, body {
     margin: 0;
     font-size: 10px;
 }
-body{
-    background-color: #1f1f1f;
-    
-}
-
-
 .detalle-producto h1{
     font-family: 'Roboto Slab', serif;
     color: #ffffff;
+    text-align: center;
 }
 
 .detalle-producto h2{
@@ -55,7 +50,7 @@ body{
     
     width: 100%;
     height: 80vw;
-    background-color: blue;
+   ;
 }
 /*  ---SLIDER----   */
 .detalle-producto .product-detail__images-box--slider{
@@ -163,8 +158,8 @@ body{
 
 .detalle-producto .product-detail__images-box--largeImg img{
     object-fit: fill;
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 85%;
 
 }
 

@@ -9,9 +9,6 @@
 
 
 /* loader */
-
-
-
  *{
     box-sizing: border-box;
     padding: 0;
@@ -22,32 +19,20 @@
 }
 .home a{
     text-decoration: none;
-
 }
-
-p{
+.home .cuerpo{
+    padding: 0 20px;
+}
+.homr p{
     color: #ffffff;
 }
 
-body{
+.home body{
     background-image: url('../images/Fondo.png');
     min-height: 100vh;
-
-
 }
-
-/* BANNER SLIDER */
-
-.home .banner-slide{
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 10px;
-    
-}
-
 .home .carousel-inner, .carousel-item > img{
     border-radius: 10px;
-
 }
 
 /* BANNER */
@@ -55,6 +40,7 @@ body{
 .home section.banner img{
     
     width: 100%;
+    height: 150px;
     margin-top: 20px;
     border-radius: 10px;
     
@@ -96,70 +82,99 @@ body{
     margin-left: 15px;
     width: 80%;
 
+
 /* PRODUCTOS DESTACADOS */
 }
-
-.home .productos-box{
-    border: 1px solid var(--orange);
+  .product-box {
     background-color: #272727;
     border-radius: 10px;
-}
-
-.home .productos-box img{
+    overflow: hidden;
+    transition: 300ms;
+    margin: 20px 0;
+    border: 2px solid var(--orange);
+    
+  }
+  .product-box_image {
+    height: 100%;
+    padding: 1%;
+  }
+  .product-box_image img{
     width: 100%;
     height: 300px;
     object-fit: contain;
     background-color: white;
-    border: 5px solid #272727;
-    border-radius: 10px;
+    border-radius: 6px 6px 0 0;
+    padding: 2%;
     
-}
-
-.home .productos-box p{
-    font-family: roboto;
-    font-size: 18px;
-    text-align: center;
-}
-
-.home .productos-box p:hover{
+  }
+  .product-box_data {
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #272727;
+  }
+  .product-box_data h2 {
+    font-size: 2.4em;
+    font-weight: 300;
+    margin: -15;
     color: var(--orange);
-}
-
-.home .productos-box article {
-    display: inline;
-}
-
-.home .productos-box button{
-    margin-top: 10px;
-    height: 50px;
-    width: 50%;
+  }
+  .product-box_data h2.precio {
+    color: var(--white);
+  }
+  
+  .product-box_data span {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--green);
+    margin: 0 0 0 10px;
+  }
+  
+  .product-box_data p {
+    font-size: 1.5em;
+    width: 100%;
+    color: var(--orange);
+    margin: 0;
+    height: 0;
+    transition: 300ms;
+    overflow: hidden;
+  }
+  .product-box:hover {
+    box-shadow: 0 0 5px rgb(218, 196, 4);
+  }
+  .product-box:hover p{
+    height: 40px;
+    margin-top: 15px;
+  }
+.home .product-box button{
+    margin-top: 0px;
+    height: 37px;
+    width: 94%;
     background-color: #ff6600;
     border-radius: 5px;
     text-decoration: none;
     border-style: none;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     font-size: 25px;
     text-transform: capitalize;
-    margin-left: 35px;
+    margin-left: 12px;
+    color: var(--white);
 
 }
 
-.home .productos-box button a{
+.home .product-box button a{
     text-decoration: none;
     background-color: #ff6600;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 10px;
 }
 
-.home .productos-box button a:hover{
+.home .product-box button a:hover{
     color: var(--black);
 }
 
-.home .productos-box i{
-    color: var(--orange);
-    margin-left: 40px;
-    
-}
 
 /* MEDIA QUERIES */ 
 
@@ -193,23 +208,10 @@ body{
         width: 100%;
     }
 
-    .home .productos-box{
-        margin: 15px;
-        height: 415px;
-    }
 
     .home .titulo-producto p {
         width: 46vh;
     }
-
-   /*  .home .line{
-        width: 88vh;
-    }
-
-    .home .line2{
-        width: 89vh;
-
-    } */
 
     /* DESKTOP */
 
@@ -235,29 +237,9 @@ body{
     }
 
     /* PRODUCTOS */
-
-    .home .productos-box{
-        height: 415px;
-        margin: 9px;
-        margin-bottom: 20px;
-    
+    .home .cuerpo{
+        padding: 0 70px;
     }
-
-   
-
-    .home .titulo-producto p{
-        width: 31vh;
-        padding-right: 25%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-align: center;
-    }
-
-    .home .productos-box button{
-        margin-left: 10px;
-    }
-
 }
 
 }
