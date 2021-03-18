@@ -9,12 +9,7 @@ module.exports = {
             include: [
                 { association: 'imagenes' },
                 { association: 'categoria' },
-            ],
-            order: [
-                [Sequelize.literal('RAND()')]
-            ],
-
-            limit: 8,
+            ]
 
         })
             .then(productos => {
@@ -27,10 +22,37 @@ module.exports = {
                     return producto.categoria.name == "Novedades"
                 });
 
+                var cuatroDestacados = [];
+                var posicionesElegibles = [];
+                var i, r;
+                for (i = 0; i < destacados.length; i++) posicionesElegibles[i] = i;
+                for (i = 0; i < 4; i++) {
+                    r = Math.floor(Math.random() * posicionesElegibles.length);
+                    cuatroDestacados.push(destacados[posicionesElegibles[r]]);
+                    posicionesElegibles.splice(r, 1);
+                }
+
+                var cuatroNovedades = [];
+                var posicionesElegibles1 = [];
+                var i, r;
+                for (i = 0; i < novedades.length; i++) posicionesElegibles1[i] = i;
+                for (i = 0; i < 4; i++) {
+                    r = Math.floor(Math.random() * posicionesElegibles1.length);
+                    cuatroNovedades.push(novedades[posicionesElegibles1[r]]);
+                    posicionesElegibles1.splice(r, 1);
+                }
+
+
+
+
+
+
                 res.render("index", {
                     title: "IG-Armados",
                     destacados,
-                    novedades
+                    novedades,
+                    cuatroNovedades,
+                    cuatroDestacados
                 })
             }).catch(error => console.log(error))
     },
