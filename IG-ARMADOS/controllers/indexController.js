@@ -21,7 +21,7 @@ module.exports = {
                 let novedades = productos.filter(producto => {
                     return producto.categoria.name == "Novedades"
                 });
-
+/* 
                 var cuatroDestacados = [];
                 var posicionesElegibles = [];
                 var i, r;
@@ -42,7 +42,7 @@ module.exports = {
                     posicionesElegibles1.splice(r, 1);
                 }
 
-
+ */
 
 
 
@@ -51,8 +51,8 @@ module.exports = {
                     title: "IG-Armados",
                     destacados,
                     novedades,
-                    cuatroNovedades,
-                    cuatroDestacados
+                    /* cuatroNovedades,
+                    cuatroNovedades */
                 })
             }).catch(error => console.log(error))
     },
