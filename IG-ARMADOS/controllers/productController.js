@@ -1,9 +1,30 @@
-
 const db = require('../database/models');
-
+const {Op} = require('sequelize');
 
 
 module.exports = { 
+    busqueda : (req,res) => {
+
+      
+        db.Products.findAll({
+            where : {
+                name : {
+                    [Op.like] : `%${req.query.search}%`
+                }
+            },
+            include : [{association : 'imagenes'}]
+        })
+        .then(result => {
+            
+            res.render('productList',{
+                title : 'resultados',
+                productos : result,
+                search : req.query.search
+            })
+        })
+        
+    },
+
     detalle: (req, res) => {
         let producto = db.Products.findOne({
             where : {

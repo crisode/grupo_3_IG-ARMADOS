@@ -1,0 +1,22 @@
+.listaProducto .aviso h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.listaProducto .aviso{
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+
+@media(min-width:768px) {
+    .listaProducto .aviso{
+        width: 50vw;
+    }
+}
+
+@media(min-width: 992px){
+    .listaProducto .aviso{
+        width: auto;
+    }
+}

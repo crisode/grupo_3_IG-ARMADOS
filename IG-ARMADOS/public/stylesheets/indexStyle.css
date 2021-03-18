@@ -85,6 +85,10 @@
 
 /* PRODUCTOS DESTACADOS */
 }
+
+.flex {
+    display: flex;
+}
   .product-box {
     background-color: #272727;
     border-radius: 10px;
