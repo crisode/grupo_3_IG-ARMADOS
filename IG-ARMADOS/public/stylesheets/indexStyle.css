@@ -30,7 +30,6 @@ a{
 .home body{
     background-image: url('../images/Fondo.png');
     min-height: 100vh;
-  
 }
 .home .carousel-inner, .carousel-item > img{
     border-radius: 10px;

@@ -4,8 +4,8 @@ html, body {
     font-size: 10px;
 }
 body{
-    background-color: #1f1f1f;
     background-image: url('../images/Fondo.png');
+    background-attachment: fixed
     
 }
 

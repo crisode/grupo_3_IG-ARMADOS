@@ -23,7 +23,7 @@
 }
 
 .productList .card-body__title p{
-   width: 61vh;
+   width: 100%;
    padding-right: 25%;
    overflow: hidden;
    white-space: nowrap;
