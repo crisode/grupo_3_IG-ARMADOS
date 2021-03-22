@@ -27,10 +27,7 @@
     background-color: #198754;
     border-color: #198754;
 }
-.productList button.add{
-    background-color: #198754;
-    border-color: #198754;
-}
+
 .productList .form-control {
     margin-bottom: 3px;
 }
@@ -49,6 +46,30 @@
 .productList a p:hover {
 color: var(--orange);
 }
+.productList .headerAdmin{
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    margin-bottom: 5px;
+}
+.productList .headerAdmin p,a{
+    color: var(--white);
+    margin-bottom: 0;
+}
+.productList .headerAdmin select{
+    border-radius: 5px;
+}
+.productList .headerAdmin a{
+
+    background-color: var(--orange);
+    border-radius: 5px;
+    border-color: var(--orange);
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+    
 
 
 /* ! media query*/
@@ -58,6 +79,8 @@ color: var(--orange);
         display: inline-block;
         border: none;
     }
+
+   
       tr{
         border: solid 1px ;
     }
@@ -65,6 +88,8 @@ color: var(--orange);
        justify-content: center;
        margin-top: 27px;
        color: white;
+
+
         
     }
    
@@ -83,12 +108,32 @@ color: var(--orange);
         margin-top: 4px;
 
     }
+    .productList .headerAdmin{
+        flex-direction: row;
+        width: 100%;
+        margin-top: 10px
+        ;
+    }
+     
+   .productList .headerAdmin select{
+        height: 25px;
+    }
+    .productList .headerAdmin a{
+        margin: 0px 5px; 
+        text-align: center;
+        font-size: 14px;
+        margin: 3px 11px;
+
+    }
+    
+    .productList .headerAdmin i{
+        margin-top: 5px;
+    }
     @media(min-width:992px){
         .productList .fondoLista{
-            margin: 30px 160px; 
+            margin: 30px 80px; 
         }
     
     }
-    
-        
+   
 }
