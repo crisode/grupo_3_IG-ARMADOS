@@ -81,6 +81,28 @@ module.exports = {
                         })
                 })
                 .catch(error => res.send(error))
+        } else{
+            let categorias = db.Categorys.findAll();
+            let componentes = db.Components.findAll();
+            let garantias = db.Guarantees.findAll();
+            let marcas = db.Marks.findAll();
+
+
+
+            Promise.all([categorias, componentes, garantias, marcas])
+                .then(([categorias, componentes, garantias, marcas]) => {
+                    res.render("admin/cargaProducto", {
+                        title: "Carga de producto",
+                        categorias,
+                        componentes,
+                        garantias,
+                        marcas,
+                        errores : errores.mapped()
+
+                    })
+                })
+                .catch(error => console.log(error))
+
         }
 
     },
@@ -180,6 +202,39 @@ module.exports = {
                 })
 
                 .catch(error => res.send(error))
+        }else {
+            let categorias = db.Categorys.findAll();
+            let componentes = db.Components.findAll();
+            let garantias = db.Guarantees.findAll();
+            let marcas = db.Marks.findAll();
+
+            let producto = db.Products.findOne({
+                where: {
+                    id: req.params.id
+                },
+                include: [
+                    { association: 'categoria' },
+                    { association: 'componente' },
+                    { association: "marca" },
+                    { association: "imagenes" },
+                    { association: "garantia" }
+                ]
+            })
+            Promise.all([categorias, componentes, garantias, marcas, producto])
+                .then(([categorias, componentes, garantias, marcas, producto]) => {
+                    return res.render("admin/editarProducto", {
+                        title: "Edicion de producto",
+                        producto ,
+                        categorias,
+                        componentes,
+                        garantias,
+                        marcas,
+                        errores : errores.mapped()
+
+                    })
+                })
+                .catch(error => res.send(error))
+
         }
 
 
