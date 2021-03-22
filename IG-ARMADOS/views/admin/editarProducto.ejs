@@ -18,13 +18,16 @@
                         <div class="box ">
                         <h2>titulo del producto</h2>
                         <input type="text" name="title" id="" value="<%= producto.name %>">
+                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.title ? errores.title.msg : null) %></span>
                         <h2>Precio del producto</h2>
                         <input type="text" name="price" id="" value="<%= producto.price %> ">
+                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.price ? errores.price.msg : null) %></span>
                         </div>
     
                         <div class="box2">
                         <h2>oferta</h2>      
                         <input type="text" name="insale" value="<%= producto.insale %> ">
+                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.insale ? errores.insale.msg : null) %></span>
                         <h2>garantia</h2>
                         <select name="garantia" id="" value="<%= producto.guarantee_id %> ">
                             <<% garantias.forEach(garantia=> { %>
@@ -64,6 +67,7 @@
                         <div class="box4">
                         <h2>modelo</h2>
                         <input type="text" name="model" value="<%= producto.model %>">
+                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.model ? errores.model.msg : null) %></span>
                         <h2>en stock</h2>
                         <select name="stock" id="" value="<%= producto.stock %>">
                             <option value="si"><p>Si</p></option>
@@ -75,6 +79,8 @@
                     <article class="product-description--title">
                         <h2>descripcion</h2>
                     </article>
+                    <span class="text-danger"><%= (typeof errores != "undefined" && errores.description ? errores.description.msg : null) %></span>
+
         
                     <section class="product-description col-12">
                         <textarea name="description" id="" cols="30" rows="10"><%= producto.description %></textarea>
@@ -83,6 +89,8 @@
                     <article class="product-feature--title">
                         <h2>caracteristicas</h2>
                     </article>
+                    <span class="text-danger"><%= (typeof errores != "undefined" && errores.features ? errores.features.msg : null) %></span>
+
         
                     <section class="product-feature col-12">
                         <textarea name="features" id="" cols="30" rows="10"><%= producto.features %></textarea>

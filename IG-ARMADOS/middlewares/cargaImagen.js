@@ -11,6 +11,23 @@ const storage = multer.diskStorage({
     }
 })
 
-const upload = multer({storage})
+const upload = multer({
+    storage : storage,
+    fileFilter : (req,file, cb) => {
+        /*
+        req: parametro request
+        file: archivo enviado en el formulario
+        cb: multer.fileFilterCallback(error,acceptFile), error recibe null o new Error y acceptFile recibe un boolean
+        */ 
+
+        //file.mimetype revisa la extension del documento
+        if(file.mimetype == "image/jpg" || file.mimetype == "image/png" || file.mimetype == "image/jpeg"){
+            return cb(null, true);
+        }else {
+            return cb(new Error('Solo se permiten los formatos .jpg, .png y .jpeg'))
+        }
+    }
+
+})
 
 module.exports = upload;
