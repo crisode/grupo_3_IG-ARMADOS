@@ -9,7 +9,7 @@
     /* Generales */
     
  
-    .boton-admin{
+    header .boton-admin{
       position: fixed;
       width: 180px;
       height: 36px;
@@ -99,7 +99,7 @@
         padding-top: 20px;
         
      }
-     .btn-group-vertical.btn, .btn-group>.btn{
+     header .btn-group-vertical.btn, .btn-group>.btn{
        box-shadow: none;
      }
      
@@ -282,17 +282,17 @@
 
 
 
-      .menu a span:first-child {
+     header .menu a span:first-child {
         display: inline-block;
         padding: 10px;
       }
-      .menu a {
+     header .menu a {
         display: block;
         position: relative;
         overflow: hidden;
       }
        
-      .menu a span:last-child {
+     header .menu a span:last-child {
         position: absolute;
         top: 0;
         right: 0;
@@ -303,40 +303,40 @@
         justify-content: center;
         transform: translateY(-100%);
       }
-      .menu a span {
+     header .menu a span {
         transition: transform 0.2s ease-out;
       }
        
-      .menu a:hover span:first-child {
+     header .menu a:hover span:first-child {
         transform: translateY(100%);
         color: var(--orange);
       }
        
-      .menu a:hover span:last-child {
+     header .menu a:hover span:last-child {
         transform: none;
         color: var(--orange);
       }
-      .menu[data-animation="to-top"] a span:last-child {
+     header .menu[data-animation="to-top"] a span:last-child {
         transform: translateY(100%);
       }
        
-      .menu[data-animation="to-top"] a:hover span:first-child {
+     header .menu[data-animation="to-top"] a:hover span:first-child {
         transform: translateY(-100%);
       }
        
-      .menu[data-animation="to-right"] a span:last-child {
+     header .menu[data-animation="to-right"] a span:last-child {
         transform: translateX(-100%);
       }
        
-      .menu[data-animation="to-right"] a:hover span:first-child {
+     header .menu[data-animation="to-right"] a:hover span:first-child {
         transform: translateX(100%);
       }
        
-      .menu[data-animation="to-left"] a span:last-child {
+     header .menu[data-animation="to-left"] a span:last-child {
         transform: translateX(100%);
       }
        
-      .menu[data-animation="to-left"] a:hover span:first-child {
+     header .menu[data-animation="to-left"] a:hover span:first-child {
         transform: translateX(-100%);
       }
       header .menu-mobile {

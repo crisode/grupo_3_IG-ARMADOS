@@ -1,50 +1,81 @@
+<%- include("../partials/head") %>
 
-<%- include("../partials/head")  %> 
-
-<body>
-    <script>
-        function eliminar ()
-          {
-              resultado = confirm("¿Seguro que desea eliminar este producto?");
-              return resultado;
-          }
+    <body>
+        <script>
+            function eliminar() {
+                resultado = confirm("¿Seguro que desea eliminar este producto?");
+                return resultado;
+            }
         </script>
-    <%- include("../partials/header")  %> 
-    <div class="productList container-fluid">
-        <main>
-            <div class="container mt-5">
-                <div class="botones col-12">
-                    <a href="/admin/create"><button class="btn btn-primary">CREAR PRODUCTO</button></a>
-                </div>
-                <div class="row">
-                    <% productos.forEach(producto => { %>
-                        <div class="col-12 col-md-6 col-lg-3 my-3">
-                            <div class="card card-product" style="width: 98%">
-                                
-                                <img src="/images/productos/<%- producto.imagenes[0].name %> "  class="card-img-top" alt="..." />
-                              
-                                <div class="card-body">
-                                    <section class="card-body__title">
-                                        <p class="card-text"><%= producto.name %> </p>
-                                    </section>
-                                    
-                                    <a href="/product/<%= producto.id %> " class="btn btn-primary card-link">DETALLE</a>
-                                    <a href="/admin/edit/<%= producto.id %>" class="btn btn-primary card-link">EDITAR</a>
-                                    <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST" class="card-body__form">
-                                        <button class="btn btn-sm btn-danger" type="submit" onclick="javascript:return eliminar();">ELIMINAR</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    <% }) %>
-                </div>
-                
+        <%- include("../partials/header") %>
+            <div class="productList container-fluid">
+                <main>
+                    <div class="fondoLista table-responsive">
+                        <table class="table">
+                            <thead>
+                           <!--      <tr>
+                                    <td colspan="5" class="table-active"><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></td>
+                                    <th scope="row"><button class="add"><i class="fas fa-plus"></i></button></th>
+                                </tr> -->
+                                <tr class="columna">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th  class="img" scope="col">Imagen</th>
+                                    <th scope="col">Precio</th>
+                                    <th class="cate" cope="col">Categoria</th>
+                                    <th scope="col">Accion</th>
+                                </tr>
+                            </thead>
+                            <% productos.forEach(p=> { %>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                           <p><%=p.id %></p> 
+                                        </th>
+                                        <td class="name">
+                                            <a href="/product/<%= p.id %>"><p><%=p.name%></p></a>
+                                        </td>
+                                        <td class="img">
+                                            <img src="/images/productos/<%- p.imagenes[0].name %> " alt="">
+                                        </td>
+                                        <td class="price">
+                                           <p>$<%=p.price.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "." );%></p> 
+                                        </td>
+                                        <td class="cate">
+                                            <p><%=p.categoria.name  %> </p>
+                                        </td>
+                                        <td class="accion">
+                                            <form action="/admin/delete/<%= p.id %>?_method=DELETE" method="POST"
+                                                class="card-body__form">
+                                                <button class="delete" type="submit"
+                                                    onclick="javascript:return eliminar();"></i><i class="far fa-trash-alt"></i></button>
+                                                </form>
+                                                <button class="edit"><a href="/admin/edit/<%= p.id %>" > <i class="fas fa-pencil-alt"></i></a></li></button>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                </tbody>
+                        </table>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                </main>
+
             </div>
-        </main>
-    
-    </div>
-    
-    <%- include("../partials/footer")  %> 
-    <%- include("../partials/scriptBS")  %> 
-</body>
-</html>
+
+            <%- include("../partials/footer") %>
+                <%- include("../partials/scriptBS") %>
+    </body>
+
+    </html>

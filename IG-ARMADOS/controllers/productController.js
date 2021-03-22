@@ -7,7 +7,6 @@ const { sequelize } = require('../database/models');
 module.exports = { 
     busqueda : (req,res) => {
 
-      
         db.Products.findAll({
             where : {
                 name : {

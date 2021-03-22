@@ -20,11 +20,11 @@
     border: #ff6600 solid 2px;
    
 }
-.list-group{
+.profile .list-group{
     margin: 20px 0;
     
 }
-.list-group p{
+.profile .list-group p{
     font-weight: bold;
     color: var(--black);
     padding-top: 6px;
@@ -35,7 +35,7 @@
     flex-wrap: wrap;
     justify-content: center
 }
-.btn-profile{
+.profile .btn-profile{
     background-color: var(--orange);
     border-radius: 25px;
     margin-bottom: 20px;

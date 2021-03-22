@@ -1,15 +1,21 @@
- const db = require("../database/models");
+const db = require("../database/models");
 const { validationResult } = require('express-validator');
+const {Op} = require('sequelize');
 
 
 module.exports = {
     index: (req, res) => {
-        db.Products.findAll({include:[{association:'imagenes'}]})
+        db.Products.findAll({include:[
+            {association:'imagenes'},
+            {association: 'categoria'},
+        ]})
+      
         .then(function(productos){
                 res.render("admin/productoLista", {
                     title: "lista de productos",
                     productos: productos,
-                    imagen:productos
+                    imagen:productos,
+                    categoria:productos
 
                 })
             }).catch(error => console.log(error))
