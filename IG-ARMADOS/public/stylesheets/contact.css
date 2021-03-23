@@ -13,7 +13,7 @@
     height: 120px;
     border-radius: 100px;
     border: orange solid 2px;
-    margin-top: 20px;
+    margin-top: -61px;
 }.nosotros .dev p{
     margin: 15px 0;
 }.nosotros .quienes{
@@ -22,25 +22,29 @@
 }.nosotros .dev{
     background-color:rgb(157, 136, 136, 0.2);
     border-radius: 10px;
-    margin: 20px 10px;
-    height: 300px;
+    margin: 63px 10px;
+    height: 187px;
 }.nosotros .dev p{
     text-align: start;
 }.nosotros p{
     color: white;
 }
+.nosotros p{
+    color: white;
+}
 @media (min-width: 768px){
 .nosotros .dev{
         width: 45%;
-        margin: 2%;
+        margin-top: 30px;
 
     }
     
 }
 @media (min-width: 992px){
 .nosotros .dev{
-        width: 20%;
-        height: 400px;
+        width: 21%;
+        height: 334px;
+        margin: 2%;
     }
 .nosotros .dev p{
         padding: 10px;
