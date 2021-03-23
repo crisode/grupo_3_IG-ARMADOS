@@ -94,7 +94,7 @@ module.exports = {
                         componentes,
                         garantias,
                         marcas,
-                        errores : errores.mapped()
+                        errores : errors.mapped()
 
                     })
                 })
@@ -226,7 +226,7 @@ module.exports = {
                         componentes,
                         garantias,
                         marcas,
-                        errores : errores.mapped()
+                        errores : errors.mapped()
 
                     })
                 })
