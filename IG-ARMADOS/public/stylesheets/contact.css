@@ -26,6 +26,8 @@
     height: 300px;
 }.nosotros .dev p{
     text-align: start;
+}.nosotros p{
+    color: white;
 }
 @media (min-width: 768px){
 .nosotros .dev{

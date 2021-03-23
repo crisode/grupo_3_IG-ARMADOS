@@ -7,8 +7,10 @@
                 <form action="/admin/upload/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <section class="product-img col-12">
                         <figure class="product-detail__images-box--largeImg">
-                            <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
-                        </figure>>
+                            <div class="col-12 img-container">
+                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                            </div>
+                        </figure>
                         <label for="img">Cargar Imagenes</label>
                         
                             <input type="file" name="image" id="img" value="<%= producto.image %> "> 
