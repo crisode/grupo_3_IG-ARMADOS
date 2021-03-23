@@ -5,17 +5,20 @@ const {Op} = require('sequelize');
 
 module.exports = {
     index: (req, res) => {
-        db.Products.findAll({include:[
+       let productos = db.Products.findAll({include:[
             {association:'imagenes'},
             {association: 'categoria'},
         ]})
-      
-        .then(function(productos){
+        let categorias = db.Categorys.findAll();
+
+        Promise.all([categorias, productos])
+        .then(([categorias, productos]) => {
                 res.render("admin/productoLista", {
                     title: "lista de productos",
                     productos: productos,
                     imagen:productos,
-                    categoria:productos
+                    categoria:productos,
+                    categorias
 
                 })
             }).catch(error => console.log(error))

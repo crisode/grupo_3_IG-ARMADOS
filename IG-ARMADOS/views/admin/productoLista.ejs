@@ -10,17 +10,45 @@
         <%- include("../partials/header") %>
             <div class="productList container-fluid">
                 <main>
+
+
                     <div class="fondoLista table-responsive">
+                        <div class="headerAdmin">
+                            <p class="">Filtro por categoria</p>
+                            <select name="category" id="">
+                                <% categorias.forEach(categoria=> { %>
+                                    <option value="<%= categoria.id%>">
+                                        <%= categoria.name%>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                            <p>Orden alfabetico </p>
+                            <select name="" id="">
+                                <option value="">Descendente</option>
+                                <option value="">Ascendente</option>
+                            </select>
+                            <p>Filtro por precio</p>
+                            <select name="" id="">
+                                <option value="">Mayor precio</option>
+                                <option value="">Menor precio</option>
+                            </select>
+                            
+                            <a class="add1" href="/admin/create">CREAR PRODUCTO</a>
+                         
+
+                        </div>
+                        
+
                         <table class="table">
                             <thead>
-                           <!--      <tr>
+                                <!--      <tr>
                                     <td colspan="5" class="table-active"><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></td>
                                     <th scope="row"><button class="add"><i class="fas fa-plus"></i></button></th>
                                 </tr> -->
                                 <tr class="columna">
                                     <th scope="col">#</th>
                                     <th scope="col">Nombre</th>
-                                    <th  class="img" scope="col">Imagen</th>
+                                    <th class="img" scope="col">Imagen</th>
                                     <th scope="col">Precio</th>
                                     <th class="cate" cope="col">Categoria</th>
                                     <th scope="col">Accion</th>
@@ -30,27 +58,38 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">
-                                           <p><%=p.id %></p> 
+                                            <p>
+                                                <%=p.id %>
+                                            </p>
                                         </th>
                                         <td class="name">
-                                            <a href="/product/<%= p.id %>"><p><%=p.name%></p></a>
+                                            <a href="/product/<%= p.id %>">
+                                                <p>
+                                                    <%=p.name%>
+                                                </p>
+                                            </a>
                                         </td>
                                         <td class="img">
                                             <img src="/images/productos/<%- p.imagenes[0].name %> " alt="">
                                         </td>
                                         <td class="price">
-                                           <p>$<%=p.price.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "." );%></p> 
+                                            <p>$<%=p.price.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "." );%>
+                                            </p>
                                         </td>
                                         <td class="cate">
-                                            <p><%=p.categoria.name  %> </p>
+                                            <p>
+                                                <%=p.categoria.name %>
+                                            </p>
                                         </td>
                                         <td class="accion">
                                             <form action="/admin/delete/<%= p.id %>?_method=DELETE" method="POST"
                                                 class="card-body__form">
                                                 <button class="delete" type="submit"
-                                                    onclick="javascript:return eliminar();"></i><i class="far fa-trash-alt"></i></button>
-                                                </form>
-                                                <button class="edit"><a href="/admin/edit/<%= p.id %>" > <i class="fas fa-pencil-alt"></i></a></li></button>
+                                                    onclick="javascript:return eliminar();"></i><i
+                                                        class="far fa-trash-alt"></i></button>
+                                            </form>
+                                            <button class="edit"><a href="/admin/edit/<%= p.id %>"> <i
+                                                        class="fas fa-pencil-alt"></i></a></li></button>
                                         </td>
                                     </tr>
                                     <% }) %>
@@ -59,17 +98,17 @@
                     </div>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                          </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
                         </ul>
-                      </nav>
+                    </nav>
                 </main>
 
             </div>
