@@ -11,7 +11,7 @@
           <form class=" " action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="col-12 col-lg-4">
               <label for="img"><img src="/images/userAvatar/<%= result.avatar %>" alt=""></label>
-                  <input type="file" name="image" id="img" value="<%= result.avatar %>">
+                  <input class="imagenPerfil" type="file" name="image" id="img" value="<%= result.avatar %>">
             </section>
             <div class="">
               <h3>Modifica tus datos personales</h3>
