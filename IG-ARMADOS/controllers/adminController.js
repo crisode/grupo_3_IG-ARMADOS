@@ -14,7 +14,7 @@ module.exports = {
         Promise.all([categorias, productos])
         .then(([categorias, productos]) => {
                 res.render("admin/productoLista", {
-                    title: "lista de productos",
+                    title: "Lista de Productos",
                     productos: productos,
                     imagen:productos,
                     categoria:productos,
@@ -38,7 +38,7 @@ module.exports = {
         Promise.all([categorias, componentes, garantias, marcas])
             .then(([categorias, componentes, garantias, marcas]) => {
                 res.render("admin/cargaProducto", {
-                    title: "Carga de producto",
+                    title: "Carga de Producto",
                     categorias,
                     componentes,
                     garantias,
@@ -160,7 +160,7 @@ module.exports = {
         Promise.all([categorias, componentes, garantias, marcas, producto])
             .then(([categorias, componentes, garantias, marcas, producto]) => {
                 return res.render("admin/editarProducto", {
-                    title: "Edicion de producto",
+                    title: "Edicion de Producto",
                     producto,
                     categorias,
                     componentes,
@@ -198,7 +198,7 @@ module.exports = {
                 }
             })
                 .then(() => {
-                    return res.redirect("/admin/detalle/" + req.params.id)
+                    return res.redirect("/admin")
                 })
 
                 .catch(error => res.send(error))
