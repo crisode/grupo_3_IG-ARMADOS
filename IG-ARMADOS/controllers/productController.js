@@ -54,7 +54,7 @@ module.exports = {
         .then( ([interes,producto])=> {
 
             res.render("productoDetalle",{
-                title:"Detalle",
+                title:producto.name,
                 producto:producto,
                 categoria:producto,
                 componente:producto,
