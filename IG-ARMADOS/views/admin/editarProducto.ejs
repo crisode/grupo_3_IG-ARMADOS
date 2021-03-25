@@ -7,8 +7,8 @@
                 <form action="/admin/upload/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <section class="product-img col-12">
                         <figure class="product-detail__images-box--largeImg">
-                            <div class="col-12 img-container">
-                                <img src="/images/productos/<%- producto.imagenes[0].name %> " alt="">
+                            <div id="imagenPreview" class="col-12 img-container">
+                                <img src="/images/productos/<%- producto.imagenes[0].name %>" alt="">
                             </div>
                         </figure>
                         <label for="img">Cargar Imagenes</label>
@@ -24,18 +24,18 @@
                         <span id="errorTitulo"></span>
                         <span class="text-danger"><%= (typeof errores != "undefined" && errores.title ? errores.title.msg : null) %></span>
                         <h2>Precio del producto</h2>
-                        <input type="text" name="price" id="precio" value="<%= producto.price %> ">
+                        <input type="text" name="price" id="precio" value="<%= producto.price %>">
                         <span id="errorPrecio"></span>
                         <span class="text-danger"><%= (typeof errores != "undefined" && errores.price ? errores.price.msg : null) %></span>
                         </div>
     
                         <div class="box2">
                         <h2>Oferta</h2>      
-                        <input type="text" id="oferta" name="insale" value="<%= producto.insale %> ">
+                        <input type="text" id="oferta" name="insale" value="<%= producto.insale %>">
                         <span id="errorOferta"></span>
                         <span class="text-danger"><%= (typeof errores != "undefined" && errores.insale ? errores.insale.msg : null) %></span>
                         <h2>Garantia</h2>
-                        <select name="garantia" id="garantia" value="<%= producto.guarantee_id %> ">
+                        <select name="garantia" id="garantia" value="<%= producto.guarantee_id %>">
                             <% garantias.forEach(garantia=> { %>
                                 <option  <%= garantia.id == producto.guarantee_id  ? "selected":null %> value="<%= garantia.id%>"> <%= garantia.type%> </option>
                                 <% }) %>
@@ -123,7 +123,7 @@
 
     
     <%- include("../partials/footer")  %> 
-
+    <script src="/javascript/editarProducto.js"></script>
     <%- include("../partials/scriptBS")  %> 
 </body>
 </html>

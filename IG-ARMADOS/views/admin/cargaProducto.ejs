@@ -5,15 +5,18 @@
             <div class="carga-producto">
                 <div class="container">
                     <div class="content-form row">
-                        <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="img-container" id="imagenPreview">
+                            <img src="/images/productos/default-image.png" alt="">
+                        </div>
+                        <form action="" id="form" method="POST" enctype="multipart/form-data">
+                            
                             <section class="product-img col-12">
-                                <div class="img-container" id="imagenPreview">
-                        
-                                </div>
+                                <span id="errorImagen"></span>
                                 <label for="img">Cargar Imagenes</label>
                                 <input type="file" name="image" id="imagen">
-                                <span id="errorImagen"></span>
+                                
                             </section>
+                            
                             <section class="product-info col-12">
                                 <div class="box ">
                                     <h2>Titulo del producto</h2>
@@ -34,6 +37,7 @@
 
                                     <h2>Garantia</h2>
                                     <select name="garantia" id="garantia">
+                                        <option value="" hidden selected></option>
                                         <% garantias.forEach(garantia=> { %>
                                             <option value="<%= garantia.id%>"> <%= garantia.type%> </option>
                                             <% }) %>
@@ -50,6 +54,7 @@
                                 <div class="box3">
                                     <h2>Componente</h2>
                                     <select name="component" id="componente">
+                                        <option value="" hidden selected></option>
                                         <% componentes.forEach(componente=> { %>
                                             <option value="<%= componente.id%>"><%= componente.name%></option>
                                             <% }) %>
@@ -57,6 +62,7 @@
                                     <span id="errorComponente"></span>
                                     <h2>Marca</h2>
                                     <select name="mark" id="marca">
+                                            <option value="" hidden selected></option>
                                         <% marcas.forEach(marca=> { %>
                                             <option value="<%= marca.id%>"><%= marca.name%></option>
                                             <% }) %>
@@ -64,6 +70,7 @@
                                         <span id="errorMarca"></span>
                                     <h2 class="mt-3">Category</h2>
                                     <select name="category" id="categoria">
+                                            <option value="" hidden selected></option>
                                         <% categorias.forEach(categoria=> { %>
                                             <option value="<%= categoria.id%>"><%= categoria.name%></option>
                                             <% }) %>
@@ -78,6 +85,7 @@
                                     <span class="text-danger"><%= (typeof errores != "undefined" && errores.model ? errores.model.msg : null) %></span>
                                     <h2>En Stock</h2>
                                     <select name="stock" id="stock">
+                                        <option value="" hidden selected></option>
                                         <option value="si">
                                             <p>Si</p>
                                         </option>
@@ -110,7 +118,7 @@
                             <span id="errorCaracteristicas"></span>
                             <div class="product-botom">
                                 <button id="botonEnviar" type="submit">Enviar</button>
-                                <span id="errorBoton"></span>
+                                <span id="errorBoton" class=""></span>
                             </div>
                         </form>
 
@@ -123,7 +131,7 @@
 
 
             <%- include("../partials/footer") %>
-
+            <script src="../javascript/crearProducto.js"></script>
                 <%- include("../partials/scriptBS") %>
     </body>
 
