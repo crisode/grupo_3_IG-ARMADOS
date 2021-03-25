@@ -189,7 +189,7 @@ height: 100%;
 }
 
 .invalido{
-    box-shadow: inset 3px 3px 15px red;
+    box-shadow: inset 0px 0px 15px red;
 }
 .errorFormulario{
     text-align: center;
@@ -198,7 +198,7 @@ height: 100%;
 }
 
 .valido{
-    box-shadow: 3px 3px 15px rgb(14, 204, 30);
+    box-shadow: 0px 0px 15px rgb(14, 204, 30);
 }
 
 /* MEDIA QUERIES */
