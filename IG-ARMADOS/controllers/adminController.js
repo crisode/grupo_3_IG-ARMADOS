@@ -202,7 +202,7 @@ module.exports = {
                 })
 
                 .catch(error => res.send(error))
-        }else {
+        }/* else {
             let categorias = db.Categorys.findAll();
             let componentes = db.Components.findAll();
             let garantias = db.Guarantees.findAll();
@@ -237,7 +237,7 @@ module.exports = {
 
         }
 
-
+ */
 
 
 

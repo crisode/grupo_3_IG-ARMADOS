@@ -23,6 +23,10 @@
                                             <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
                                                 name="name">
                                             <label for="nombre">Nombre</label>
+                                            <span class="text-danger">
+                                                <%= (typeof errores !="undefined" && errores.name ? errores.name.msg :
+                                                    null) %>
+                                            </span>
 
 
                                         </div>
@@ -36,10 +40,7 @@
                                                 <%= (typeof errores !="undefined" && errores.apellido ?
                                                     errores.apellido.msg : null) %>
                                             </span>
-                                            <span class="text-danger">
-                                                <%= (typeof errores !="undefined" && errores.name ? errores.name.msg :
-                                                    null) %>
-                                            </span>
+                                            
                                         </div>
                                     </div>
                                     <h4 class="titulos">Tu Avatar</h4>
@@ -86,7 +87,7 @@
                                                 id="flexCheckDefault">
                                             <label class="form-check-label" for="flexCheckDefault">
                                                 Acepto los terminos y condiciones
-                                            </label>
+                                            </label><br>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.term ? errores.term.msg :
                                                     null) %>

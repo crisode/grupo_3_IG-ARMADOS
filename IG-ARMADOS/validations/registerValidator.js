@@ -8,11 +8,11 @@ module.exports= [
     .withMessage('Nombre requerido'),
     check('apellido')
     .notEmpty()
-    .withMessage('apellido requerido'),
+    .withMessage('Apellido requerido'),
 
     check('email')
     .isEmail()
-    .withMessage('email invalido'),
+    .withMessage('Debes ingresar un email valido'),
 
     body('email').custom((value) => {
         
@@ -48,6 +48,6 @@ module.exports= [
         }else{
             return true
         }
-    }).withMessage('tiene que aceptar los terminos y condiciones')
+    }).withMessage('Tiene que aceptar los terminos y condiciones')
 
 ]

@@ -146,7 +146,7 @@ a{
     overflow: hidden;
   }
   .product-box:hover {
-    box-shadow: 0 0 5px rgb(218, 196, 4);
+     box-shadow: 0 0 20px var(--orange);   
   }
   .product-box:hover p{
     height: 40px;
@@ -243,7 +243,9 @@ a{
     /* PRODUCTOS */
     .home .cuerpo{
         padding: 0 70px;
+        
     }
+   
 }
 
 }
