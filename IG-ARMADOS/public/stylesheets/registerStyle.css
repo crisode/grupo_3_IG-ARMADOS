@@ -12,14 +12,22 @@ body{
     font-weight: 300;
 }
 .registro .form-floating>.form-control, .form-floating>.form-select{
-    padding-top: 3.625rem;
+    padding-top: 2.625rem;
     padding-bottom: 2rem;
     margin: 30px 0 2px 0;
 }
 .registro .form-control{
     font-size: 2rem;
-    
+    /* background-color: #272727;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #ff6600;
+    padding-left: 10px;
+     */
 }
+/* .registro label{
+    color: #ffffff;
+ */
 .registro span{
     font-weight: 700;
     

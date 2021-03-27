@@ -6,6 +6,9 @@ module.exports= [
     check('name')
     .notEmpty()
     .withMessage('Nombre requerido'),
+
+
+    
     check('apellido')
     .notEmpty()
     .withMessage('Apellido requerido'),

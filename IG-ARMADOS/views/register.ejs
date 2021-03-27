@@ -11,7 +11,7 @@
             <!-- HEADER -->
             <div class="registro">
                 <main>
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form id="form" action="" method="POST" enctype="multipart/form-data">
                         <div class="container">
                             <div class="row justify-content-center mt-5">
 
@@ -22,11 +22,8 @@
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
                                                 name="name">
+                                                <span class="error text-danger" id="nombreErrors"></span>
                                             <label for="nombre">Nombre</label>
-                                            <span class="text-danger">
-                                                <%= (typeof errores !="undefined" && errores.name ? errores.name.msg :
-                                                    null) %>
-                                            </span>
 
 
                                         </div>
@@ -36,17 +33,22 @@
                                             <input type="text" class="form-control" id="apellido"
                                                 placeholder="Tu apellido" name="apellido">
                                             <label for="apellido">Apellido</label>
+                                            <span class="text-danger" id="apellidoErrors"></span>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.apellido ?
                                                     errores.apellido.msg : null) %>
                                             </span>
-                                            
+                                            <span class="text-danger">
+                                                <%= (typeof errores !="undefined" && errores.name ? errores.name.msg :
+                                                    null) %>
+                                            </span>
                                         </div>
                                     </div>
                                     <h4 class="titulos">Tu Avatar</h4>
                                     <div class="col-12 col-md-8 col-lg-6">
                                         <div class="imagen">
-                                            <input type="file" name="img">
+                                            <input id="img" type="file" name="img">
+                                            <span id="imgErrors"></span>
                                         </div>
                                     </div>
                                     <h4 class="titulos">Tu Email y Contraseña</h4>
@@ -54,6 +56,7 @@
                                         <div class="form-floating mb-3">
                                             <input type="email" class="form-control" id="email" placeholder="Email"
                                                 name="email">
+                                                <span class="text-danger" id="emailErrors"></span>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.email ? errores.email.msg :
                                                     null) %>
@@ -67,6 +70,7 @@
                                             <input type="password" class="form-control" id="pass"
                                                 placeholder="Contraseña" name="pass">
                                             <label for="pass">Contraseña</label>
+                                            <span class="text-danger" id="passErrors"></span>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.pass ? errores.pass.msg :
                                                     null) %>
@@ -78,16 +82,21 @@
                                         <div class="form-floating">
                                             <input type="password" class="form-control" id="pass2"
                                                 placeholder="Contraseña" name="pass2">
+                                                
                                             <label for="pass2">Repetir Contraseña</label>
+                                            <span class="text-danger" id="pass2Errors"></span>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 col-lg-8">
                                         <div class="condiciones">
                                             <input class="form-check-input" name="term" type="checkbox" value="si"
                                                 id="flexCheckDefault">
+                                                
                                             <label class="form-check-label" for="flexCheckDefault">
                                                 Acepto los terminos y condiciones
-                                            </label><br>
+                                            </label>
+                                            
+                                            <span class="termErrors"></span>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.term ? errores.term.msg :
                                                     null) %>
@@ -97,7 +106,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-8 text-center">
-                                    <button class="botonPagar" type="submit">Registrarme</button>
+                                    <button class="botonPagar" type="submit">Registrarme</button><br>
+                                    <span class="text-danger" id="submitErrors"></span>
                                     <p class="mt-4">¿Estás registrado? <a href="/users/login">Inicia sesión</a></p>
                                 </div>
                                 <div class="col-12 col-md-8 text-center redes">
@@ -121,7 +131,7 @@
                 <%- include('partials/footer') %>
 
                     <!-- FOOTER -->
-
+                    <script src="/javascript/userRegister.js"></script>
                     <%- include("partials/scriptBS") %>
     </body>
 
