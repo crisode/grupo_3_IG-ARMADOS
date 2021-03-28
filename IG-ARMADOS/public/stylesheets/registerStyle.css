@@ -75,9 +75,68 @@ justify-content: center}
 }
 
 .registro .imagen{
-    background-color: #ff6600;
-    margin: 10px 0;
+    width: 50%;
+    height: 50%;
+    border: thin solid gray ;
+    border-radius: 10px;
+    text-align: center;
 }
+.registro .imagen img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+.registro #img{
+    height: 50%;
+    width: 50%;
+   
+}
+
+
+.registro .imagen {          
+    position: relative;
+    display: inline-block;
+  }  
+   
+  .registro .imagen::before {
+    color: white;
+    display: flex;            
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: "Tu avatar"; /* texto por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;                
+  }
+   
+  .registro .imagen input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;            
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .registro .condiciones{
@@ -91,7 +150,7 @@ justify-content: center}
 
 .registro .botonPagar{
     height: 41px;
-    width: 29%; 
+    width:40%; 
     background-color: #ff6600;
     color: #ffffff;
     border-radius: 10px;

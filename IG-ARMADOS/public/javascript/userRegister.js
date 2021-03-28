@@ -17,6 +17,7 @@ window.addEventListener('load', function() {
     $Pass2 = qs('#pass2'),
     $pass2Errors = qs('#pass2Errors'),
     $img = qs('#img'),
+    $imgPreview = qs('#img-preview'),
     $imgErrors = qs('#imgErrors'),
     $form = qs('#form'),
     $terms = qs('#flexCheckDefault'),
@@ -129,15 +130,26 @@ window.addEventListener('load', function() {
 
     /* VALIDACION IMAGEN */
 
-    $img.addEventListener("change", function fileValidation() {
+    $img.addEventListener("change", 
+    function fileValidation(){
         let filePath = $img.value,
-          allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i 
+        allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i 
         if (!allowedExtensions.exec(filePath)) { 
-          $imgErrors.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)"
-          $img.value = "";
-          return false
-
-        }
+        $imgErrors.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)"
+        $img.value = "";
+        $imgPreview.innerHTML="";
+        return false
+        }else{
+            console.log($img.files);
+            if($img.files && $img.files[0]){
+                let reader = new FileReader();
+                reader.onload = function(e){
+                    $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
+                };
+                  reader.readAsDataURL($img.files[0]);
+                  $imgErrors.innerHTML="";
+            }   
+             }
     })
 
     /* VALIDACIÓN CAMPO TERMINOS Y CONDICIONES */
