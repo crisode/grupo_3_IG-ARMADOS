@@ -25,6 +25,26 @@ module.exports = {
         })
         
     },
+    productByComponent : (req,res) => {
+        
+        db.Products.findAll({
+            where : {
+                component_id : +req.params.id
+            },
+            include : [{association : 'imagenes'},{association : 'componente'}]
+        })
+        .then(result => {
+
+            return res.render('componentProducts',{
+                title : 'resultados',
+                productos : result,
+            })
+     
+            
+          
+        })
+        .catch(error => console.log(error))
+    },
 
     detalle: (req, res) => {
         let interes=db.Products.findAll({
@@ -63,26 +83,7 @@ module.exports = {
                 interes
             })
         }).catch(error => console.log(error))
-        
-        
-
-
-
-        /*
-        let producto = productos.find(producto => {
-            return producto.id === Number(req.params.id)
-        });
-        
-        let novedades = productos.filter(producto => {
-            return producto.category == "novedades"
-        });
-
-        res.render("productoDetalle",{
-            title:"Detalle",
-            producto,
-            novedades
-        })*/
-
+             
     },
     carrito :(req, res)=>{
         res.render("carrito",{
