@@ -7,22 +7,32 @@ const { sequelize } = require('../database/models');
 module.exports = { 
     busqueda : (req,res) => {
 
+        let busqueda;
+
+        if(req.query.search){
+            busqueda = req.query.search.trim()
+        }
+        
+
         db.Products.findAll({
             where : {
                 name : {
-                    [Op.like] : `%${req.query.search}%`
+                    [Op.like] : `%${busqueda}%`
                 }
             },
             include : [{association : 'imagenes'}]
         })
         .then(result => {
+
             
-            res.render('productList',{
+            
+            return res.render('productList',{
                 title : 'resultados',
                 productos : result,
-                search : req.query.search
+                search : busqueda
             })
-        })
+        }).catch(error => console.log(error))
+
         
     },
     productByComponent : (req,res) => {
