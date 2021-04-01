@@ -31,6 +31,19 @@ module.exports = (sequelize, dataTypes) => {
         },
         rol_id : {
             type : dataTypes.INTEGER,
+        },
+        direccion : {
+            type : dataTypes.STRING(255)
+        },
+        localidad : {
+            type : dataTypes.STRING(255)
+        },
+        provincia : {
+            type : dataTypes.STRING(255)
+        },
+        telefono : {
+            type : dataTypes.STRING(255),
+            allowNull : true
         }
     }; // defino las propiedades de los datos de la tabla
 

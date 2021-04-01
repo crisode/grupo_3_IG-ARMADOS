@@ -13,7 +13,7 @@
               <label for="img"><img src="/images/userAvatar/<%= result.avatar %>" alt=""></label>
                   <input class="imagenPerfil" type="file" name="image" id="img" value="<%= result.avatar %>">
             </section>
-            <div class="">
+            <div class="mb-4">
               <h3>Modifica tus datos personales</h3>
             </div>
             <ul class="">
@@ -29,8 +29,32 @@
                   Apellido
                 </label>
               </div>
+              <div class="form-floating mb-3">
+                <input type="text" value="<%= result.provincia %>" name="provincia" class="form-control" id="floatingtext" placeholder="Provincia">
+                <label for="floatingtext">
+                  Provincia
+                </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" value="<%= result.localidad %>" name="localidad" class="form-control" id="floatingtext" placeholder="Localidad">
+                <label for="floatingtext">
+                  Localidad
+                </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" value="<%= result.direccion %>" name="direccion" class="form-control" id="floatingtext" placeholder="Direccion">
+                <label for="floatingtext">
+                  Dirección
+                </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" value="<%= result.telefono %>" name="telefono" class="form-control" id="floatingtext" placeholder="Telefono">
+                <label for="floatingtext">
+                  Telefono
+                </label>
+              </div>
               <!-- <div class="form-floating mb-3">
-                <input type="email" value="<%= result.email %>" class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
+                <input type="email" value="<%= /* result.email */ %>" class="form-control" name="email" id="floatingInput" placeholder="Email de usuario">
                 <label for="floatingInput">
                   Email
                 </label>

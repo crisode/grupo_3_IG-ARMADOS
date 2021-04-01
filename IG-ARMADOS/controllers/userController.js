@@ -32,7 +32,7 @@ module.exports = {
 
             db.Users.findOne({
                 where: {
-                    email : email
+                    email : email.trim()
                 }
             })
             .then(user => {
@@ -155,14 +155,17 @@ module.exports = {
     },
     update: (req, res) => {
 
-        const {name, apellido, email} = req.body
+        const {name, apellido, provincia, localidad, direccion, telefono} = req.body
 
 
         db.Users.update({
             name : name,
             last_name : apellido,
-            email : email,
-            avatar : (req.files[0]) ? req.files[0].filename : req.session.user.avatar
+            avatar : (req.files[0]) ? req.files[0].filename : req.session.user.avatar,
+            provincia : provincia,
+            localidad : localidad,
+            direccion : direccion,
+            telefono : telefono
         },{
             where : {
                 id : req.session.user.id
@@ -171,6 +174,7 @@ module.exports = {
     .then(() => {
             res.redirect("/users/profile")
         })
+    .catch(error => res.send(error))
     },
     remove: (req, res) => {
 
