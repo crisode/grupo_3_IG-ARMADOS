@@ -1,12 +1,8 @@
 <%- include("../partials/head") %>
 
     <body>
-        <script>
-            function eliminar() {
-                resultado = confirm("¿Seguro que desea eliminar este producto?");
-                return resultado;
-            }
-        </script>
+        
+        
         <%- include("../partials/header") %>
             <div class="productList container-fluid">
                 <main>
@@ -84,11 +80,10 @@
                                         <td class="accion">
                                             <form action="/admin/delete/<%= p.id %>?_method=DELETE" method="POST"
                                                 class="card-body__form">
-                                                <button class="delete" type="submit"
-                                                    onclick="javascript:return eliminar();"></i><i
+                                                <button id="delete<%=p.id %> "class="delete"  type="submit"></i><i
                                                         class="far fa-trash-alt"></i></button>
                                             </form>
-                                            <button class="edit"><a href="/admin/edit/<%= p.id %>"> <i
+                                            <button id="edit"   class="edit"><a href="/admin/edit/<%= p.id %>"> <i
                                                         class="fas fa-pencil-alt"></i></a></li></button>
                                         </td>
                                     </tr>
@@ -115,6 +110,8 @@
 
             <%- include("../partials/footer") %>
                 <%- include("../partials/scriptBS") %>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <script src="/javascript/alertDelete.js"></script>
     </body>
 
     </html>
