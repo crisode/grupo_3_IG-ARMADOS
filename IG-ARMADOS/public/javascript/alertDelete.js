@@ -18,10 +18,12 @@ const swalWithBootstrapButtons = Swal.mixin({
     confirmButtonText: 'Si, eliminar!',
     cancelButtonText: 'No, cancelar',
     reverseButtons: true
-  }).then((result) => {
+  })
+  
+  .then((result) => {
     console.log(result);
     if (result.isConfirmed) {
-      event.submit()
+      
       swalWithBootstrapButtons.fire(
         'Eliminado!',
         'Producto eliminado.',

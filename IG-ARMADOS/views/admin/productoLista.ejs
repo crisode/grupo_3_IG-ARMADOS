@@ -80,7 +80,7 @@
                                         <td class="accion">
                                             <form action="/admin/delete/<%= p.id %>?_method=DELETE" method="POST"
                                                 class="card-body__form">
-                                                <button id="delete<%=p.id %> "class="delete"  type="submit"></i><i
+                                                <button id="delete-<%=p.id%>"  onclick="confirmar(document.querySelector('#delete-<%=p.id%>'),event)" class="delete"  type=""></i><i
                                                         class="far fa-trash-alt"></i></button>
                                             </form>
                                             <button id="edit"   class="edit"><a href="/admin/edit/<%= p.id %>"> <i
