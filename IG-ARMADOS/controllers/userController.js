@@ -9,7 +9,7 @@ const db = require("../database/models");
 module.exports = {
     login: (req, res) => {
         res.render("login", {
-            title: "ingreso"
+            title: "Ingreso"
         });
     },
     loginProcess: (req, res) => {
@@ -22,7 +22,7 @@ module.exports = {
             
             return res.render("login", {
                 errores: errores.mapped(),
-                title : "ingreso",
+                title : "Ingreso",
                 
             })
 

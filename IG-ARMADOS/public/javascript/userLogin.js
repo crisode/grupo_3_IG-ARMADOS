@@ -12,9 +12,10 @@ window.addEventListener('load', function () {
         regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
         regExPass = /^.{6,12}$/,
         $formLogin = qs("#formLogin"),
-        $errorForm = qs("#errorForm")
+        $errorFormLogin = qs("#errorFormLogin")
 
     /* VALIDACIÓN EMAIL */
+    
 
     $inputEmail.addEventListener('blur', function () {
         switch (true) {
@@ -57,24 +58,27 @@ window.addEventListener('load', function () {
     })
 
     /* VALIDACION FORMULARIO */
+    
+    console.log($formLogin)
 
     $formLogin.addEventListener("submit", function (event) {
         let error = false;
+        
         event.preventDefault()
-        console.log($form.elements)
+        console.log($formLogin.elements)
         let elementosForm = this.elements
 
-        for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < 1; index++) {
             if (elementosForm[index].value = "") {
                 elementosForm[index].classList.add("invalido")
-                $errorForm.innerHTML = "Los campos señalados son obligatorios"
-                $errorForm.classList.add("errorFormulario")
+                $errorFormLogin.innerHTML = "Los campos señalados son obligatorios"
+                $errorFormLogin.classList.add("errorFormulario")
                 error = true;
             }
         }
 
         if (!error) {
-            $form.submit()
+            $formLogin.submit()
         }
     })
 
