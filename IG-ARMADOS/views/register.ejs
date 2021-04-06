@@ -11,12 +11,23 @@
             <!-- HEADER -->
             <div class="registro">
                 <main>
+
+
                     <form id="form" action="" method="POST" enctype="multipart/form-data">
                         <div class="container">
                             <div class="row justify-content-center mt-5">
 
                                 <div class="fondo-login">
                                     <h1 class="text-center my-5">Registro</h1>
+
+                                    <h4 class="titulos">Tu Avatar</h4>
+                                    <div class="col-12">
+                                        <div class="imagen" id="img-preview">
+                                            <input id="img" type="file" name="img">
+                                            
+                                        </div>
+                                        <span class="text-danger" id="imgErrors"></span>
+                                    </div>
                                     <h4 class="titulos">Tu Nombre y Apellido</h4>
                                     <div class="col-12 col-md-6 col-lg-8">
                                         <div class="form-floating mb-3">
@@ -44,16 +55,8 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <!-- 
-                                        !--------------
-                                     -->
-                                    <h4 class="titulos">Tu Avatar</h4>
-                                    <div class="col-12">
-                                        <div class="imagen" id="img-preview">
-                                            <input id="img" type="file" name="img">
-                                            <span id="imgErrors"></span>
-                                        </div>
-                                    </div>
+                                   
+                                    
                                     <h4 class="titulos">Tu Email y Contraseña</h4>
                                     <div class="col-12 col-md-6 col-lg-8">
                                         <div class="form-floating mb-3">

@@ -160,7 +160,7 @@ window.addEventListener('load', function() {
         console.log($form.elements)
         let elementosForm = this.elements
 
-        for (let index = 0; index < 6; index++){
+        for (let index = 1; index < 6; index++){
         if(elementosForm[index].value == ""){
             elementosForm[index].classList.add('invalido');
             submitErrors.innerHTML = "Los campos señalados son obligatorios.";
