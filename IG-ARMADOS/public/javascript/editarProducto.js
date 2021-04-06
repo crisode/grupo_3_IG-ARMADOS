@@ -29,12 +29,14 @@ window.addEventListener("load", () => {
     $categoria = qs("#categoria"),
     $modelo = qs("#modelo"),
     $stock = qs("#stock"),
+   
     $descripcion = qs("#descripcion"),
+    
     $caracteristicas = qs("#caracteristicas"),
     $imagenPreview = qs("#imagenPreview"),
     $esNumero = /^([0-9])*$/,
-    $esTexto = /^[A-Za-z\d_].{20,500}$/,
-    $esTexto5 = /^[A-Za-z\d_].{5,500}$/
+    $esTexto = /^{20,500}$/,
+    $esTexto5 = /^[A-Za-z\d_\s*/m].{5,500}$/
 
 
   $imagen.addEventListener("change", function fileValidation() {
@@ -198,7 +200,8 @@ window.addEventListener("load", () => {
 
   $descripcion.addEventListener("blur", function() {
     switch (true) {
-      case !$descripcion.value.trim():
+      case !$descripcion:
+       
         $errorDescripcion.innerHTML = "¡El campo descripcion es obligatorio!"
         $descripcion.classList.remove("valido")
         $descripcion.classList.add("invalido")
@@ -218,7 +221,7 @@ window.addEventListener("load", () => {
 
   $caracteristicas.addEventListener("blur", function() {
     switch (true) {
-      case !$caracteristicas.value.trim():
+      case !$caracteristicas.value:
         $errorCaracteristicas.innerHTML = "¡El campo caracteristicas es obligatorio!"
         $caracteristicas.classList.remove("valido")
         $caracteristicas.classList.add("invalido")

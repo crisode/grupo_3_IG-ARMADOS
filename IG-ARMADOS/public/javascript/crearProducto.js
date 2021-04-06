@@ -39,9 +39,9 @@ window.addEventListener("load", () => {
 
   $imagen.addEventListener("change", function fileValidation() {
     let filePath = $imagen.value, //capturo el valor del input
-      allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i //Extensiones permitidas
+      allowedExtensions = /(.jpg|.jpeg|.png|.gif|.jfif|.webp)$/i //Extensiones permitidas
     if (!allowedExtensions.exec(filePath)) { //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
-      $errorImagen.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif)"
+      $errorImagen.innerHTML = "Carga un archivo de imagen valido, con las extensiones (.jpg - .jpeg - .png - .gif - .jfif - .webp)"
       $imagen.value = "";
       $imagenPreview.innerHTML = "";
       return false;

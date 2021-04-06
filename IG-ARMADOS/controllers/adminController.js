@@ -64,7 +64,7 @@ module.exports = {
                 mark_id: mark.trim(),
                 model: model.trim(),
                 stock: +stock,
-                description: description.trim(),
+                description: description.trim() ,
                 features: features.trim(),
                 category_id: category
 
@@ -188,7 +188,7 @@ module.exports = {
                 mark_id: mark != "" ? mark.trim() : null,
                 model: model != "" ? model.trim() : null,
                 stock: stock != "" ? +stock : null,
-                description: description != "" ? description.trim() : null,
+                description: description != "" ? description.trim(): null,
                 features: features != "" ? features.trim() : null,
                 category_id: category != "" ? category : null,
                 image: image != "" ? image : null

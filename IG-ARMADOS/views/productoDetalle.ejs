@@ -101,7 +101,7 @@
                         <section class="product-detail__description col-12">
                             <h2>Descripcion de Producto</h2>
                             <p>
-                                <%-producto.description%>
+                                <%-producto.description.replace(/\n/g, "<br>") %>
                             </p>
                         </section>
 
@@ -134,7 +134,7 @@
                         <section class="product-detail__description col-12">
                             <h2>Detalles</h2>
                             <p>
-                                <%-producto.features%>
+                                <%-producto.features.replace(/\n/g, "<br>")%>
                             </p>
                         </section>
                     </div>
