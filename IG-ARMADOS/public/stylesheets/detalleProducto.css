@@ -94,6 +94,7 @@ html, body {
 
 
 .detalle-producto .product-detail__data{
+    padding-top: 10px;
     padding: 10px;
     background-color: rgba(95,106, 106, 0.2);
     border-radius: 10px;
@@ -102,6 +103,7 @@ html, body {
 
 
 .detalle-producto .product-detail__description{
+    padding-top: 10px;
     margin-top: 30px;
     background-color: rgba(95,106, 106, 0.2);
     border-radius: 10px;
@@ -117,6 +119,8 @@ html, body {
     display: none;
 }
 .detalle-producto .product-detail__data--caja1{
+    padding-top: 10px;
+
     display: flex;
     border-bottom: 1px solid rgba(126,126,131,.15);
     margin-bottom: 20px;
@@ -249,6 +253,8 @@ html, body {
         margin-top: 50px;
         background-color: rgba(95,106, 106, 0.2);
         border-radius: 10px;
+        padding-top: 10px;
+
         
     }
 
