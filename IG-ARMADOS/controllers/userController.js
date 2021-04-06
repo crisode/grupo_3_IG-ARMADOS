@@ -92,7 +92,7 @@ module.exports = {
     },
     register: (req, res) => {
         res.render("register", {
-            title: "registro de usuario"
+            title: "Registro de Usuario"
         });
     },
     registerProcess: (req, res) => {

@@ -83,9 +83,10 @@ justify-content: center}
   .registro .imagen{
     width: 50%;
     height: 50%;
-    border: thin solid gray ;
+    /* border: thin solid gray ; */
     border-radius: 10px;
     text-align: center;
+    margin-bottom: 15px;
 }
   
 
@@ -133,7 +134,9 @@ justify-content: center}
 
 
 
-
+.registro .titulos{
+    margin-top: 15px;
+}
 
 
 
