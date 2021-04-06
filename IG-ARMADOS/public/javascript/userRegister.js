@@ -144,12 +144,14 @@ window.addEventListener('load', function() {
             if($img.files && $img.files[0]){
                 let reader = new FileReader();
                 reader.onload = function(e){
+                    $imgPreview.innerHTML = "";
                     $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
                 };
                   reader.readAsDataURL($img.files[0]);
                   $imgErrors.innerHTML="";
+                  $img.classList.remove("invalido")
             }   
-             }
+        }
     })
 
     /* VALIDACIÓN CAMPO TERMINOS Y CONDICIONES */
