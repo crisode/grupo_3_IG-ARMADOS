@@ -127,7 +127,7 @@ CREATE TABLE `images` (
   `name` varchar(45) NOT NULL,
   `product_id` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +136,7 @@ CREATE TABLE `images` (
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
-INSERT INTO `images` VALUES (1,'logo.png',5),(2,'default-image.png',6),(3,'image-1615934415990.png',7),(4,'image-1615934538696.png',8),(5,'default-image.png',9),(6,'image-1615936714157.png',10),(7,'image-1616001985968.jfif',11),(8,'image-1616004637293.png',12),(9,'image-1616005291639.jpg',13),(10,'image-1616012282770.jpg',14),(11,'image-1616603347201.png',15),(12,'image-1616605408251.png',16),(13,'image-1617630955579.jpg',17),(14,'image-1617632334357.jpg',18),(15,'image-1617632686585.jpg',19),(16,'image-1617633856989.jpeg',20),(17,'image-1617633962479.jpg',21),(18,'image-1617634010738.png',22),(19,'image-1617634067653.jpg',23),(20,'image-1617634119732.jpg',24),(21,'image-1617634180752.jpg',25),(22,'image-1617634233338.jpg',26),(23,'image-1617634305462.jpg',27);
+INSERT INTO `images` VALUES (1,'logo.png',5),(2,'default-image.png',6),(3,'image-1615934415990.png',7),(4,'image-1615934538696.png',8),(5,'default-image.png',9),(6,'image-1615936714157.png',10),(7,'image-1616001985968.jfif',11),(8,'image-1616004637293.png',12),(9,'image-1616005291639.jpg',13),(10,'image-1616012282770.jpg',14),(11,'image-1616603347201.png',15),(12,'image-1616605408251.png',16),(13,'image-1617630955579.jpg',17),(14,'image-1617632334357.jpg',18),(15,'image-1617632686585.jpg',19),(16,'image-1617633856989.jpeg',20),(17,'image-1617633962479.jpg',21),(18,'image-1617634010738.png',22),(19,'image-1617634067653.jpg',23),(20,'image-1617634119732.jpg',24),(21,'image-1617634180752.jpg',25),(22,'image-1617634233338.jpg',26),(23,'image-1617634305462.jpg',27),(24,'image-1617641137753.jfif',28),(25,'image-1617641501844.jfif',29),(26,'image-1617641598973.jfif',30),(27,'image-1617641725346.jfif',31),(28,'image-1617642099069.jfif',32);
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +193,7 @@ CREATE TABLE `products` (
   CONSTRAINT `FK_COMPONENT_ID` FOREIGN KEY (`component_id`) REFERENCES `components` (`id`),
   CONSTRAINT `FK_GUARANTEE_ID` FOREIGN KEY (`guarantee_id`) REFERENCES `guarantee` (`id`),
   CONSTRAINT `FK_MARK_ID` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,7 +202,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (20,'Combo I5',30000,1,0,'Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.\",','\"description\": \"Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.\",','otro',4,9,11,3),(21,'Motherboard Asus Prime H310m-r',43234,1,0,'saddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd','saddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd','H310M-R',3,1,1,3),(22,'Memoria RAM 8GB HyperX',8754,1,0,'Memoria RAM 8GB HyperX','Memoria RAM 8GB HyperX','HyperX',2,4,2,3),(23,'Gefore Gtx 1660 6gb',200000,1,0,'Gefore Gtx 1660 6gbGefore Gtx 1660 6gb','Gefore Gtx 1660 6gbGefore Gtx 1660 6gb','qq',1,1,7,3),(24,'Evga Gtx 1650 4gb Gddr6',1000000,1,0,'Evga Gtx 1650 4gb Gddr6Evga Gtx 1650 4gb Gddr6','Evga Gtx 1650 4gb Gddr6Evga Gtx 1650 4gb Gddr6','qq',3,5,7,1),(25,'Intel Core i7-10700',20000,2,0,'Intel Core i7-10700Intel Core i7-10700Intel Core i7-10700','Intel Core i7-10700Intel Core i7-10700Intel Core i7-10700','H310M-R',2,2,5,1);
+INSERT INTO `products` VALUES (20,'Combo I5',30000,1,0,'Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.\",','\"description\": \"Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.\",','otro',4,9,11,1),(21,'Motherboard Asus Prime H310m-r',43234,1,0,'saddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd','saddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd','H310M-R',3,1,1,3),(22,'Memoria RAM 8GB HyperX',8754,1,0,'Memoria RAM 8GB HyperX','Memoria RAM 8GB HyperX','HyperX',2,4,2,3),(23,'Gefore Gtx 1660 6gb',200000,1,0,'Gefore Gtx 1660 6gbGefore Gtx 1660 6gb','Gefore Gtx 1660 6gbGefore Gtx 1660 6gb','qq',1,1,7,3),(24,'Evga Gtx 1650 4gb Gddr6',1000000,1,0,'Evga Gtx 1650 4gb Gddr6Evga Gtx 1650 4gb Gddr6','Evga Gtx 1650 4gb Gddr6Evga Gtx 1650 4gb Gddr6','qq',3,5,7,1),(25,'Intel Core i7-10700',20000,2,0,'Intel Core i7-10700Intel Core i7-10700Intel Core i7-10700','Intel Core i7-10700Intel Core i7-10700Intel Core i7-10700','H310M-R',2,2,5,1),(28,'Teclado gamer Redragon Kumara K552',5499,1,0,'La gran calidad del Redragon Kumara K552, y su precio económico lo vuelven un atractivo ideal para que te diviertas frente a la pantalla. Su ergonomía, su base antidelizante y su rápido tiempo de respuesta permite que tus juegos favoritos se sientan más cerca que nunca, al alcance de tus manos.','Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo','Kumara K552',2,9,8,3),(29,'Mouse de juego Logitech G Series Prodigy G203',2289,0,0,'Mouse de juego Logitech G Series Prodigy G203 negroMouse de juego Logitech G Series Prodigy G203 negroMouse de juego Logitech G Series Prodigy G203 negroMouse de juego Logitech G Series Prodigy G203 negro','Mouse de juego Logitech G Series Prodigy G203 negroMouse de juego Logitech G Series Prodigy G203 negroMouse de juego Logitech G Series Prodigy G203 negro','g203',3,9,9,3),(30,'Disco Duro Western Digital Blue Wd10ezex 1tb 3,5 Sata3 64mb',6999,1,0,'Disco Duro Western Digital Blue Wd10ezex 1tb 3,5 Sata3 64mbDisco Duro Western Digital Blue Wd10ezex 1tb 3,5 Sata3 64mb','Disco Duro Western Digital Blue Wd10ezex 1tb 3,5 Sata3 64mbDisco Duro Western Digital Blue Wd10ezex 1tb 3,5 Sata3 64mb','H310M-R',5,9,3,3),(31,'Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24',19888,1,0,'Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24','Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24Monitor Gamer Daewoo 24 Pul Lcd 1080p Hdmi Full Hd Dw-mon24','ada',1,6,4,1),(32,'GABINETE TT AH T600 TEMPERED GLASS*2 FULL TOWER WHITE',24000,1,0,'GABINETE TT AH T600 TEMPERED GLASS*2 FULL TOWER WHITEGABINETE TT AH T600 TEMPERED GLASS*2 FULL TOWER WHITE','GABINETE TT AH T600 TEMPERED GLASS*2 FULL TOWER WHITEGABINETE TT AH T600 TEMPERED GLASS*2 FULL TOWER WHITE','sdf-k',2,9,12,3);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -274,4 +274,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-05 13:27:07
+-- Dump completed on 2021-04-05 14:02:59
