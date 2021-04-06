@@ -61,7 +61,7 @@ window.addEventListener('load', function () {
     
     console.log($formLogin)
 
-    $formLogin.addEventListener("submit", function (event) {
+    /* $formLogin.addEventListener("submit", function (event) {
         let error = false;
         
         event.preventDefault()
@@ -80,6 +80,6 @@ window.addEventListener('load', function () {
         if (!error) {
             $formLogin.submit()
         }
-    })
+    }) */
 
 })

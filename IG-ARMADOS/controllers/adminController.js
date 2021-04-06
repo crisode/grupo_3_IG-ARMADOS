@@ -54,7 +54,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {/* si no hay errores */
 
-            const { image, title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
+            const { title, price, insale, garantia, component, mark, category, model, stock, description, features } = req.body;
             db.Products.create({
                 name: title.trim(),
                 price: +price.trim(),
@@ -191,11 +191,19 @@ module.exports = {
                 description: description != "" ? description.trim(): null,
                 features: features != "" ? features.trim() : null,
                 category_id: category != "" ? category : null,
-                image: image != "" ? image : null
+                /* image: image != "" ? image : null */
             }, {
                 where: {
                     id: req.params.id
                 }
+            }).then(() => {
+                db.Images.update({
+                    name: (req.files[0]) ? req.files[0].filename : image
+                }, {
+                    where: {
+                        product_id : req.params.id
+                    }
+                })
             })
                 .then(() => {
                     return res.redirect("/admin")
