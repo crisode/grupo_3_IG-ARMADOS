@@ -1,11 +1,12 @@
-let $form = document.querySelector('#busqueda');
-let $input = document.querySelector('#input');
+
+let $form2 = document.querySelector('#busqueda');
+let $input3 = document.querySelector('#input');
 
 
 
-$form.onsubmit = (e) => {
-    if(!$input.value){
-        e.preventDefault();
+$form2.onsubmit = (evento) => {
+    if(!$input3.value){
+        evento.preventDefault();
 
     }
     
