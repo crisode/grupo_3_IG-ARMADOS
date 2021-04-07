@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("../partials/head") %>
+
+  <body>
+    <%- include("../partials/header") %>
+      <div class="container-fluid">
+        <div class="profile-edit row ">
+
+            <div class="container-fluid">
+                <div class="profile row ">
+                  <img src="/images/userAvatar/<%= result.avatar %> " alt="">
+                  <ul class="list-group col-10 col-lg-8">
+                    <li class="list-group-item"><p>Nombre : <%= result.name  %></p></li>
+                    <li class="list-group-item"><p>Apellido : <%=  result.last_name  %></p></li>
+                    <li class="list-group-item"><p>Email : <%=  result.email  %></p></li>
+                    <li class="list-group-item"><p>Provincia : <%= result.provincia %></p></li>
+                    <li class="list-group-item"><p>Localidad : <%=  result.localidad  %></p></li>
+                    <li class="list-group-item"><p>Direccion : <%=  result.direccion  %></p></li>
+                    <li class="list-group-item"><p>Telefono : <%=  result.telefono  %></p></li>
+                    <li>
+                      <form action="/admin/users/upload/<%= result.id %>?_method=PUT" method="POST" method="POST" enctype="multipart/form-data">
+                            <select class="rol-select " name="rol" id="rol">
+                                <option class="rol-select " value="" hidden selected><%= result.roles.name %></option>
+                                <% roles.forEach(rol => { %>
+                                 <option  class="rol-select " value="<%= rol.id %>"><%= rol.name %></option>
+                                <% }) %>
+                            </select>
+                          <button class="btn-profile-edit col-4" type="submit">Actualizar</button>
+                        </form>
+
+                    </li>
+                  </ul>
+                 
+                </div>
+              </div>
+          
+        </div>
+      </div>
+
+
+
+
+      <%- include("../partials/footer") %>
+        <%- include("../partials/scriptBS") %>
+
+
+  </body>
+
+</html>

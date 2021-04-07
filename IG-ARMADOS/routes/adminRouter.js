@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {index, cargaProducto, storeProducto, detalleProducto, editarProducto, actualizarProducto, borrarProducto} = require("../controllers/adminController")
+const {index,users,profile,updateUser, cargaProducto, storeProducto, detalleProducto, editarProducto, actualizarProducto, borrarProducto} = require("../controllers/adminController")
 const productValidator = require('../validations/productValidator');
 
 
@@ -9,6 +9,15 @@ const upload = require("../middlewares/cargaImagen");
 
 //listado de productos
 router.get("/", index);
+
+// Listado de usuarios
+router.get("/users", users )
+
+// vista edicion de usuario
+router.get("/users/:id",profile)
+
+// edicion de usuario
+router.put("/users/upload/:id",updateUser)
 
 //crear producto
 router.get("/create", cargaProducto);

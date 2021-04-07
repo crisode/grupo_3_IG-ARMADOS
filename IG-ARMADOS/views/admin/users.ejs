@@ -1,0 +1,76 @@
+<%- include("../partials/head") %>
+
+    <body>
+        <div class="control-users">
+            <script>
+                function eliminar() {
+                    resultado = confirm("¿Seguro que desea eliminar este producto?");
+                    return resultado;
+                }
+            </script>
+
+            <%- include("../partials/header") %>
+
+                <div class="productList container-fluid">
+                    <main>
+                        <table class="table">
+                            <thead>
+                                <!--      <tr>
+                    <td colspan="5" class="table-active"><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></td>
+                    <th scope="row"><button class="add"><i class="fas fa-plus"></i></button></th>
+                </tr> -->
+                                <tr class="columna">
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col" class="w992">Apellido</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col" class="accion" >accion</th>
+                                </tr>
+                            </thead>
+                            <% users.forEach(user=> { %>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <p>
+                                                <%=user.id%>
+                                            </p>
+                                        </th>
+                                        <th class="w992">
+                                            <p>
+                                                <%= user.last_name %> 
+                                            </p>
+                                        </th>
+                                        <td class="name">
+                                                <p>
+                                                    <%=user.email%>
+                                                </p> 
+                                        </td>
+                                        <td class="price">
+                                            <p>
+                                                <%=user.rol_id%>
+                                            </p>
+                                        </td>
+
+                                        <td class="accion">
+                                            <form action="/admin/delete/<%= user.id %>?_method=DELETE" method="POST"
+                                                class="card-body__form">
+                                                <button class="delete" type="submit"
+                                                    onclick="javascript:return eliminar();"></i><i
+                                                        class="far fa-trash-alt"></i></button>
+                                            </form>
+                                            <button class="edit"><a href="/admin/users/<%= user.id %>"> <i
+                                                        class="fas fa-pencil-alt"></i></a></li></button>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                </tbody>
+                        </table>
+                    </main>
+
+                </div>
+                <%- include("../partials/footer") %>
+                    <%- include("../partials/scriptBS") %>
+        </div>
+    </body>
+
+    </html>

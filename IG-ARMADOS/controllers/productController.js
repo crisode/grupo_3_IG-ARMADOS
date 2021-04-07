@@ -65,9 +65,6 @@ module.exports = {
             order: sequelize.random(),
             limit:4
         })
-
-
-        
          let producto = db.Products.findOne({
             where : {
                 id : req.params.id

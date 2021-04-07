@@ -24,6 +24,31 @@
     margin: 20px 0;
     
 }
+
+
+/* !edicion de administrador */
+.profile .rol-select{
+    width: 100%;
+    padding: 1.5rem 1rem;
+}
+.profile .rol-select-form button{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* !------------------------------ */
+
+
+
+
+
 .profile .list-group p{
     font-weight: bold;
     color: var(--black);

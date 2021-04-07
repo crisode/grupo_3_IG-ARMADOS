@@ -1,0 +1,50 @@
+.control-users .productList{
+    padding: 0;
+    width: 90%;
+    margin-top: 20px;
+}
+.control-users .productList td button{
+    width: 100%;
+    
+
+}
+.control-users .productList tr{
+    width: 90%;
+    font-size: 13px;
+
+}
+.control-users .productList .w992{
+    display: none
+}
+.control-users .productList {
+    background-color: rgba(95,106, 106, 0.5);
+   
+}
+.control-users .productList p{
+    font-size: 13px;
+}
+/* ! media Query  desktop*/
+
+@media (min-width:992px) {
+    .control-users .productList .w992{
+        display: revert
+
+
+    }
+    .control-users .productList p{
+        font-size: medium;
+        font-weight: 100;
+    }
+    .control-users .productList th{
+        width: 1%;
+    }
+    .control-users .productList{
+        width: 70%;
+        margin-top: 30px;
+    }
+    .control-users .productList td button{
+        width: 100%;
+        
+
+    }
+}

@@ -23,8 +23,54 @@ module.exports = {
                 })
             }).catch(error => console.log(error))
     },
+    users: (req, res) => {
+    db.Users.findAll(
+           {include:[
+            {association:'roles'},
+        ]})
+        
+        .then((users) => {
+            res.render("admin/users", {
+                title: "Registro de usuarios",
+                users
+            })
+        })
+    },
+    profile: (req, res) => {
+      let result =  db.Users.findOne({
+            where: {
+                id: req.params.id
+            }, 
+            include:[
+                {association:'roles'},
+            ] 
+        })
+        let roles = db.Rols.findAll()
+        Promise.all([result,roles])
+        .then(([result,roles]) => {
+            res.render("admin/userEdit", {
+                title: "Perfil",
+                result,
+                roles
+            })
+        })
+    },
+    updateUser: (req, res) => {
 
-
+        const {rol} = req.body
+        db.Users.update({
+         rol_id:rol
+        },{
+            where : {
+                id: req.params.id
+        }
+    })
+    .then(() => {
+            res.redirect("/admin/users")
+        })
+    .catch(error => res.send(error))
+    },
+  
 
     cargaProducto: (req, res) => {
 
