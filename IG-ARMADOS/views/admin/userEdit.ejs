@@ -20,11 +20,10 @@
                     <li class="list-group-item"><p>Telefono : <%=  result.telefono  %></p></li>
                     <li>
                       <form action="/admin/users/upload/<%= result.id %>?_method=PUT" method="POST">
-                            <input type="text" name="texto">
-                            <select class="rol-select " name="roles" id="rol">
+                            <select class="rol-select " name="rol" id="rol">
                                 <option class="rol-select " value="" hidden selected><%= result.roles.name %></option>
                                 <% roles.forEach(rol => { %>
-                                 <option  name="rol"  class="rol-select "value="<%= result.rol_id %>"><%= rol.name %></option>
+                                 <option   class="rol-select "value="<%= rol.id %>"><%= rol.name %></option>
                                 <% }) %>
                             </select>
                           <button class="btn-profile-edit col-4" type="submit">Actualizar</button>

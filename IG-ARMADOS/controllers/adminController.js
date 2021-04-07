@@ -56,16 +56,21 @@ module.exports = {
         })
     },
     updateUser: (req, res) => {
-
+        
         const {rol} = req.body
+       
+        let NewiD = Number(rol)
+        
+
         db.Users.update({
-         rol_id:rol
+         rol_id : +NewiD
         },{
             where : {
-                id: req.params.id
+                id: +req.params.id
         }
     })
-    .then(() => {
+    .then((result) => {
+            
             res.redirect("/admin/users")
         })
     .catch(error => res.send(error))
