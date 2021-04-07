@@ -1,3 +1,9 @@
+:root{
+    --orange:#ff6600;
+    --white:#ffffff;
+    --black:#1f1f1f;
+    --red:#e30909;
+    }
 html, body {
     min-height: 100vh;
     margin: 0;
@@ -6,23 +12,25 @@ html, body {
 body{
     background-image: url('../images/Fondo.png');
     background-attachment: fixed
-    
 }
-
-
-
 .carga-producto h1{
     font-family: 'Roboto Slab', serif;
     color: #ffffff;
 }
-
+.carga-producto .toma-img{
+    background-color: #e30909;
+    width: 50%;
+}
 .carga-producto h2{
     color: #ffffff;
-    font-size: 25px;   
+    font-size: 16px;   
     text-transform: capitalize;
-    padding: 10px 0;
+    padding: 5px 0 1px 0;
 
 }
+select:focus{
+     outline: none;
+    }
 .img-edit{
     width: 20%;
     height: 20%;
@@ -41,7 +49,11 @@ body{
 
 .carga-producto textarea{
     width: 100%;
+    resize: none;
+    
 }
+
+
 
 .carga-producto input{
     background-color: #272727;
@@ -96,9 +108,8 @@ body{
 }
 
 .carga-producto .product-info h2{
-    font-size: 22px;
-    margin-bottom: 8px;
-    ;
+    font-size: 16px;
+    
 }
 
 
@@ -130,20 +141,21 @@ body{
 
 .carga-producto span{
     color: red;
-    font-size: 20px;
+    font-size: 13px;
+    justify-content: center;
 }
 
 .carga-producto .product-img label[for="img"] {
-    margin-top: 10px;
-    height: 50px;
-    width: 100%; 
-    background-color: #ff6600;;
+    
+    height: auto;
+    width: 65%; 
+    background-color: var(--orange);
     color: #ffffff;
     border-radius: 5px;
     text-decoration: none;
     border-style: none;
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: capitalize;
     text-align: center;
     }
@@ -154,38 +166,41 @@ body{
 }
 
 .carga-producto .product-detail h2{
-    font-size: 22px;
-    margin-bottom: 8px;
+    font-size: 16px;
+  
 }
-
 .carga-producto .product-detail select{
     font-size: 16px;
 }
 
 .carga-producto .product-botom button{
     margin-top: 20px;
-    height: 50px;
+    height: auto;
     width: 100%; 
-    background-color: #ff6600;;
-    color: #ffffff;
+    background-color: var(--orange);
+    color: var(--white);
     border-radius: 5px;
     text-decoration: none;
     border-style: none;
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: capitalize;
     text-align: center;
 }
 
 .img-container{
-height: 300px;
-width: 300px;
+height: 200px;
+width: 200px;
 margin-top: 20px;
 margin-bottom: 20px;
+border-radius: 10px;
+
 }
 .img-container img{
 width: 100%;
 height: 100%;
+border-radius: 10px;
+border:var(--orange) 1px solid;
 }
 
 .invalido{
@@ -206,38 +221,49 @@ height: 100%;
 /* TABLET */
 
 @media(min-width: 768px){
-    .carga-producto .product-botom{
-        display: flex;
-        justify-content: center;
-    }
 
-    .carga-producto .product-botom button{
-        margin-top: 20px;
-        height: 50px;
-        width: 20%; 
-        background-color: #ff6600;;
-        color: #ffffff;
-        border-radius: 5px;
-        text-decoration: none;
-        border-style: none;
-        margin-bottom: 15px;
-        font-size: 25px;
-        text-transform: capitalize;
-        text-align: center;
-        width: 80%;
+    .carga-producto .toma-img{
+        background-color: #e30909;
+        width: 50%;
+    }
+    .carga-producto .product-img label[for="img"] {
+        width: 50%; 
     }
 }
 
 /* DESKTOP */
 
 @media(min-width: 992px){
+    .carga-producto .content-form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+    }
+    .carga-producto .product-img{
+        margin: 0;
+        display:block;
+        float: left;
+      
+    }
+    .carga-producto .selectores{
+        float: right;
+    }
+    .carga-producto .text-descripcion{
+        float: right;
+    }
+    .carga-producto .text-caracteristicas{
+        float: right;
+    }
+    .carga-producto .product-botom button{
+        width: 50%;
+    }
 
-    .carga-producto .product-info{
+  /*   .carga-producto .product-info{
         display: flex;
         flex-wrap: wrap;
     
-    }
-
+    } */
+ /*
     .carga-producto .box{
         width: 46%;
     }
@@ -294,5 +320,5 @@ height: 100%;
     .carga-producto .product-botom button:hover{
         color: black;
     }
-
+ */
 }

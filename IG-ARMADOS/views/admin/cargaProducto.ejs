@@ -5,74 +5,95 @@
             <div class="carga-producto">
                 <div class="container">
                     <div class="content-form row">
-                        <div class="img-container" id="imagenPreview">
-                            <img src="/images/productos/default-image.png" alt="">
-                        </div>
                         <form action="" id="form" method="POST" enctype="multipart/form-data">
-                            
-                            <section class="product-img col-12">
+                          
+
+                            <!-- !IMAGEN -->
+                            <section class="product-img col-12 col-md-12 col-lg-6">
+                                <div class="img-container" id="imagenPreview">
+                                    <img src="/images/productos/default-image.png" alt="">
+                                </div>
                                 <span id="errorImagen"></span>
                                 <label for="img">Cargar Imagenes</label>
-                                <input type="file" name="image" id="imagen">
-                                
+                                <input class="toma-img" type="file" name="image" id="imagen">
                             </section>
+                            <!-- !IMAGEN -->
                             
-                            <section class="product-info col-12">
+                             <!-- !IMOUTS -->
+                             <div class="selectores col-lg-6">
+                            <section class="product-info col-12 col-md-8">
                                 <div class="box ">
                                     <h2>Titulo del producto</h2>
                                     <input type="text" name="title" id="titulo">
                                     <span id="errorTitulo"></span>
-                                    <span class="text-danger"><%= (typeof errores != "undefined" && errores.title ? errores.title.msg : null) %></span>
+                                    <span class="text-danger">
+                                        <%= (typeof errores !="undefined" && errores.title ? errores.title.msg : null)
+                                            %>
+                                    </span>
                                     <h2>Precio del producto</h2>
                                     <input type="text" name="price" id="precio">
                                     <span id="errorPrecio"></span>
-                                    <span class="text-danger"><%= (typeof errores != "undefined" && errores.price ? errores.price.msg : null) %></span>
+                                    <span class="text-danger">
+                                        <%= (typeof errores !="undefined" && errores.price ? errores.price.msg : null)
+                                            %>
+                                    </span>
                                 </div>
 
                                 <div class="box2">
                                     <h2>Oferta</h2>
                                     <input type="text" name="insale" id="oferta">
                                     <span id="errorOferta"></span>
-                                    <span class="text-danger"><%= (typeof errores != "undefined" && errores.insale ? errores.insale.msg : null) %></span>
+                                    <span class="text-danger">
+                                        <%= (typeof errores !="undefined" && errores.insale ? errores.insale.msg : null)
+                                            %>
+                                    </span>
 
                                     <h2>Garantia</h2>
                                     <select name="garantia" id="garantia">
                                         <option value="" hidden selected></option>
                                         <% garantias.forEach(garantia=> { %>
-                                            <option value="<%= garantia.id%>"> <%= garantia.type%> </option>
+                                            <option value="<%= garantia.id%>">
+                                                <%= garantia.type%>
+                                            </option>
                                             <% }) %>
                                     </select>
                                     <span id="errorGarantia"></span>
                                 </div>
                             </section>
 
-                            <article class="product-detail--title">
+                            <article class="product-detail--title col-md-8">
                                 <h2>Detalle</h2>
                             </article>
 
-                            <section class="product-detail col-12">
+                            <section class="product-detail col-12 col-md-8">
                                 <div class="box3">
                                     <h2>Componente</h2>
                                     <select name="component" id="componente">
                                         <option value="" hidden selected></option>
                                         <% componentes.forEach(componente=> { %>
-                                            <option value="<%= componente.id%>"><%= componente.name%></option>
+                                            <option value="<%= componente.id%>">
+                                                <%= componente.name%>
+                                            </option>
                                             <% }) %>
-                                            </select>
+                                    </select>
                                     <span id="errorComponente"></span>
                                     <h2>Marca</h2>
                                     <select name="mark" id="marca">
-                                            <option value="" hidden selected></option>
+                                        <option value="" hidden selected></option>
                                         <% marcas.forEach(marca=> { %>
-                                            <option value="<%= marca.id%>"><%= marca.name%></option>
+                                            <option value="<%= marca.id%>">
+                                                <%= marca.name%>
+                                            </option>
                                             <% }) %>
-                                            </select>
-                                        <span id="errorMarca"></span>
+                                    </select>
+                                    <span id="errorMarca"></span>
                                     <h2 class="mt-3">Category</h2>
                                     <select name="category" id="categoria">
-                                            <option value="" hidden selected></option>
+                                        <option value="" hidden selected></option>
                                         <% categorias.forEach(categoria=> { %>
-                                            <option value="<%= categoria.id%>"><%= categoria.name%></option>
+                                            <option value="<%= categoria.id%>">
+                                                <%= categoria.name%>
+                                            </option>
                                             <% }) %>
                                     </select>
                                     <span id="errorCategoria"></span>
@@ -82,7 +103,10 @@
                                     <h2>Modelo</h2>
                                     <input type="text" name="model" id="modelo">
                                     <span id="errorModelo"></span>
-                                    <span class="text-danger"><%= (typeof errores != "undefined" && errores.model ? errores.model.msg : null) %></span>
+                                    <span class="text-danger">
+                                        <%= (typeof errores !="undefined" && errores.model ? errores.model.msg : null)
+                                            %>
+                                    </span>
                                     <h2>En Stock</h2>
                                     <select name="stock" id="stock">
                                         <option value="" hidden selected></option>
@@ -96,30 +120,52 @@
                                 </select>
                                 <span id="errorStock"></span>
                             </section>
-
-                            <article class="product-description--title">
-                                <h2>Descripcion</h2>
-                            </article>
-                            <span class="text-danger"><%= (typeof errores != "undefined" && errores.description ? errores.description.msg : null) %></span>
-
-                            <section class="product-description col-12">
-                                <textarea name="description" id="descripcion" cols="30" rows="10"></textarea>
-                            </section>
-                            <span id="errorDescripcion"></span>
-                            <article class="product-feature--title">
-                                <h2>Caracteristicas</h2>
-                            </article>
-                            <span class="text-danger"><%= (typeof errores != "undefined" && errores.features ? errores.features.msg : null) %></span>
+                        </div><!-- !IMOUTS -->
 
 
-                            <section class="product-feature col-12">
-                                <textarea name="features" id="caracteristicas" cols="30" rows="10"></textarea>
-                            </section>
-                            <span id="errorCaracteristicas"></span>
-                            <div class="product-botom">
+
+                            <!-- !text area descripcion -->
+                            <div class="text-descripcion col-md-8 col-lg-6">
+                                <article class="product-description--title ">
+                                    <h2>Descripcion</h2>
+                                </article>
+                                <span class="text-danger">
+                                    <%= (typeof errores !="undefined" && errores.description ? errores.description.msg :
+                                        null) %>
+                                </span>
+                                <section class="product-description col-12">
+                                    <textarea name="description" id="descripcion" cols="30" rows="6"></textarea>
+                                </section>
+                                <span id="errorDescripcion"></span>
+                            </div>
+                            <!-- !text area descripcion -->
+
+
+
+
+
+                            <!-- !text area Caracteriticas -->
+                            <div class="text-caracteristicas col-md-8 col-lg-6">
+                                <article class="product-feature--title">
+                                    <h2>Caracteristicas</h2>
+                                </article>
+                                <span class="text-danger">
+                                    <%= (typeof errores !="undefined" && errores.features ? errores.features.msg : null)
+                                        %>
+                                </span>
+                                <section class="product-feature col-12">
+                                    <textarea name="features" id="caracteristicas" cols="30" rows="6"></textarea>
+                                </section>
+                                <span id="errorCaracteristicas"></span>
+                            </div>
+                            <!-- !text area Caracteriticas -->
+
+                            <!-- !button -->
+                            <div class="product-botom col-md-8">
                                 <button id="botonEnviar" type="submit">Enviar</button>
                                 <span id="errorBoton" class=""></span>
                             </div>
+                            <!-- !button -->
                         </form>
 
 
@@ -131,7 +177,7 @@
 
 
             <%- include("../partials/footer") %>
-            <script src="../javascript/crearProducto.js"></script>
+                <script src="../javascript/crearProducto.js"></script>
                 <%- include("../partials/scriptBS") %>
     </body>
 
