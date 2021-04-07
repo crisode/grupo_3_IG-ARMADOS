@@ -24,7 +24,7 @@
                                     <th scope="col" class="w992">Apellido</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Rol</th>
-                                    <th scope="col" class="accion" >accion</th>
+                                    <th scope="col" class="accion" >Accion</th>
                                 </tr>
                             </thead>
                             <% users.forEach(user=> { %>
@@ -32,7 +32,7 @@
                                     <tr>
                                         <th scope="row">
                                             <p>
-                                                <%=user.id%>
+                                                <%=user.name%>
                                             </p>
                                         </th>
                                         <th class="w992">
@@ -47,7 +47,7 @@
                                         </td>
                                         <td class="price">
                                             <p>
-                                                <%=user.rol_id%>
+                                                <%=user.roles.name%>
                                             </p>
                                         </td>
 

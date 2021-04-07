@@ -19,12 +19,18 @@
                     <li class="list-group-item"><p>Direccion : <%=  result.direccion  %></p></li>
                     <li class="list-group-item"><p>Telefono : <%=  result.telefono  %></p></li>
                     <li>
+<<<<<<< HEAD
                       <form action="/admin/users/upload/<%= result.id %>?_method=PUT" method="POST">
                             <input type="text" name="texto">
                             <select class="rol-select " name="roles" id="rol">
                                 <option class="rol-select " value="" hidden selected><%= result.roles.name %></option>
+=======
+                      <form action="/admin/users/upload/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                            <select class="rol-select " name="rol" id="rol">
+                                <option class="rol-select " value="rol" hidden selected><%= result.roles.name %></option>
+>>>>>>> 06c3be700ca90994b9d1701370e18ef59cd1351e
                                 <% roles.forEach(rol => { %>
-                                 <option  class="rol-select " value="<%= rol.id %>"><%= rol.name %></option>
+                                 <option  name="rol"  class="rol-select "value="<%= result.rol_id %>"><%= rol.name %></option>
                                 <% }) %>
                             </select>
                           <button class="btn-profile-edit col-4" type="submit">Actualizar</button>
