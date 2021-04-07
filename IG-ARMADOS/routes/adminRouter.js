@@ -16,7 +16,7 @@ router.get("/users", users )
 // vista edicion de usuario
 router.get("/users/:id",profile)
 
-// edicion de usuario
+// edicion de usuario via admim
 router.put("/users/upload/:id",updateUser)
 
 //crear producto
