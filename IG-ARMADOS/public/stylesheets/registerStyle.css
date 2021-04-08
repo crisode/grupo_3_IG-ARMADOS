@@ -10,6 +10,39 @@
     margin: 0 auto;
 }
 
+
+.custom-input-file {
+  background-color:orangered;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto 0;
+  height: auto;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  justify-content: center;
+  border-radius: 1rem;
+
+}
+
+.custom-input-file .input-file {
+ border: 10000px solid transparent;
+ cursor: pointer;
+ font-size: 10000px;
+ margin: 0;
+ opacity: 0;
+ outline: 0 none;
+ padding: 0;
+ position: absolute;
+ right: -1000px;
+ top: -1000px;
+}
+
+
 body{
     min-height: 100vh;
     font-size: 15px;
@@ -201,9 +234,9 @@ justify-content: center}
         margin: 10px 100px;
     }
 
-    .registro .custom-input-file{
+  /*   .registro .custom-input-file{
         margin: 0px 22px;
-    }
+    } */
 }
 
 

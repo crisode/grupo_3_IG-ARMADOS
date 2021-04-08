@@ -13,8 +13,10 @@
                                 <img src="/images/productos/<%- producto.imagenes[0].name %>" alt="">
                             </div>
                         </figure>
-                        <label for="img">Cargar Imagenes</label>
-                            <input type="file" name="image" id="imagen" value="<%= producto.image %> ">
+                       
+                        <div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
+                            <input class="input-file" type="file" name="image" id="imagen" value="<%= producto.image %> ">Cargar imagen
+                        </div>
                             <span id="errorImagen"></span> 
                     </section>
                      <!-- !IMAGEN -->
