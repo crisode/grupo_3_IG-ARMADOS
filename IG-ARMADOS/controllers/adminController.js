@@ -75,8 +75,22 @@ module.exports = {
         })
     .catch(error => res.send(error))
     },
-  
+    
+    borrarUser: (req, res) => {
+        db.Users.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => {
+                return res.redirect("/admin/users")
+            })
+            .catch(error => res.send(error))
 
+
+
+
+    },
     cargaProducto: (req, res) => {
 
         let categorias = db.Categorys.findAll();

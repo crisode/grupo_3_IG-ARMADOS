@@ -4,7 +4,7 @@
         <div class="control-users">
             <script>
                 function eliminar() {
-                    resultado = confirm("¿Seguro que desea eliminar este producto?");
+                    resultado = confirm("¿Seguro que desea eliminar este usuario?");
                     return resultado;
                 }
             </script>
@@ -37,7 +37,7 @@
                                         </th>
                                         <th class="w992">
                                             <p>
-                                                <%= user.last_name %> 
+                                                <%=user.last_name%> 
                                             </p>
                                         </th>
                                         <td class="name">
@@ -52,7 +52,7 @@
                                         </td>
 
                                         <td class="accion">
-                                            <form action="/admin/delete/<%= user.id %>?_method=DELETE" method="POST"
+                                            <form action="/admin/user/delete/<%= user.id %>?_method=DELETE" method="POST"
                                                 class="card-body__form">
                                                 <button class="delete" type="submit"
                                                     onclick="javascript:return eliminar();"></i><i

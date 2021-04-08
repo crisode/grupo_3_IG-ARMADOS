@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {index,users,profile,updateUser, cargaProducto, storeProducto, detalleProducto, editarProducto, actualizarProducto, borrarProducto} = require("../controllers/adminController")
+const {index,users,profile,updateUser,borrarUser, cargaProducto, storeProducto, detalleProducto, editarProducto, actualizarProducto, borrarProducto} = require("../controllers/adminController")
 const productValidator = require('../validations/productValidator');
 
 
@@ -18,6 +18,13 @@ router.get("/users/:id",profile)
 
 // edicion de usuario via admim
 router.put("/users/upload/:id",updateUser)
+
+
+
+// Borrar usuario
+router.delete("/user/delete/:id",borrarUser)
+
+
 
 //crear producto
 router.get("/create", cargaProducto);
