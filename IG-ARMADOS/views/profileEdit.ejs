@@ -30,16 +30,15 @@
                 </label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" value="<%= result.provincia %>" name="provincia" class="form-control" id="floatingtext" placeholder="Provincia">
-                <label for="floatingtext">
-                  Provincia
-                </label>
+                <label for="inputProvincia">Provincia</label>
+                <select name="provincia" class="form-control" id="provinciaSelect">
+                  <option value="">Seleccione una provincia</option>
+                </select>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" value="<%= result.localidad %>" name="localidad" class="form-control" id="floatingtext" placeholder="Localidad">
-                <label for="floatingtext">
-                  Localidad
-                </label>
+                <label for="imputLocalidad">Localidad</label>
+                <select name="localidad" class="form-control" id="localidadSelect"></select>
+                
               </div>
               <div class="form-floating mb-3">
                 <input type="text" value="<%= result.direccion %>" name="direccion" class="form-control" id="floatingtext" placeholder="Direccion">
@@ -85,7 +84,7 @@
       <%- include("partials/footer") %>
         <%- include("partials/scriptBS") %>
 
-
+        <script src="/javascript/apiProvincias.js"></script>
   </body>
 
 </html>
