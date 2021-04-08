@@ -1,0 +1,29 @@
+.redes{
+	font-size: 3rem;
+	display: flex;
+	flex-direction: row;
+    border-radius: 10px;
+    height: auto;
+}
+ .fa-facebook:before {
+    color:#3b5998;
+}
+.redes .fa-facebook-f{
+    background-color: #00acee;
+}
+.fa-twitter:before {
+    color:#00acee;
+}
+.redes .fa-whatsapp:before {
+ color: #00bb2d; 
+} 
+
+ .fa-facebook:hover {
+     -webkit-transform:scale(1.3);transform:scale(1.3);transition: all .5s;
+    }
+.fa-twitter:hover {
+    -webkit-transform:scale(1.3);transform:scale(1.3);transition: all .5s;
+    }
+.fa-whatsapp:hover {-webkit-transform:scale(1.3);transform:scale(1.3);transition: all .5s;;}
+.redes {overflow:hidden;
+}

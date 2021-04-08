@@ -56,6 +56,7 @@ window.addEventListener("load", () => {
         reader.readAsDataURL($imagen.files[0]);
         $errorImagen.innerHTML = "";
         $imagen.classList.remove("invalido")
+        
       }
     }
   });

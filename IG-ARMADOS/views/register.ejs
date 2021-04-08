@@ -16,17 +16,24 @@
                     <form id="form" action="" method="POST" enctype="multipart/form-data">
                         <div class="container">
                             <div class="row justify-content-center mt-5">
+                              
 
                                 <div class="fondo-login">
                                     <h1 class="text-center my-5">Registro</h1>
 
                                     <h4 class="titulos">Tu Avatar</h4>
                                     <div class="col-12">
+
+
+
                                         <div class="imagen" id="img-preview">
-                                            
-                                            
+                                            <img src="/images/desarroladores/Download User for free.png" alt="">
+
                                         </div>
                                         <input id="img" type="file" name="img">
+
+
+
                                         <span class="text-danger" id="imgErrors"></span>
                                     </div>
                                     <h4 class="titulos">Tu Nombre y Apellido</h4>
@@ -34,7 +41,7 @@
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
                                                 name="name">
-                                                <span class="error text-danger" id="nombreErrors"></span>
+                                            <span class="error text-danger" id="nombreErrors"></span>
                                             <label for="nombre">Nombre</label>
 
 
@@ -56,14 +63,14 @@
                                             </span>
                                         </div>
                                     </div>
-                                   
-                                    
+
+
                                     <h4 class="titulos">Tu Email y Contraseña</h4>
                                     <div class="col-12 col-md-6 col-lg-8">
                                         <div class="form-floating mb-3">
                                             <input type="email" class="form-control" id="email" placeholder="Email"
                                                 name="email">
-                                                <span class="text-danger" id="emailErrors"></span>
+                                            <span class="text-danger" id="emailErrors"></span>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.email ? errores.email.msg :
                                                     null) %>
@@ -89,7 +96,7 @@
                                         <div class="form-floating">
                                             <input type="password" class="form-control" id="pass2"
                                                 placeholder="Contraseña" name="pass2">
-                                                
+
                                             <label for="pass2">Repetir Contraseña</label>
                                             <span class="text-danger" id="pass2Errors"></span>
                                         </div>
@@ -98,11 +105,11 @@
                                         <div class="condiciones">
                                             <input class="form-check-input" name="term" type="checkbox" value="si"
                                                 id="flexCheckDefault">
-                                                
+
                                             <label class="form-check-label" for="flexCheckDefault">
                                                 Acepto los terminos y condiciones
                                             </label>
-                                            
+
                                             <span class="termErrors"></span>
                                             <span class="text-danger">
                                                 <%= (typeof errores !="undefined" && errores.term ? errores.term.msg :

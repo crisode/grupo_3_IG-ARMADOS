@@ -53,8 +53,15 @@ body{
     color: inherit;
 }
 
-.registro img{
-    width: 100%;
+
+
+
+
+.registro img{ /* !al cargar la imagen  */
+    width: 150px;
+    height: 150px;
+    border: #ff6600 1px solid;
+    border-radius: 50pc;
 }
 
 .registro h1, h2, h4{
@@ -74,13 +81,6 @@ justify-content: center}
 .form-control{
     margin-bottom: 3rem;
 }
-
-
-
-
-
-
-
  .registro a:hover{
     color: black;
 } 

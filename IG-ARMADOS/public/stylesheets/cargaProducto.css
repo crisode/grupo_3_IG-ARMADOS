@@ -18,7 +18,6 @@ body{
     color: #ffffff;
 }
 .carga-producto .toma-img{
-    background-color: #e30909;
     width: 50%;
 }
 .carga-producto h2{
@@ -223,7 +222,7 @@ border:var(--orange) 1px solid;
 @media(min-width: 768px){
 
     .carga-producto .toma-img{
-        background-color: #e30909;
+        
         width: 50%;
     }
     .carga-producto .product-img label[for="img"] {
