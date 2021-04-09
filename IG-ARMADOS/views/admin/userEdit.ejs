@@ -3,6 +3,17 @@
 <%- include("../partials/head") %>
 
   <body>
+
+
+    <script>
+      function eliminar() {
+          resultado = confirm("¿Seguro que desea cambiar el rol de este usuario?");
+          return resultado;
+      }
+  </script>
+
+
+
     <%- include("../partials/header") %>
       <div class="container-fluid">
         <div class="profile-edit row ">
@@ -26,7 +37,7 @@
                                  <option   class="rol-select "value="<%= rol.id %>"><%= rol.name %></option>
                                 <% }) %>
                             </select>
-                          <button class="btn-profile-edit col-4" type="submit">Actualizar</button>
+                          <button class="btn-profile-edit col-4" type="submit"  onclick="javascript:return eliminar();">Actualizar</button>
                         </form>
 
                     </li>
