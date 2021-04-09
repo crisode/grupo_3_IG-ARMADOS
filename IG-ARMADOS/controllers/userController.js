@@ -91,18 +91,24 @@ module.exports = {
         })*/
     },
     register: (req, res) => {
+       
         res.render("register", {
-            title: "Registro de Usuario"
+            
+            title: "Registro de Usuario",
+          
         });
     },
     registerProcess: (req, res) => {
 
         let errores = validationResult(req);
-        
+       
+
         if (!errores.isEmpty()) {
             return res.render('register', {
                 errores: errores.mapped(),
-                title: 'Registro de Usuario'
+                title: 'Registro de Usuario',
+                oldRegister: req.body
+               
             })
         } else {
 
