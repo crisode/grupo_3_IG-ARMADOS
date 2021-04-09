@@ -53,7 +53,6 @@ select:focus{
 }
 
 
-
 .carga-producto input{
     background-color: #272727;
     color: white;
@@ -97,13 +96,13 @@ select:focus{
 .carga-producto .product-info input{
     width: 100%;
     height: 40px;
-
+    background-color: #272727;
 }
 
 .carga-producto .product-info select{
     width: 100%;
     height: 40px;
-    
+    background-color: #272727;
 }
 
 .carga-producto .product-info h2{
@@ -300,7 +299,13 @@ border:var(--orange) 1px solid;
         justify-content: flex-end;
     }
 
-    .carga-producto .product-botom button{
+   
+
+    .carga-producto .product-botom button:hover{
+        color: black;
+    }
+ */
+/*  .carga-producto .product-botom button{
     margin-top: 20px;
     height: 50px;
     width: 15%; 
@@ -314,10 +319,5 @@ border:var(--orange) 1px solid;
     text-transform: capitalize;
     text-align: center;
 
-    }
-
-    .carga-producto .product-botom button:hover{
-        color: black;
-    }
- */
+    } */
 }
