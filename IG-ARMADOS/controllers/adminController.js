@@ -83,7 +83,7 @@ module.exports = {
             }
         })
             .then(() => {
-                return res.redirect("/admin/user")
+                return res.redirect("/admin/users")
             })
             .catch(error => res.send(error))
 

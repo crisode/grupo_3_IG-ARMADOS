@@ -35,8 +35,8 @@ window.addEventListener("load", () => {
     $caracteristicas = qs("#caracteristicas"),
     $imagenPreview = qs("#imagenPreview"),
     $esNumero = /^([0-9])*$/,
-    $esTexto = /^{20,500}$/,
-    $esTexto5 = /^[A-Za-z\d_\s*/m].{5,500}$/
+    $esTexto = /.{1,500}$/,
+    $esTexto5 = /.{1,500}$/
 
 
   $imagen.addEventListener("change", function fileValidation() {
