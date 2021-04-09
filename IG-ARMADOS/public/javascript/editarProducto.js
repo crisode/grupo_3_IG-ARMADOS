@@ -3,7 +3,7 @@ let qs = function (element) {
 };
 
 window.addEventListener("load", () => {
-  console.log("Vinculado!")
+  console.log("Vinculadoo!")
 
   let $errorImagen = qs("#errorImagen"),
     $errorTitulo = qs("#errorTitulo"),
