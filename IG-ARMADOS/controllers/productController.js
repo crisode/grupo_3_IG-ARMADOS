@@ -27,7 +27,7 @@ module.exports = {
             
             
             return res.render('productList',{
-                title : 'resultados',
+                title : 'Resultados',
                 productos : result,
                 search : busqueda
             })
@@ -46,7 +46,7 @@ module.exports = {
         .then(result => {
 
             return res.render('componentProducts',{
-                title : 'resultados',
+                title : 'Resultados',
                 productos : result,
             })
      
