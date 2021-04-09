@@ -43,7 +43,7 @@ module.exports = {
     },
     contact: (req, res) => {
         res.render("contacto", {
-            title: "contacto"
+            title: "Contacto"
         })
     }
 
