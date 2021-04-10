@@ -34,9 +34,9 @@ module.exports = [
 
     check('description')
     .isLength({
-        min : 20
+        min : 1
     })
-    .withMessage('La descripcion debe contener al menos 20 caracteres'),
+    .withMessage('La descripcion debe contener al menos 1 caracter'),
 
     
     check('features')
@@ -45,9 +45,9 @@ module.exports = [
 
     check('features')
     .isLength({
-        min : 20
+        min : 1
     })
-    .withMessage('La caracteristica debe contener al menos 20 caracteres'),
+    .withMessage('La caracteristica debe contener al menos 1 caracter'),
 
     check('model')
     .notEmpty()

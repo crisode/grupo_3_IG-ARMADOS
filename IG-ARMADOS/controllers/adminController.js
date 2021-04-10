@@ -162,8 +162,8 @@ module.exports = {
                         componentes,
                         garantias,
                         marcas,
-                        errores : errors.mapped()
-
+                        errores : errors.mapped(),
+                        oldProduct : req.body
                     })
                 })
                 .catch(error => console.log(error))

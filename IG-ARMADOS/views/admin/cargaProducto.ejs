@@ -26,14 +26,14 @@
                             <section class="product-info col-12 col-md-8">
                                 <div class="box ">
                                     <h2>Titulo del producto</h2>
-                                    <input type="text" name="title" id="titulo" autofocus>
+                                    <input type="text" name="title" id="titulo" autofocus value="<%= (typeof oldProduct != "undefined" && oldProduct.title ? oldProduct.title : null) %>">
                                     <span id="errorTitulo"></span>
                                     <span class="text-danger">
                                         <%= (typeof errores !="undefined" && errores.title ? errores.title.msg : null)
                                             %>
                                     </span>
                                     <h2>Precio del producto</h2>
-                                    <input type="text" name="price" id="precio">
+                                    <input type="text" name="price" id="precio" value="<%= (typeof oldProduct != "undefined" && oldProduct.price ? oldProduct.price : null) %>">
                                     <span id="errorPrecio"></span>
                                     <span class="text-danger">
                                         <%= (typeof errores !="undefined" && errores.price ? errores.price.msg : null)
@@ -43,7 +43,7 @@
 
                                 <div class="box2">
                                     <h2>Oferta</h2>
-                                    <input type="text" name="insale" id="oferta">
+                                    <input type="text" name="insale" id="oferta" value="<%= (typeof oldProduct != "undefined" && oldProduct.insale ? oldProduct.insale : null) %>">
                                     <span id="errorOferta"></span>
                                     <span class="text-danger">
                                         <%= (typeof errores !="undefined" && errores.insale ? errores.insale.msg : null)
@@ -52,7 +52,7 @@
 
                                     <h2>Garantia</h2>
                                     <select name="garantia" id="garantia">
-                                        <option value="" hidden selected></option>
+                                        <option value="<%= (typeof oldProduct != "undefined" && oldProduct.garantia ? oldProduct.garantia : null) %>" hidden selected></option>
                                         <% garantias.forEach(garantia=> { %>
                                             <option value="<%= garantia.id%>">
                                                 <%= garantia.type%>
@@ -71,7 +71,7 @@
                                 <div class="box3">
                                     <h2>Componente</h2>
                                     <select name="component" id="componente">
-                                        <option value="" hidden selected></option>
+                                        <option value="<%= (typeof oldProduct != "undefined" && oldProduct.component ? oldProduct.component : null) %>" hidden selected></option>
                                         <% componentes.forEach(componente=> { %>
                                             <option value="<%= componente.id%>">
                                                 <%= componente.name%>
@@ -81,7 +81,7 @@
                                     <span id="errorComponente"></span>
                                     <h2>Marca</h2>
                                     <select name="mark" id="marca">
-                                        <option value="" hidden selected></option>
+                                        <option value="<%= (typeof oldProduct != "undefined" && oldProduct.mark ? oldProduct.mark : null) %>" hidden selected></option>
                                         <% marcas.forEach(marca=> { %>
                                             <option value="<%= marca.id%>">
                                                 <%= marca.name%>
@@ -91,7 +91,7 @@
                                     <span id="errorMarca"></span>
                                     <h2 class="mt-3">Category</h2>
                                     <select name="category" id="categoria">
-                                        <option value="" hidden selected></option>
+                                        <option value="<%= (typeof oldProduct != "undefined" && oldProduct.category ? oldProduct.category : null) %>" hidden selected></option>
                                         <% categorias.forEach(categoria=> { %>
                                             <option value="<%= categoria.id%>">
                                                 <%= categoria.name%>
@@ -103,7 +103,7 @@
 
                                 <div class="box4">
                                     <h2>Modelo</h2>
-                                    <input type="text" name="model" id="modelo">
+                                    <input value="<%= (typeof oldProduct != "undefined" && oldProduct.model ? oldProduct.model : null) %>" type="text" name="model" id="modelo">
                                     <span id="errorModelo"></span>
                                     <span class="text-danger">
                                         <%= (typeof errores !="undefined" && errores.model ? errores.model.msg : null)
@@ -111,7 +111,7 @@
                                     </span>
                                     <h2>En Stock</h2>
                                     <select name="stock" id="stock">
-                                        <option value="" hidden selected></option>
+                                        <option value="<%= (typeof oldProduct != "undefined" && oldProduct.stock ? oldProduct.stock : null) %>" hidden selected></option>
                                         <option value="si">
                                             <p>Si</p>
                                         </option>
