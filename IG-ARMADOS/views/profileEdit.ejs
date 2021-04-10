@@ -8,28 +8,36 @@
         <div class="profile-edit row ">
 
           
-          <form class=" " action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form class=" " id="formPerfil" action="/users/update/<%= result.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <section class="col-12 col-lg-4">
-              <label for="img"><img src="/images/userAvatar/<%= result.avatar %>" alt=""></label>
+              <label for="img">
+                <div id="img-preview-perfil">
+                  <img src="/images/userAvatar/<%= result.avatar %>" alt="">
+                </div>
+                
+              </label>
               <div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
-                <input class="imagenPerfil input-file" type="file" name="image" id="img" value="<%= result.avatar %>">Cambiar Avartar
+                <input class="imagenPerfil input-file" type="file" name="image" id="imgPerfil" value="<%= result.avatar %>">Cambiar Avartar
               </div>
+              <span id="imgErrorPerfil"></span>
             </section>
             <div class="mb-4">
               <h3>Modifica tus datos personales</h3>
             </div>
             <ul class="">
               <div class="form-floating mb-3">
-                <input type="text" value="<%= result.name %>" name="name" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
+                <input type="text" value="<%= result.name %>" name="name" class="form-control" id="nombrePerfil" placeholder="Nombre de usuario">
                 <label for="floatingInput">
                   Nombre
                 </label>
+                <span id="nombrePerfilError"></span>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" value="<%= result.last_name %>" name="apellido" class="form-control" id="floatingtext" placeholder="Apellido de usuario">
+                <input type="text" value="<%= result.last_name %>" name="apellido" class="form-control" id="apellidoPerfil" placeholder="Apellido de usuario">
                 <label for="floatingtext">
                   Apellido
                 </label>
+                <span id="apellidoPerfilError"></span>
               </div>
               <div class="form-floating mb-3">
                 
@@ -76,6 +84,7 @@
                 <label for="floatingInput">Repetir Contraseña</label>
               </div> -->
             </ul>
+            <span id="errorFormPerfil"></span>
             <button class="btn-profile-edit col-4" type="submit">Actualizar</button>
           </form>
           <form action="/users/delete/<%= result.id %>?_method=DELETE" method="POST" class="card-body__form">
@@ -89,7 +98,7 @@
 
       <%- include("partials/footer") %>
         <%- include("partials/scriptBS") %>
-
+        <script src="/javascript/profileEdit.js"></script>
         <!-- <script src="/javascript/apiProvincias.js"></script> -->
   </body>
 
