@@ -53,9 +53,9 @@
 
                                         <td class="accion">
                                             <form action="/admin/user/delete/<%= user.id %>?_method=DELETE" method="POST"
-                                                class="card-body__form">
+                                                class="card-body__form" id="dele<%= user.id %>">
                                                 <button class="delete" type="submit"
-                                                    onclick="javascript:return eliminar();"></i><i
+                                                onclick="funar(event,document.querySelector('#dele<%= user.id %>'))"></i><i
                                                         class="far fa-trash-alt"></i></button>
                                             </form>
                                             <a href="/admin/users/<%= user.id %>"><button class="edit"> <i
@@ -71,6 +71,9 @@
                 <%- include("../partials/footer") %>
                     <%- include("../partials/scriptBS") %>
         </div>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>            
+            <script src="/javascript/alertUsuarios.js"></script>
     </body>
 
     </html>

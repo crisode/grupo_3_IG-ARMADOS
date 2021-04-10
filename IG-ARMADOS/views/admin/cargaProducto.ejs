@@ -164,7 +164,7 @@
 
                             <!-- !button -->
                             <div class="product-botom col-md-8">
-                                <button id="botonEnviar" type="submit">Enviar</button>
+                                <button id="botonEnviar" type="submit" onclick="confirm">Enviar</button>
                                 <span id="errorBoton" class=""></span>
                             </div>
                             <!-- !button -->
@@ -181,6 +181,9 @@
             <%- include("../partials/footer") %>
                 <script src="../javascript/crearProducto.js"></script>
                 <%- include("../partials/scriptBS") %>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>            
+                    <script src="/javascript/confirm.js"></script>
     </body>
 
     </html>

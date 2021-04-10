@@ -84,9 +84,9 @@
                                         </td>
                                         <td class="accion">
                                             <form action="/admin/delete/<%= p.id %>?_method=DELETE" method="POST"
-                                                class="card-body__form">
+                                                class="card-body__form" id="dele<%= p.id %>">
                                                 <button class="delete" type="submit"
-                                                    onclick="javascript:return eliminar();"></i><i
+                                                onclick="confirmar(event,document.querySelector('#dele<%= p.id %>'))"></i><i
                                                         class="far fa-trash-alt"></i></button>
                                             </form>
                                             <a href="/admin/edit/<%= p.id %>"><button class="edit"> <i
@@ -105,7 +105,8 @@
             <%- include("../partials/footer") %>
                 <%- include("../partials/scriptBS") %>
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-                <script src="/javascript/alertDelete.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>            
+                    <script src="/javascript/alertDeleteProduct.js"></script>
     </body>
 
     </html>

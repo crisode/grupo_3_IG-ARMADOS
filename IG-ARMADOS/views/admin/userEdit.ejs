@@ -30,14 +30,14 @@
                     <li class="list-group-item"><p>Direccion : <%=  result.direccion  %></p></li>
                     <li class="list-group-item"><p>Telefono : <%=  result.telefono  %></p></li>
                     <li>
-                      <form action="/admin/users/upload/<%= result.id %>?_method=PUT" method="POST">
-                            <select class="rol-select " name="rol" id="rol">
+                      <form action="/admin/users/upload/<%= result.id %>?_method=PUT" method="POST" id="editRol">
+                            <select class="rol-select " name="rol" id="rol ">
                                 <option class="rol-select " value="" hidden selected><%= result.roles.name %></option>
                                 <% roles.forEach(rol => { %>
                                  <option   class="rol-select "value="<%= rol.id %>"><%= rol.name %></option>
                                 <% }) %>
                             </select>
-                          <button class="btn-profile-edit col-4" type="submit"  onclick="javascript:return eliminar();">Actualizar</button>
+                          <button class="btn-profile-edit col-4" type="submit" onclick="rolEdit(event,document.querySelector('#editRol'))" >Actualizar</button>
                         </form>
 
                     </li>
@@ -55,7 +55,9 @@
       <%- include("../partials/footer") %>
         <%- include("../partials/scriptBS") %>
 
-
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>            
+            <script src="/javascript/editarRol.js"></script>
   </body>
 
 </html>
