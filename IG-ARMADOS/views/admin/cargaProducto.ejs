@@ -17,7 +17,7 @@
                               
                                 <div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
                                 <input class="input-file" type="file" name="image" id="imagen">Cargar Imagenes
-                            </div>
+                                </div>
                             </section>
                             <!-- !IMAGEN -->
                             
@@ -26,7 +26,7 @@
                             <section class="product-info col-12 col-md-8">
                                 <div class="box ">
                                     <h2>Titulo del producto</h2>
-                                    <input type="text" name="title" id="titulo">
+                                    <input type="text" name="title" id="titulo" autofocus>
                                     <span id="errorTitulo"></span>
                                     <span class="text-danger">
                                         <%= (typeof errores !="undefined" && errores.title ? errores.title.msg : null)

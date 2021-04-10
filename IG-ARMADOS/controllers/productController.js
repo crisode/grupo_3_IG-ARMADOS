@@ -23,9 +23,6 @@ module.exports = {
             include : [{association : 'imagenes'}]
         })
         .then(result => {
-
-            
-            
             return res.render('productList',{
                 title : 'Resultados',
                 productos : result,

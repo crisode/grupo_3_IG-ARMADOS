@@ -14,15 +14,17 @@
 
     </section>
     <div class="row">
-        <!-- <section>
+        <!-- !suscripcion -->
+        <section>
             <div class="suscription">
                 <p class="col-lg-2">Suscripción</p>
-            <form action="" class="suscript col-lg-10">
-                <input type="text" placeholder="ingrese su correo" class="">
-                <button type="submit">Enviar</button>
+            <form action="/suscripcion" method="POST" id="suscription" class="suscript col-lg-10">
+                <input name="email" type="email" placeholder="su correo electronico"id="enviarSuc">
+                <button type="submit">Suscribirme</button>
             </form>
             </div>
-        </section> -->
+        </section>
+        <!-- !suscripcion -->
         <section class="marcas col-lg-4">
             <img src="/images/logo.png" class="logo-footer col-lg-3" alt="">
             <p class="col-lg-6">Marcas con las que trabajamos</p>
@@ -42,10 +44,10 @@
         </section>
         <section class="sucursales col-lg-4">
             <p>¿Donde podes encontrarnos?</p>
-            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square facebook"></i>  Facebook</a></li>
-            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram Instagran"></i>  Instagram</a></li>
-            <li><a href="/contact"><i class="fab fa-contao"></i>  Contacto</a></li>
+            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square facebook"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram Instagran"></i> Instagram</a></li>
+            <li><a href="/contact"><i class="fab fa-contao"></i> Contacto</a></li>
         </section>
     </div>
-
+    <script src="/javascript/suscriction.js"></script>
 </footer>

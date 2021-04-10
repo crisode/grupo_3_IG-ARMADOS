@@ -492,6 +492,7 @@
         background-color: var(--orange);
         border-radius: 5px;
         color: var(--white);
+        padding: 1px 14px;
       }
       footer.marcas{
         display: flex;
