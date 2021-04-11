@@ -17,48 +17,43 @@ window.addEventListener('load', function () {
     /* VALIDACIÓN EMAIL */
     
 
-    $inputEmail.addEventListener('blur', function () {
+    $inputEmail.addEventListener('blur', function(){
         switch (true) {
             case !$inputEmail.value.trim():
-                $emailErrors.innerHTML = 'El campo email es obligatorio';
-                $inputEmail.classList.add('errorFormularioLogin')
+                $emailErrors.innerHTML = '* Debes ingresar un email';
+                $inputEmail.classList.add('invalido')
                 break;
             case !regExEmail.test($inputEmail.value):
-                $emailErrors.innerHTML = 'Debes ingresar un Email válido'
-                $inputEmail.classList.add('errorFormularioLogin')
+                $emailErrors.innerHTML = 'Este correo electronico no es válido. Por favor usa el formato: tucorreo@ejemplo.com'
+                $inputEmail.classList.add('invalido')
                 break;
             default:
-                $inputEmail.classList.remove('errorFormularioLogin');
+                $inputEmail.classList.remove('invalido');
                 $inputEmail.classList.add('valido');
                 $emailErrors.innerHTML = ''
-                $errorFormLogin.innerHTML = ""
                 break;
         }
-
     })
 
     /* VALIDACIÓN PASSWORD  */
 
-    $Pass.addEventListener('blur', function () {
+    $Pass.addEventListener('blur', function(){
         switch (true) {
             case !$Pass.value.trim():
-                $passErrors.innerHTML = 'El campo contraseña es obligatorio.';
-                $Pass.classList.add('errorFormularioLogin')
+                $passErrors.innerHTML = '* Debes ingresar una contraseña';
+                $Pass.classList.add('invalido')
                 break;
-            case !regExPass.test($Pass.value):
-                $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres'
-                $Pass.classList.add('errorFormularioLogin')
-                break;
+                case !regExPass.test($Pass.value):
+                $passErrors.innerHTML = 'Tu contraseña debe tener entre 6 y 12 caracteres'
+                $Pass.classList.add('invalido')
+                break; 
             default:
-                $Pass.classList.remove('errorFormularioLogin');
+                $Pass.classList.remove('invalido');
                 $Pass.classList.add('valido');
                 $passErrors.innerHTML = ''
-                $errorFormLogin.innerHTML = ""
                 break;
         }
-
     })
-
     /* VALIDACION FORMULARIO */
     
     console.log($formLogin)

@@ -9,6 +9,9 @@
     box-sizing: border-box;
     margin: 0 auto;
 }
+.registro .form-floating{
+    text-align: initial;
+}
 
 
 .custom-input-file {
@@ -67,7 +70,7 @@ body{
     color: #ffffff;
  */
 .registro span{
-    font-weight: 700;
+    font-weight: 600;
     
 }
 

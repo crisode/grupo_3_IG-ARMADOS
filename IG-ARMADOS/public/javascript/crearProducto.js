@@ -65,12 +65,12 @@ window.addEventListener("load", () => {
   $titulo.addEventListener('blur', function () {
     switch (true) {
       case !$titulo.value.trim():
-        $errorTitulo.innerHTML = '¡El campo titulo es obligatorio!'
+        $errorTitulo.innerHTML = '* ¡Debes ingresar el título del producto! '
         $titulo.classList.remove("valido")
         $titulo.classList.add('invalido')
         break;
       case !$esTexto5.test($titulo.value):
-        $errorTitulo.innerHTML = "¡El campo precio debe tener al menos 5 caracteres!"
+        $errorTitulo.innerHTML = "* ¡El título debe tener al menos 5 caracteres!"
         $titulo.classList.remove("valido")
         $titulo.classList.add("invalido")
         break;
@@ -85,12 +85,12 @@ window.addEventListener("load", () => {
   $precio.addEventListener("blur", function() {
     switch (true) {
       case !$precio.value.trim():
-        $errorPrecio.innerHTML = "¡El campo precio es obligatorio!"
+        $errorPrecio.innerHTML = "* ¡Debes ingresar el precío del producto!"
         $precio.classList.remove("valido")
         $precio.classList.add("invalido")
         break;
       case !$esNumero.test($precio.value):
-        $errorPrecio.innerHTML = "¡El campo precio debe ser numerico!"
+        $errorPrecio.innerHTML = "* ¡El precío debe ser un numero!"
         $precio.classList.remove("valido")
         $precio.classList.add("invalido")
         break;
@@ -105,12 +105,12 @@ window.addEventListener("load", () => {
   $oferta.addEventListener("blur", function() {
     switch (true) {
       case !$oferta.value.trim():
-        $errorOferta.innerHTML = "¡El campo oferta es obligatorio!"
+        $errorOferta.innerHTML = "* ¡El campo oferta es obligatorio!"
         $oferta.classList.remove("valido")
         $oferta.classList.add("invalido")
         break;
       case !$esNumero.test($oferta.value):
-        $errorOferta.innerHTML = "¡El campo oferta debe ser numerico!"
+        $errorOferta.innerHTML = "* ¡El campo oferta debe ser numerico!"
         $oferta.classList.remove("valido")
         $oferta.classList.add("invalido")
         break;
@@ -124,7 +124,7 @@ window.addEventListener("load", () => {
 
   $garantia.addEventListener("blur", function() {
     if (!$garantia.value.trim()) {
-      $errorGarantia.innerHTML = "¡El campo garantia es requerido!"
+      $errorGarantia.innerHTML = "* ¡Debes ingresar el tipo de garantia que tendra el producto!"
       $garantia.classList.remove("valido")
       $garantia.classList.add("invalido")
     }else{
@@ -136,7 +136,7 @@ window.addEventListener("load", () => {
 
   $componente.addEventListener("blur", function() {
     if (!$componente.value.trim()) {
-      $errorComponente.innerHTML = "¡El campo componente es requerido!"
+      $errorComponente.innerHTML = "* ¡Debes ingresar que tipo de componente es!"
       $componente.classList.remove("valido")
       $componente.classList.add("invalido")
     }else{
@@ -148,7 +148,7 @@ window.addEventListener("load", () => {
 
   $marca.addEventListener("blur", function() {
     if (!$marca.value.trim()) {
-      $errorMarca.innerHTML = "¡El campo marca es requerido!"
+      $errorMarca.innerHTML = "* ¡Debes ingresar la marca del producto!"
       $marca.classList.remove("valido")
       $marca.classList.add("invalido")
     }else{
@@ -161,7 +161,7 @@ window.addEventListener("load", () => {
   $modelo.addEventListener('blur', function () {
     switch (true) {
       case !$modelo.value.trim():
-        $errorModelo.innerHTML = '¡El campo modelo es obligatorio!'
+        $errorModelo.innerHTML = '* ¡Debes ingresar el modelo del producto!'
         $modelo.classList.remove("valido")
         $modelo.classList.add('invalido')
         break;
@@ -175,7 +175,7 @@ window.addEventListener("load", () => {
 
   $stock.addEventListener("blur", function() {
     if (!$stock.value.trim()) {
-      $errorStock.innerHTML = "¡El campo stock es requerido!"
+      $errorStock.innerHTML = "* ¡Confirma el stock del producto!"
       $stock.classList.remove("valido")
       $stock.classList.add("invalido")
     }else{
@@ -187,7 +187,7 @@ window.addEventListener("load", () => {
 
   $categoria.addEventListener("blur", function() {
     if (!$categoria.value.trim()) {
-      $errorCategoria.innerHTML = "¡El campo categoria es requerido!"
+      $errorCategoria.innerHTML = "* ¡Debes ingresar en que categoria se agregara el producto!"
       $categoria.classList.remove("valido")
       $categoria.classList.add("invalido")
     }else{
@@ -200,12 +200,12 @@ window.addEventListener("load", () => {
   $descripcion.addEventListener("blur", function() {
     switch (true) {
       case !$descripcion.value:
-        $errorDescripcion.innerHTML = "¡El campo descripcion es obligatorio!"
+        $errorDescripcion.innerHTML = "* ¡Ingresa una descripción del producto !"
         $descripcion.classList.remove("valido")
         $descripcion.classList.add("invalido")
         break;
       case !$esTexto.test($descripcion.value):
-        $errorDescripcion.innerHTML = "¡El campo descripcion debe tener al menos 20 caracteres!"
+        $errorDescripcion.innerHTML = "* ¡La descripcion debe tener al menos 5 caracteres!"
         $descripcion.classList.remove("valido")
         $descripcion.classList.add("invalido")
         break;
@@ -220,12 +220,12 @@ window.addEventListener("load", () => {
   $caracteristicas.addEventListener("blur", function() {
     switch (true) {
       case !$caracteristicas.value:
-        $errorCaracteristicas.innerHTML = "¡El campo caracteristicas es obligatorio!"
+        $errorCaracteristicas.innerHTML = "* ¡Ingresa las caracteristicas del producto!"
         $caracteristicas.classList.remove("valido")
         $caracteristicas.classList.add("invalido")
         break;
       case !$esTexto.test($caracteristicas.value):
-        $errorCaracteristicas.innerHTML = "¡El campo caracteristicas debe tener al menos 20 caracteres!"
+        $errorCaracteristicas.innerHTML = "* ¡El campo caracteristicas debe tener al menos 5 caracteres!"
         $caracteristicas.classList.remove("valido")
         $caracteristicas.classList.add("invalido")
         break;
@@ -246,7 +246,7 @@ window.addEventListener("load", () => {
     for (let index = 1; index < 12; index++) {
       if (elementosForm[index].value == "") {
         elementosForm[index].classList.add("invalido")
-        $errorForm.innerHTML = "Los campos señalados son obligatorios";
+        $errorForm.innerHTML = "* Debes ingresar todos los datos ";
         $errorForm.classList.add("errorFormulario")
         error = true;
       }

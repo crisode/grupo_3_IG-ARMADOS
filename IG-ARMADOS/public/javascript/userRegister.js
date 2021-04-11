@@ -33,11 +33,11 @@ window.addEventListener('load', function() {
     $inputNombre.addEventListener('blur', function(){
         switch (true) {
             case !$inputNombre.value.trim():
-                $nombreErrors.innerHTML = 'El campo nombre es obligatorio';
+                $nombreErrors.innerHTML = '* Debes ingresar un nombre';
                 $inputNombre.classList.add('invalido')
                 break;
             case !regExAlpha.test($inputNombre.value):
-                $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
+                $nombreErrors.innerHTML = '* Debes ingresar un nombre válido'
                 $inputNombre.classList.add('invalido')
                 break;
             default:
@@ -53,11 +53,11 @@ window.addEventListener('load', function() {
     $inputApellido.addEventListener('blur', function(){
         switch (true) {
             case !$inputApellido.value.trim():
-                $apellidoErrors.innerHTML = 'El campo apellido es obligatorio';
+                $apellidoErrors.innerHTML = '* Debes ingresar un apellido';
                 $inputApellido.classList.add('invalido')
                 break;
             case !regExAlpha.test($inputApellido.value):
-                $apellidoErrors.innerHTML = 'Debes ingresar un nombre válido'
+                $apellidoErrors.innerHTML = 'Debes ingresar un apellido válido'
                 $inputApellido.classList.add('invalido')
                 break;
             default:
@@ -73,11 +73,11 @@ window.addEventListener('load', function() {
     $inputEmail.addEventListener('blur', function(){
         switch (true) {
             case !$inputEmail.value.trim():
-                $emailErrors.innerHTML = 'El campo email es obligatorio';
+                $emailErrors.innerHTML = '* Debes ingresar un email';
                 $inputEmail.classList.add('invalido')
                 break;
             case !regExEmail.test($inputEmail.value):
-                $emailErrors.innerHTML = 'Debes ingresar un Email válido'
+                $emailErrors.innerHTML = 'Este correo electronico no es válido. Por favor usa el formato: tucorreo@ejemplo.com'
                 $inputEmail.classList.add('invalido')
                 break;
             default:
@@ -93,11 +93,11 @@ window.addEventListener('load', function() {
     $Pass.addEventListener('blur', function(){
         switch (true) {
             case !$Pass.value.trim():
-                $passErrors.innerHTML = 'El campo contraseña es obligatorio';
+                $passErrors.innerHTML = '* Debes ingresar una contraseña';
                 $Pass.classList.add('invalido')
                 break;
                 case !regExPass.test($Pass.value):
-                $passErrors.innerHTML = 'Debe tener entre 6 y 12 caracteres'
+                $passErrors.innerHTML = 'Tu contraseña debe tener entre 6 y 12 caracteres'
                 $Pass.classList.add('invalido')
                 break; 
             default:
@@ -113,11 +113,11 @@ window.addEventListener('load', function() {
     $Pass2.addEventListener('blur', function(){
         switch (true) {
             case !$Pass2.value.trim():
-                $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
+                $pass2Errors.innerHTML = '* Debes reingresar la contraseña';
                 $Pass2.classList.add('invalido')
                 break;
             case $Pass2.value != $Pass.value:
-                $pass2Errors.innerHTML = 'Las contraseñas no coinciden'
+                $pass2Errors.innerHTML = '* Las contraseñas no coinciden'
                 $Pass2.classList.add('invalido')
                 break;
             default:
@@ -165,14 +165,14 @@ window.addEventListener('load', function() {
         for (let index = 1; index < 6; index++){
         if(elementosForm[index].value == ""){
             elementosForm[index].classList.add('invalido');
-            submitErrors.innerHTML = "Los campos señalados son obligatorios.";
+            submitErrors.innerHTML = "Debes ingresar todos los campos.";
             error = true;
             }
         }
         
         if(!$terms.checked){
             $terms.classList.add('invalido');
-            $termsErrors.innerHTML = "Debes aceptar las bases y condiciones"
+            $termsErrors.innerHTML = "Debes aceptar las bases y condiciones para registrarte"
             error = true
         }
 

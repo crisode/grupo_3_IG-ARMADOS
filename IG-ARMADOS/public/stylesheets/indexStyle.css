@@ -55,7 +55,8 @@ a{
 .home .titulo h2{
     font-size: 24px;
     margin-top: 20px;
-    margin: 0;
+
+    margin-top: 11px ;
     text-transform: capitalize;
 
 }

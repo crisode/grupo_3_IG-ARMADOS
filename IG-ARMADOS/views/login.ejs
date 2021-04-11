@@ -30,8 +30,11 @@
                                         
                                         <label for="email">Email</label>
 
-                                        <span id="emailErrors"></span>
-                                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.email ? errores.email.msg : null) %></span>
+                                        <span class="text-danger" id="emailErrors"></span>
+                                            <span class="text-danger">
+                                                <%= (typeof errores !="undefined" && errores.email ? errores.email.msg :
+                                                    null) %>
+                                            </span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12 col-lg-8">
@@ -39,8 +42,11 @@
                                         <input type="password" class="form-control" id="pass" placeholder="Contraseña"
                                             name="pass">
                                         <label for="pass">Contraseña</label>
-                                        <span id="passErrors"></span>
-                                        <span class="text-danger"><%= (typeof errores != "undefined" && errores.pass ? errores.pass.msg : null) %></span>
+                                        <span class="text-danger" id="passErrors"></span>
+                                            <span class="text-danger">
+                                                <%= (typeof errores !="undefined" && errores.pass ? errores.pass.msg :
+                                                    null) %>
+                                            </span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12 col-lg-8">
