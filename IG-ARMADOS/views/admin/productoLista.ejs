@@ -16,7 +16,7 @@
                     <div class="fondoLista table-responsive">
                         <div class="headerAdmin">
                             <p class="">Filtro por categoria</p>
-                            <select name="category" id="">
+                            <select name="category" id="categoria">
                                 <% categorias.forEach(categoria=> { %>
                                     <option value="<%= categoria.id%>">
                                         <%= categoria.name%>
@@ -24,14 +24,14 @@
                                     <% }) %>
                             </select>
                             <p>Orden alfabetico </p>
-                            <select name="" id="">
-                                <option value="">Descendente</option>
-                                <option value="">Ascendente</option>
+                            <select name="orden" id="orden">
+                                <option value="DESC">Descendente</option>
+                                <option value="ASC">Ascendente</option>
                             </select>
                             <p>Filtro por precio</p>
-                            <select name="" id="">
-                                <option value="">Mayor precio</option>
-                                <option value="">Menor precio</option>
+                            <select name="price" id="precio">
+                                <option value="DESC">Mayor precio</option>
+                                <option value="asc">Menor precio</option>
                             </select>
                             
                             <a class="add1" href="/admin/create">CREAR PRODUCTO</a>
@@ -55,48 +55,22 @@
                                     <th scope="col">Accion</th>
                                 </tr>
                             </thead>
-                            <% productos.forEach(p=> { %>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <p>
-                                                <%=p.id %>
-                                            </p>
-                                        </th>
-                                        <td class="name">
-                                            <a href="/product/<%= p.id %>">
-                                                <p>
-                                                    <%=p.name%>
-                                                </p>
-                                            </a>
-                                        </td>
-                                        <td class="img">
-                                            <img src="/images/productos/<%- p.imagenes[0].name %> " alt="">
-                                        </td>
-                                        <td class="price">
-                                            <p>$<%=p.price.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "." );%>
-                                            </p>
-                                        </td>
-                                        <td class="cate">
-                                            <p>
-                                                <%=p.categoria.name %>
-                                            </p>
-                                        </td>
-                                        <td class="accion">
-                                            <form action="/admin/delete/<%= p.id %>?_method=DELETE" method="POST"
-                                                class="card-body__form" id="dele<%= p.id %>">
-                                                <button class="delete" type="submit"
-                                                onclick="confirmar(event,document.querySelector('#dele<%= p.id %>'))"></i><i
-                                                        class="far fa-trash-alt"></i></button>
-                                            </form>
-                                            <a href="/admin/edit/<%= p.id %>"><button class="edit"> <i
-                                                        class="fas fa-pencil-alt"></i></li></button></a>
-                                        </td>
-                                    </tr>
-                                    <% }) %>
-                                </tbody>
+                       
                         </table>
                     </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center father">
+                            <li class="page-item">
+                                <a class="page-link child" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item "><a class="page-link child">1</a></li>
+                            <li class="page-item"><a class="page-link child" >2</a></li>
+                            <li class="page-item"><a class="page-link child" >3</a></li>
+                            <li class="page-item">
+                                <a class="page-link child" >Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                     
                 </main>
 
@@ -104,6 +78,8 @@
 
             <%- include("../partials/footer") %>
                 <%- include("../partials/scriptBS") %>
+                <script defer src="/javascript/funcionesLista.js"></script>
+                <script defer src="/javascript/productoLista.js"></script>
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>            
                     <script src="/javascript/alertDeleteProduct.js"></script>
