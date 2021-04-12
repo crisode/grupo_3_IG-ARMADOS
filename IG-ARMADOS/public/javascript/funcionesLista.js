@@ -41,7 +41,7 @@ function productTable(products,table) {
                         onclick="confirmar(event,document.querySelector('#dele${p.id}'))"></i><i
                             class="far fa-trash-alt"></i></button>
                         </form>
-                        <a href="/admin/edit/<%= p.id %>"><button class="edit"> <i
+                        <a href="/admin/edit/${p.id}"><button class="edit"> <i
                                     class="fas fa-pencil-alt"></i></li></button></a>
             </td>
         </tr>
