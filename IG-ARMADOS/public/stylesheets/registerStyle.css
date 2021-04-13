@@ -45,7 +45,9 @@
  top: -1000px;
 }
 
-
+.fa-eye{
+    color: orangered;
+}
 body{
     min-height: 100vh;
     font-size: 15px;

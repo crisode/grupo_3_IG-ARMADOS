@@ -4,7 +4,7 @@ console.log("confirm");
 function confirm() {
   Swal.fire({
     icon: 'success',
-    title: 'Your work has been saved',
+    title: 'Operacion realizada!',
     showConfirmButton: false,
     timer: 2000
   })

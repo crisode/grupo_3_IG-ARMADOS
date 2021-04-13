@@ -26,7 +26,7 @@
                             <section class="product-info col-12 col-md-8">
                                 <div class="box ">
                                     <h2>Titulo del producto</h2>
-                                    <input type="text" name="title" id="titulo" autofocus value="<%= (typeof oldProduct != "undefined" && oldProduct.title ? oldProduct.title : null) %>">
+                                    <input type="text" name="title" id="titulo"  value="<%= (typeof oldProduct != "undefined" && oldProduct.title ? oldProduct.title : null) %>">
                                     <span id="errorTitulo"></span>
                                     <span class="text-danger">
                                         <%= (typeof errores !="undefined" && errores.title ? errores.title.msg : null)
@@ -163,8 +163,8 @@
                             <!-- !text area Caracteriticas -->
 
                             <!-- !button -->
-                            <div class="product-botom col-md-8">
-                                <button id="botonEnviar" type="submit" onclick="confirm">Enviar</button>
+                            <div class="product-botom col-md-8 col-lg-8">
+                                <button id="botonEnviar" type="submit" onclick="confirm">Agregar</button>
                                 <span id="errorBoton" class=""></span>
                             </div>
                             <!-- !button -->

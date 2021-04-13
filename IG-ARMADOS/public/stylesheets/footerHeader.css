@@ -493,6 +493,7 @@
         border-radius: 5px;
         color: var(--white);
         padding: 1px 14px;
+        border-style: none;
       }
       footer.marcas{
         display: flex;

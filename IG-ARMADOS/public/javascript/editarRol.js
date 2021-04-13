@@ -12,17 +12,13 @@ function rolEdit (evento, formulario){
         cancelButtonColor: '#d33',
         confirmButtonText: 'Cambiar',
         cancelButtonText: "No cambiar",
-       
         backdrop: `rgba(0,0,123,0.4)`
 
       }).then((result) => {
         if (result.isConfirmed) {
             formulario.submit()
             Swal.fire(
-                'Se le asigno el nuevo rol al usuario!',
-                
-
-          )
+                'Se le asigno el nuevo rol al usuario!')
         }
        
       })

@@ -243,6 +243,9 @@ border:var(--orange) 1px solid;
         float: left;
       
     }
+    .carga-producto textarea{
+        height: 167px;
+    }
     .carga-producto .selectores{
         float: right;
     }
@@ -251,9 +254,12 @@ border:var(--orange) 1px solid;
     }
     .carga-producto .text-caracteristicas{
         float: right;
+        margin-bottom: 10px;
+        
     }
     .carga-producto .product-botom button{
-        width: 50%;
+        width: 20%;
+        margin-left: 40%;
     }
 
   /*   .carga-producto .product-info{

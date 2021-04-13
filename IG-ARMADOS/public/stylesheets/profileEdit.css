@@ -33,17 +33,23 @@
     }
     .btn-profile-edit{
         background-color: var(--orange);
-        border-radius: 25px;
+        border-radius: 10px;
         text-align: center;
         margin-bottom: 10px;
         margin-left: 33.33%;
+        margin-top: 10px;
+        color: #ffffff;
+
+        border-style: none;
     }
     .btn-profile-eliminate{
         background-color: var(--red);
         border-radius: 25px;
         text-align: center;
         margin-bottom: 10px;
+        border: none;
         margin-left: 33.33%;
+        color: #ffffff;
     }
     .profile-edit a{
         text-decoration: none;
@@ -82,4 +88,15 @@
     width: 200px;
     height: 20%;
 }
+
+.page-link{
+    color: var(--white);
+    background-color: var(--orange);
+    border: solid 1px black;
+    border-radius: 6px;
+
+}
+
+
+
 }

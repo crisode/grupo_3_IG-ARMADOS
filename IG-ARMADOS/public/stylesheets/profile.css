@@ -30,6 +30,9 @@
 .profile .rol-select{
     width: 100%;
     padding: 1.5rem 1rem;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
 }
 .profile .rol-select-form button{
     margin-top: 20px;
@@ -62,8 +65,10 @@
 }
 .profile .btn-profile{
     background-color: var(--orange);
-    border-radius: 25px;
+    border-radius: 15px;
     margin-bottom: 20px;
+    border-style: none;
+    color: #ffffff;
 }
 
 
@@ -90,6 +95,7 @@
     }
     .profile .btn-profile{
        margin-left: 45%;
+     
     }
    
 
