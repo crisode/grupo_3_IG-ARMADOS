@@ -17,6 +17,7 @@
                         <div class="headerAdmin">
                             <p class="">Filtro por categoria</p>
                             <select name="category" id="categoria">
+                                <option value="todos">todos</option>
                                 <% categorias.forEach(categoria=> { %>
                                     <option value="<%= categoria.id%>">
                                         <%= categoria.name%>
