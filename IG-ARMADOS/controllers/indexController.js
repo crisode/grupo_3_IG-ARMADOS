@@ -671,6 +671,11 @@ module.exports = {
         res.render("contacto", {
             title: "Contacto",
         })
+    },
+    agradecimiento:(req,res)=>{
+        res.render("agradecimiento",{
+            title:"agradecimiento"
+        })
     }
 
 
