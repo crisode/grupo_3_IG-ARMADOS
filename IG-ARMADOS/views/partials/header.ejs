@@ -105,9 +105,10 @@
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <li><a class="dropdown-item" href="/users/profile">perfil</a></li>
           <li><a class="dropdown-item" href="/users/logout">cerrar sesion</a></li>
-          <li><a class="dropdown-item" href="/admin">Administrar sitio</a></li>
-          <li><a class="dropdown-item" href="/admin/users">Administrar Usuarios</a></li>
-
+          <% if (user.rol == 1) { %>
+            <li><a class="dropdown-item" href="/admin">Administrar sitio</a></li>
+            <li><a class="dropdown-item" href="/admin/users">Administrar Usuarios</a></li>
+          <% } %>
         </ul>
       <% } else {%>
           
